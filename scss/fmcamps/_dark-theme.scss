@@ -3,7 +3,6 @@
 @media (prefers-color-scheme: dark) {
     .tituloright {
         background: linear-gradient(90deg, #f8ba02, var(--orange-fmc));
-        -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
         text-shadow: 3px -2px 20px rgba(249, 249, 255, 0.60);
