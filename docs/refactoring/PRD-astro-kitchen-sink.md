@@ -28,27 +28,27 @@ Reemplazar el sitio Hugo por un sitio Astro estático (zero-JS) que funcione com
 
 ### 3.1 Eliminación de Hugo
 
-| Elemento | Acción |
-|----------|--------|
-| `config.yml` | Eliminar |
-| `site/layouts/` | Eliminar (49 archivos) |
-| `site/content/` | Eliminar (150 archivos) |
-| `site/data/` | Eliminar (12 YAML files) |
-| `site/static/` | Eliminar (imágenes, CNAME, favicons) |
-| `site/assets/scss/` | Eliminar (SCSS del sitio Hugo) |
-| `site/assets/js/` | Eliminar (JS del sitio Hugo) |
-| `site/assets/css-fmcamps-saasmono/` | **Mover a `docs/reference-css/`** antes de eliminar |
-| `build/vnu-jar.js` | Eliminar |
-| `hugo-bin` en package.json | Eliminar dependencia |
-| `vnu-jar` en package.json | Eliminar dependencia |
-| Scripts `docs-*` en package.json | Eliminar todos |
-| `css-prefix-examples` script | Eliminar (procesaba `site/content/**/*.css`) |
-| `.gitignore` entradas Hugo | Eliminar (`/_site/`, `/resources/`, `/.hugo_build.lock`) |
-| `hugo-bin` config en package.json | Eliminar bloque `"hugo-bin": { "buildTags": "extended" }` |
+| Elemento                            | Acción                                                    |
+| ----------------------------------- | --------------------------------------------------------- |
+| `config.yml`                        | Eliminar                                                  |
+| `site/layouts/`                     | Eliminar (49 archivos)                                    |
+| `site/content/`                     | Eliminar (150 archivos)                                   |
+| `site/data/`                        | Eliminar (12 YAML files)                                  |
+| `site/static/`                      | Eliminar (imágenes, CNAME, favicons)                      |
+| `site/assets/scss/`                 | Eliminar (SCSS del sitio Hugo)                            |
+| `site/assets/js/`                   | Eliminar (JS del sitio Hugo)                              |
+| `site/assets/css-fmcamps-saasmono/` | **Mover a `docs/reference-css/`** antes de eliminar       |
+| `build/vnu-jar.js`                  | Eliminar                                                  |
+| `hugo-bin` en package.json          | Eliminar dependencia                                      |
+| `vnu-jar` en package.json           | Eliminar dependencia                                      |
+| Scripts `docs-*` en package.json    | Eliminar todos                                            |
+| `css-prefix-examples` script        | Eliminar (procesaba `site/content/**/*.css`)              |
+| `.gitignore` entradas Hugo          | Eliminar (`/_site/`, `/resources/`, `/.hugo_build.lock`)  |
+| `hugo-bin` config en package.json   | Eliminar bloque `"hugo-bin": { "buildTags": "extended" }` |
 
 ### 3.2 Estructura del sitio Astro
 
-```
+```text
 site/                          # Raíz del sitio Astro (reusa la carpeta existente)
 ├── astro.config.mjs           # Configuración Astro
 ├── package.json               # Dependencias del sitio (solo astro)
@@ -106,11 +106,13 @@ El sitio Astro tiene su propio `package.json` dentro de `site/` para aislar depe
 ## 4. Páginas del Kitchen Sink
 
 ### 4.1 Home (`index.astro`)
+
 - Overview del design system
 - Links a todas las páginas de componentes
 - Versión de Bootstrap, dart-sass, pipeline info
 
 ### 4.2 Tokens (`tokens.astro`)
+
 - **Colores corporativos:** Swatches de `--cyan-fmc`, `--orange-fmc`, `--danger-fmc`, `--success-fmc`, `--warning-fmc`, `--blue-fmc`
 - **Colores de superficie:** `--light-bg`, `--dark-bg`, `--light-color`, `--dark-color`, `--label-color`, `--border-color`
 - **Tipografía:** html font-size (14px), label styles, .h6, .lead, .help-block
@@ -119,6 +121,7 @@ El sitio Astro tiene su propio `package.json` dentro de `site/` para aislar depe
 - **Scrollbar:** Demo de scrollbar customizado
 
 ### 4.3 Buttons (`buttons.astro`)
+
 - `.btn-primary`, `.btn-secondary`, `.btn-success`, `.btn-danger`, `.btn-warning`
 - `.btn-orange`, `.btn-link`, `.btn-outline-*`
 - `.accept-button` (large rounded CTA)
@@ -128,6 +131,7 @@ El sitio Astro tiene su propio `package.json` dentro de `site/` para aislar depe
 - Estados: hover, focus, disabled, active
 
 ### 4.4 Forms (`forms.astro`)
+
 - `.form-control` (normal, focus, disabled, readonly)
 - `.form-control.readonly-state`
 - `.form-control-left`, `.form-control-color`
@@ -140,6 +144,7 @@ El sitio Astro tiene su propio `package.json` dentro de `site/` para aislar depe
 - `@keyframes pulse-border` animation demo
 
 ### 4.5 Tables (`tables.astro`)
+
 - `.table` básica con thead/tbody
 - `.table-striped` con light-dark
 - `.table-bordered`
@@ -148,6 +153,7 @@ El sitio Astro tiene su propio `package.json` dentro de `site/` para aislar depe
 - `.modal-body-with-table`, `.card-body-with-table`
 
 ### 4.6 Cards (`cards.astro`)
+
 - `.card` con light-dark background
 - `.card .card-header` customizado
 - `.card-footer` con border-radius
@@ -155,6 +161,7 @@ El sitio Astro tiene su propio `package.json` dentro de `site/` para aislar depe
 - `.jumbotron`
 
 ### 4.7 Modals (`modals.astro`)
+
 - `.modal-content` con border cyan/orange
 - `.modal-header`, `.modal-body` (gradient), `.modal-footer`
 - `.modal-header > h3`, `> h4`
@@ -162,11 +169,13 @@ El sitio Astro tiene su propio `package.json` dentro de `site/` para aislar depe
 - Nota: sin JavaScript, mostrar modals como bloques estáticos visibles
 
 ### 4.8 Alerts (`alerts.astro`)
+
 - `.alert-primary`, `.alert-info`, `.alert-danger`, `.alert-warning`, `.alert-success`
 - Light mode y dark mode side-by-side
 - Border-left styling
 
 ### 4.9 Navigation (`navigation.astro`)
+
 - `.navbar-dark` con nav-links y active states
 - `.navbar-toggler`
 - `.nav-tabs` con `.nav-link.active` (border orange)
@@ -176,12 +185,14 @@ El sitio Astro tiene su propio `package.json` dentro de `site/` para aislar depe
 - `.page-link` pagination (orange)
 
 ### 4.10 Feedback (`feedback.astro`)
+
 - `.toast-fmc-info` (estructura completa)
 - `.dialog-fmc-success`, `.dialog-fmc-error`, `.dialog-fmc-warning`
 - `.fa-spin` spinner
 - `.badge-orange`, `.badge.badge-pill`
 
 ### 4.11 Media (`media.astro`)
+
 - `.list-group-item` con light-dark
 - `.list-group-item-action` hover
 - `.efevidencia.thumbnail`, `.img-ef`
@@ -190,6 +201,7 @@ El sitio Astro tiene su propio `package.json` dentro de `site/` para aislar depe
 - `.gestor-archivos .attached-files-list`
 
 ### 4.12 Dark Theme (`dark-theme.astro`)
+
 - Toggle para forzar `prefers-color-scheme: dark`
 - Comparativa visual de componentes clave en ambos temas
 - `.tituloright` dark variant
@@ -200,29 +212,35 @@ El sitio Astro tiene su propio `package.json` dentro de `site/` para aislar depe
 ## 5. Componentes Astro reutilizables
 
 ### `Base.astro` (Layout)
-```
+
+```text
 <html> → <head> con CSS links → <body> con Navbar + <slot/> + footer
 ```
 
 ### `Navbar.astro`
+
 - Links a todas las páginas del kitchen sink
 - Indicador de página activa via `Astro.url.pathname`
 
 ### `Section.astro`
+
 - Wrapper con `<section>`, título `<h2>`, descripción, y `<slot/>`
 - Genera IDs para deep-linking
 
 ### `CodeExample.astro`
+
 - Muestra el componente renderizado + el HTML fuente debajo
 - Props: `title`, slot para HTML
 
 ### `ThemeToggle.astro`
+
 - Botón que agrega/quita clase en `<html>` para forzar dark mode
 - Usa `<script>` inline (Astro lo permite sin hidratación)
 
 ## 6. Implementación por fases
 
 ### Fase 1: Limpiar Hugo (1 commit)
+
 1. Mover `site/assets/css-fmcamps-saasmono/` a `docs/reference-css/`
 2. Eliminar `config.yml`
 3. Eliminar `site/` completo
@@ -233,6 +251,7 @@ El sitio Astro tiene su propio `package.json` dentro de `site/` para aislar depe
 8. Commit: "Remove Hugo site and related dependencies"
 
 ### Fase 2: Scaffold Astro (1 commit)
+
 1. Crear `site/package.json` con astro como dependencia
 2. Crear `site/astro.config.mjs`
 3. Crear `site/tsconfig.json`
@@ -246,6 +265,7 @@ El sitio Astro tiene su propio `package.json` dentro de `site/` para aislar depe
 11. Commit: "Add Astro kitchen sink site scaffold"
 
 ### Fase 3: Páginas de componentes — Lote 1 (1 commit)
+
 1. `tokens.astro` — colores, tipografía, gradientes
 2. `buttons.astro` — todas las variantes
 3. `forms.astro` — inputs, switches, validación
@@ -253,6 +273,7 @@ El sitio Astro tiene su propio `package.json` dentro de `site/` para aislar depe
 5. Commit: "Add kitchen sink pages: tokens, buttons, forms, tables"
 
 ### Fase 4: Páginas de componentes — Lote 2 (1 commit)
+
 1. `cards.astro` — cards, accordion, jumbotron
 2. `modals.astro` — modal structure estática
 3. `alerts.astro` — todos los tipos
@@ -260,6 +281,7 @@ El sitio Astro tiene su propio `package.json` dentro de `site/` para aislar depe
 5. Commit: "Add kitchen sink pages: cards, modals, alerts, navigation"
 
 ### Fase 5: Páginas de componentes — Lote 3 (1 commit)
+
 1. `feedback.astro` — toasts, dialogs, spinners, badges
 2. `media.astro` — list-group, images, file uploader
 3. `dark-theme.astro` — comparativa light/dark
@@ -268,6 +290,7 @@ El sitio Astro tiene su propio `package.json` dentro de `site/` para aislar depe
 6. Commit: "Add kitchen sink pages: feedback, media, dark theme + components"
 
 ### Fase 6: Documentación y cleanup (1 commit)
+
 1. Actualizar `docs/README.md` con referencia al sitio Astro
 2. Actualizar `CLAUDE.md` con nuevos comandos (`site-dev`, etc.)
 3. Actualizar MEMORY.md
@@ -276,28 +299,30 @@ El sitio Astro tiene su propio `package.json` dentro de `site/` para aislar depe
 
 ## 7. Archivos críticos a modificar
 
-| Archivo | Acción |
-|---------|--------|
-| `package.json` (raíz) | Eliminar deps Hugo, agregar scripts site-* |
-| `package-lock.json` | Regenerar |
-| `.gitignore` | Eliminar entradas Hugo, agregar `site/node_modules/`, `site/dist/` |
-| `config.yml` | Eliminar |
-| `site/` (completo) | Eliminar y recrear con estructura Astro |
-| `build/vnu-jar.js` | Eliminar |
-| `CLAUDE.md` | Actualizar comandos y arquitectura |
-| `docs/README.md` | Agregar referencia al kitchen sink |
-| `docs/reference-css/` | Crear (mover desde site/assets/css-fmcamps-saasmono/) |
-| `docs/refactoring/PRD-astro-kitchen-sink.md` | Crear este PRD |
+| Archivo                                      | Acción                                                             |
+| -------------------------------------------- | ------------------------------------------------------------------ |
+| `package.json` (raíz)                        | Eliminar deps Hugo, agregar scripts site-\*                        |
+| `package-lock.json`                          | Regenerar                                                          |
+| `.gitignore`                                 | Eliminar entradas Hugo, agregar `site/node_modules/`, `site/dist/` |
+| `config.yml`                                 | Eliminar                                                           |
+| `site/` (completo)                           | Eliminar y recrear con estructura Astro                            |
+| `build/vnu-jar.js`                           | Eliminar                                                           |
+| `CLAUDE.md`                                  | Actualizar comandos y arquitectura                                 |
+| `docs/README.md`                             | Agregar referencia al kitchen sink                                 |
+| `docs/reference-css/`                        | Crear (mover desde site/assets/css-fmcamps-saasmono/)              |
+| `docs/refactoring/PRD-astro-kitchen-sink.md` | Crear este PRD                                                     |
 
 ## 8. Verificación
 
-### Por fase:
+### Por fase
+
 - **Fase 1:** `npm run css` sigue funcionando sin Hugo. `npm install` limpio.
 - **Fase 2:** `npm run site-dev` levanta el servidor Astro. Home page carga con fmcamps.css.
 - **Fases 3-5:** Cada página muestra los componentes correctamente en light + dark mode.
 - **Fase 6:** Toda la documentación está actualizada.
 
-### Checklist final:
+### Checklist final
+
 - [ ] `npm run css` — Pipeline CSS funciona
 - [ ] `npm run site-dev` — Dev server Astro arranca
 - [ ] Home page carga fmcamps.css (verificar en DevTools)
@@ -312,64 +337,64 @@ El sitio Astro tiene su propio `package.json` dentro de `site/` para aislar depe
 
 ### Estado general
 
-| Fase | Descripción | Estado | Notas |
-|------|-------------|--------|-------|
-| 1 | Limpiar Hugo | **Completado** | Commit previo |
-| 2 | Scaffold Astro | **Completado** | Base.astro, Section.astro, index.astro, Astro v5.18.0 |
-| 3 | Páginas: tokens, buttons, forms, tables | **Completado** | 4 páginas creadas |
-| 4 | Páginas: cards, modals, alerts, navigation | **Completado** | 4 páginas creadas |
-| 5 | Páginas: feedback, media, dark-theme | **Completado** | 3 páginas + ThemeToggle + CodeExample |
-| 6 | Documentación y cleanup | **Completado** | CLAUDE.md, docs/README.md, MEMORY.md actualizados |
+| Fase | Descripción                                | Estado         | Notas                                                 |
+| ---- | ------------------------------------------ | -------------- | ----------------------------------------------------- |
+| 1    | Limpiar Hugo                               | **Completado** | Commit previo                                         |
+| 2    | Scaffold Astro                             | **Completado** | Base.astro, Section.astro, index.astro, Astro v5.18.0 |
+| 3    | Páginas: tokens, buttons, forms, tables    | **Completado** | 4 páginas creadas                                     |
+| 4    | Páginas: cards, modals, alerts, navigation | **Completado** | 4 páginas creadas                                     |
+| 5    | Páginas: feedback, media, dark-theme       | **Completado** | 3 páginas + ThemeToggle + CodeExample                 |
+| 6    | Documentación y cleanup                    | **Completado** | CLAUDE.md, docs/README.md, MEMORY.md actualizados     |
 
 ### Detalle por página
 
-| Página | Componentes | Estado | Issues |
-|--------|-------------|--------|--------|
-| `index.astro` | Overview, links | **Completado** | |
-| `tokens.astro` | Colores, tipografía, gradientes, blur | **Completado** | |
-| `buttons.astro` | btn-*, accept-button, circle, groups | **Completado** | |
-| `forms.astro` | form-control, switches, validación | **Completado** | |
-| `tables.astro` | table, striped, bordered, hover | **Completado** | |
-| `cards.astro` | card, accordion, jumbotron | **Completado** | |
-| `modals.astro` | modal-content, header, body, footer | **Completado** | |
-| `alerts.astro` | alert-primary/info/danger/warning/success | **Completado** | |
-| `navigation.astro` | navbar, tabs, dropdowns, pagination | **Completado** | |
-| `feedback.astro` | toasts, dialogs, spinners, badges | **Completado** | |
-| `media.astro` | list-group, images, gestor-archivos | **Completado** | |
-| `dark-theme.astro` | Toggle, comparativa light/dark | **Completado** | |
+| Página             | Componentes                               | Estado         | Issues |
+| ------------------ | ----------------------------------------- | -------------- | ------ |
+| `index.astro`      | Overview, links                           | **Completado** |        |
+| `tokens.astro`     | Colores, tipografía, gradientes, blur     | **Completado** |        |
+| `buttons.astro`    | btn-\*, accept-button, circle, groups     | **Completado** |        |
+| `forms.astro`      | form-control, switches, validación        | **Completado** |        |
+| `tables.astro`     | table, striped, bordered, hover           | **Completado** |        |
+| `cards.astro`      | card, accordion, jumbotron                | **Completado** |        |
+| `modals.astro`     | modal-content, header, body, footer       | **Completado** |        |
+| `alerts.astro`     | alert-primary/info/danger/warning/success | **Completado** |        |
+| `navigation.astro` | navbar, tabs, dropdowns, pagination       | **Completado** |        |
+| `feedback.astro`   | toasts, dialogs, spinners, badges         | **Completado** |        |
+| `media.astro`      | list-group, images, gestor-archivos       | **Completado** |        |
+| `dark-theme.astro` | Toggle, comparativa light/dark            | **Completado** |        |
 
 ### Componentes Astro
 
-| Componente | Propósito | Estado |
-|------------|-----------|--------|
-| `Base.astro` | Layout base con CSS links | **Completado** |
-| `Navbar.astro` | Navegación entre páginas | **Completado** (inline en Base.astro) |
-| `Section.astro` | Wrapper de sección | **Completado** |
-| `CodeExample.astro` | Preview + HTML source | **Completado** |
-| `ThemeToggle.astro` | Toggle light/dark mode | **Completado** |
+| Componente          | Propósito                 | Estado                                |
+| ------------------- | ------------------------- | ------------------------------------- |
+| `Base.astro`        | Layout base con CSS links | **Completado**                        |
+| `Navbar.astro`      | Navegación entre páginas  | **Completado** (inline en Base.astro) |
+| `Section.astro`     | Wrapper de sección        | **Completado**                        |
+| `CodeExample.astro` | Preview + HTML source     | **Completado**                        |
+| `ThemeToggle.astro` | Toggle light/dark mode    | **Completado**                        |
 
 ### Archivos eliminados (Hugo)
 
-| Elemento | Archivos | Estado |
-|----------|----------|--------|
-| `config.yml` | 1 | **Eliminado** |
-| `site/layouts/` | 49 | **Eliminado** |
-| `site/content/` | 150 | **Eliminado** |
-| `site/data/` | 12 | **Eliminado** |
-| `site/static/` | ~50 | **Eliminado** |
-| `site/assets/scss/` | 18 | **Eliminado** |
-| `site/assets/js/` | 6 | **Eliminado** |
-| `build/vnu-jar.js` | 1 | **Eliminado** |
-| Scripts Hugo (package.json) | 7 scripts | **Eliminado** |
-| Dependencias Hugo (package.json) | 2 deps | **Eliminado** |
+| Elemento                         | Archivos  | Estado        |
+| -------------------------------- | --------- | ------------- |
+| `config.yml`                     | 1         | **Eliminado** |
+| `site/layouts/`                  | 49        | **Eliminado** |
+| `site/content/`                  | 150       | **Eliminado** |
+| `site/data/`                     | 12        | **Eliminado** |
+| `site/static/`                   | ~50       | **Eliminado** |
+| `site/assets/scss/`              | 18        | **Eliminado** |
+| `site/assets/js/`                | 6         | **Eliminado** |
+| `build/vnu-jar.js`               | 1         | **Eliminado** |
+| Scripts Hugo (package.json)      | 7 scripts | **Eliminado** |
+| Dependencias Hugo (package.json) | 2 deps    | **Eliminado** |
 
 ### Decisiones técnicas
 
-| Decisión | Opción elegida | Alternativa descartada | Razón |
-|----------|---------------|----------------------|-------|
-| Generador estático | Astro | Hugo, 11ty, plain HTML | Zero-JS, moderno, component-based |
-| Carga de CSS | `<link>` en public/ | import ESM | CSS pre-compilado, sin procesamiento |
-| Estructura | site/ con su propio package.json | Monorepo integrado | Aislamiento de dependencias |
-| Dark mode toggle | Script inline + clase en html | Media query only | Permite testing manual de ambos temas |
-| Contenido Hugo | Eliminar todo | Migrar parcialmente | No es nuestro contenido, no agrega valor |
-| CSS reference files | Mover a docs/reference-css/ | Eliminar | Se necesitan como referencia para SaaSMono |
+| Decisión            | Opción elegida                   | Alternativa descartada | Razón                                      |
+| ------------------- | -------------------------------- | ---------------------- | ------------------------------------------ |
+| Generador estático  | Astro                            | Hugo, 11ty, plain HTML | Zero-JS, moderno, component-based          |
+| Carga de CSS        | `<link>` en public/              | import ESM             | CSS pre-compilado, sin procesamiento       |
+| Estructura          | site/ con su propio package.json | Monorepo integrado     | Aislamiento de dependencias                |
+| Dark mode toggle    | Script inline + clase en html    | Media query only       | Permite testing manual de ambos temas      |
+| Contenido Hugo      | Eliminar todo                    | Migrar parcialmente    | No es nuestro contenido, no agrega valor   |
+| CSS reference files | Mover a docs/reference-css/      | Eliminar               | Se necesitan como referencia para SaaSMono |

@@ -19,7 +19,7 @@ wwwroot/static/libraries/bootstrap/4.6.2/css/fmcamps.css
 
 ## Prerequisitos
 
-- **Node.js 18 LTS** (obligatorio)
+- **Node.js** (cualquier version moderna — dart-sass no tiene restriccion de version)
 
 ## Inicio rapido
 
@@ -41,18 +41,23 @@ npm run css          # Compila, prefija y minifica CSS
 | Lint todo                                      | `npm run lint`        |
 | Tests JS (Karma + QUnit)                       | `npm run js-test`     |
 | Test completo                                  | `npm test`            |
-| Watch + docs server (puerto 9001)              | `npm start`           |
+| Kitchen sink dev server (puerto 4321)          | `npm run site-dev`    |
+| Kitchen sink build                             | `npm run site-build`  |
+| Kitchen sink preview                           | `npm run site-preview`|
 
 ## Estructura clave
 
 ```text
 scss/fmcamps/fmcamps.scss    <- Punto de entrada principal (aqui se personalizan colores)
+scss/fmcamps/_*.scss          <- 31 parciales SCSS organizados por dominio
 scss/_variables.scss          <- Variables default de Bootstrap (se sobreescriben desde fmcamps.scss)
 scss/font-awesome-4.7.0/     <- Font Awesome 4.7 integrado
 dist/css/fmcamps.css         <- CSS compilado (output)
 dist/css/fmcamps.min.css     <- CSS compilado y minificado
 js/src/                      <- Modulos JS de Bootstrap (ES6)
 build/                       <- Scripts de build (Rollup, PostCSS, etc.)
+site/                        <- Kitchen sink Astro (playground visual del design system)
+docs/                        <- Documentacion del proyecto (overview, changelog, refactoring)
 ```
 
 ## Personalizacion de colores
@@ -75,7 +80,7 @@ La personalizacion se hace en `scss/fmcamps/fmcamps.scss` sobreescribiendo varia
 
 ```text
 scss/fmcamps/fmcamps.scss
-  -> node-sass (compile)
+  -> dart-sass (compile)
   -> postcss/autoprefixer (prefix)
   -> clean-css (minify)
   -> dist/css/fmcamps.css + fmcamps.min.css
@@ -88,12 +93,13 @@ Al trabajar con este tema, respetar estas convenciones del proyecto principal:
 - Usar **Font Awesome 4.7** (`fa fa-*`), no FA 5/6 (`fas`, `far`)
 - Usar **Bootstrap 4.6.2** attributes (`data-toggle`, `data-dismiss`), no BS5 (`data-bs-*`)
 - Usar la **system font stack**, no importar Google Fonts
-- Los colores corporativos se definen como CSS custom properties en `app1.css` del proyecto SaaSMono (`--cyan-fmc`, `--orange-fmc`, etc.)
+- Los colores corporativos se definen como CSS custom properties en `scss/fmcamps/_variables.scss` (`--cyan-fmc`, `--orange-fmc`, etc.)
 
 ## Documentacion relacionada
 
-- [Design System](../v4.1/saasmono/docs/03-technical-design/frontend/design-system.en.md) - Sistema de diseno completo de FMCAMPS
-- [Bootstrap 4.6 Docs](https://getbootstrap.com/docs/4.6/) - Documentacion oficial de Bootstrap 4.6
+- [Documentacion del proyecto](docs/README.md) — Overview, changelog, decisiones de refactoring
+- [Kitchen Sink](site/) — Playground visual del design system (Astro, zero-JS)
+- [Bootstrap 4.6 Docs](https://getbootstrap.com/docs/4.6/) — Documentacion oficial de Bootstrap 4.6
 
 ## Licencia
 

@@ -2,6 +2,21 @@
 
 Historial de cambios relevantes al design system.
 
+## 2026-03-07 — Kitchen Sink Astro
+
+### Migracion Hugo → Astro
+
+- Eliminado sitio Hugo heredado (333 archivos: layouts, content, data, assets)
+- Eliminadas dependencias `hugo-bin` y `vnu-jar` del package.json
+- Creado sitio Astro v5 en `site/` como playground visual zero-JS del design system
+- 12 paginas: tokens, buttons, forms, tables, cards, modals, alerts, navigation, feedback, media, dark-theme, home
+- Componentes reutilizables: Base.astro (layout), Section.astro, ThemeToggle.astro, CodeExample.astro
+- CSS pre-compilado cargado via `<link>` desde `site/public/css/`
+- Comandos: `npm run site-dev` (puerto 4321), `npm run site-build`, `npm run site-preview`
+- PRD completo en `docs/refactoring/PRD-astro-kitchen-sink.md`
+
+---
+
 ## 2026-03-07 — Migracion app1.css + Mejoras
 
 ### Migracion SCSS
