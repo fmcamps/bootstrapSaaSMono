@@ -12,24 +12,24 @@ This is a **customized fork of Bootstrap 4.6.2** for the FMCamps SaaS Mono proje
 
 ## Key Commands
 
-| Task                                         | Command                      |
-| -------------------------------------------- | ---------------------------- |
-| Build everything (CSS + JS)                  | `npm run dist`               |
-| Build CSS only                               | `npm run css`                |
-| Compile SCSS to CSS                          | `npm run css-compile`        |
-| Build JS only                                | `npm run js`                 |
-| Lint all                                     | `npm run lint`               |
-| Lint CSS/SCSS                                | `npm run css-lint`           |
-| Lint JS                                      | `npm run js-lint`            |
-| Run JS tests                                 | `npm run js-test`            |
-| Run single test suite (Karma)                | `npm run js-test-karma`      |
-| Full test suite (lint + dist + tests)        | `npm test`                   |
-| Watch mode (CSS + JS)                        | `npm start`                  |
-| Kitchen sink dev server (Astro, port 4321)   | `npm run site-dev`           |
-| Kitchen sink build                           | `npm run site-build`         |
-| Kitchen sink preview                         | `npm run site-preview`       |
-| Visual regression tests (Playwright)         | `npm run test-visual`        |
-| Update visual baselines                      | `npm run test-visual-update` |
+| Task                                       | Command                      |
+| ------------------------------------------ | ---------------------------- |
+| Build everything (CSS + JS)                | `npm run dist`               |
+| Build CSS only                             | `npm run css`                |
+| Compile SCSS to CSS                        | `npm run css-compile`        |
+| Build JS only                              | `npm run js`                 |
+| Lint all                                   | `npm run lint`               |
+| Lint CSS/SCSS                              | `npm run css-lint`           |
+| Lint JS                                    | `npm run js-lint`            |
+| Run JS tests                               | `npm run js-test`            |
+| Run single test suite (Karma)              | `npm run js-test-karma`      |
+| Full test suite (lint + dist + tests)      | `npm test`                   |
+| Watch mode (CSS + JS)                      | `npm start`                  |
+| Kitchen sink dev server (Astro, port 4321) | `npm run site-dev`           |
+| Kitchen sink build                         | `npm run site-build`         |
+| Kitchen sink preview                       | `npm run site-preview`       |
+| Visual regression tests (Playwright)       | `npm run test-visual`        |
+| Update visual baselines                    | `npm run test-visual-update` |
 
 ## Architecture
 
@@ -48,18 +48,19 @@ This is a **customized fork of Bootstrap 4.6.2** for the FMCamps SaaS Mono proje
 
 The app's custom styles are organized into partial files imported by `fmcamps.scss`:
 
-| Group | Partials |
-|-------|----------|
-| **CSS custom properties** | `_variables` (`:root` vars, light-dark theming, DataTables vars) |
-| **Base overrides** | `_body`, `_typography`, `_links`, `_scrollbars` |
-| **Component overrides** | `_forms`, `_buttons`, `_btn-extended`, `_badges`, `_navbar`, `_navtabs`, `_dropdowns`, `_pagination`, `_tables`, `_cards`, `_modals`, `_alerts`, `_list-group`, `_spinners`, `_images` |
-| **Branding** | `_gradients` (`.bg-fmc1/2/3`, `.titulo`, blur classes) |
-| **Third-party overrides** | `_datatables` (DataTables 2.2.2), `_daterangepicker`, `_select2` (default + classic + bootstrap themes) |
-| **Layout & utilities** | `_footer`, `_utilities` (tooltips, popovers, misc), `_responsive` (viewports, media queries) |
-| **App components** | `_dialogs` (FMC dialogs), `_toasts` (bInfo toasts), `_gestor-archivos` (S3 upload) |
-| **Theme** | `_dark-theme` (`@media (prefers-color-scheme: dark)` overrides) |
+| Group                     | Partials                                                                                                                                                                               |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **CSS custom properties** | `_variables` (`:root` vars, light-dark theming, DataTables vars)                                                                                                                       |
+| **Base overrides**        | `_body`, `_typography`, `_links`, `_scrollbars`                                                                                                                                        |
+| **Component overrides**   | `_forms`, `_buttons`, `_btn-extended`, `_badges`, `_navbar`, `_navtabs`, `_dropdowns`, `_pagination`, `_tables`, `_cards`, `_modals`, `_alerts`, `_list-group`, `_spinners`, `_images` |
+| **Branding**              | `_gradients` (`.bg-fmc1/2/3`, `.titulo`, blur classes)                                                                                                                                 |
+| **Third-party overrides** | `_datatables` (DataTables 2.2.2), `_daterangepicker`, `_select2` (default + classic + bootstrap themes)                                                                                |
+| **Layout & utilities**    | `_footer`, `_utilities` (tooltips, popovers, misc), `_responsive` (viewports, media queries)                                                                                           |
+| **App components**        | `_dialogs` (FMC dialogs), `_toasts` (bInfo toasts), `_gestor-archivos` (S3 upload)                                                                                                     |
+| **Theme**                 | `_dark-theme` (`@media (prefers-color-scheme: dark)` overrides)                                                                                                                        |
 
 **SCSS notes (dart-sass):**
+
 - `light-dark()` passes through dart-sass as-is (unknown function), which is the intended behavior.
 - CSS custom properties inside `rgb()`/`rgba()` work natively — no interpolation workaround needed.
 - Bootstrap 4.6.2 uses `@import` which dart-sass marks as deprecated (warning only, not an error).

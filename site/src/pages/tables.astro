@@ -4,7 +4,7 @@ import Section from '../components/Section.astro';
 ---
 
 <Base title="Tables">
-  <h1 class="mb-4">Tables</h1>
+  <h1 class="mb-4 tw:mb-6">Tables</h1>
 
   <Section title="Tabla básica" description=".table con light-dark bg, radius y shadow sutil">
     <table class="table">
@@ -122,8 +122,8 @@ import Section from '../components/Section.astro';
   </Section>
 
   <Section title="Tabla transparente" description=".table.transparente — fondo transparente">
-    <div class="bg-fmc2 p-3 rounded">
-      <table class="table transparente text-white">
+    <div class="bg-fmc2 p-3 tw:p-4 rounded tw:rounded">
+      <table class="table transparente text-white tw:text-white">
         <thead>
           <tr>
             <th>Columna 1</th>
@@ -159,11 +159,11 @@ import Section from '../components/Section.astro';
   <Section title="Tabla en card" description=".card-body-with-table — tabla dentro de card sin padding">
     <div class="card">
       <div class="card-header">
-        <h5 class="mb-0">Tabla dentro de card</h5>
+        <h5 class="mb-0 tw:mb-0">Tabla dentro de card</h5>
       </div>
       <div class="card-body-with-table">
         <div class="table-responsive">
-          <table class="table mb-0">
+          <table class="table mb-0 tw:mb-0">
             <thead>
               <tr>
                 <th>A</th>

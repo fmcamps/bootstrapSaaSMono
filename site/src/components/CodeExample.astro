@@ -6,9 +6,9 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<div class="mb-4">
+<div class="mb-4 tw:mb-6">
   {title && <h6 class="text-muted">{title}</h6>}
-  <div class="p-3 rounded mb-2" style="border:1px solid var(--border-color);">
+  <div class="p-3 tw:p-4 rounded tw:rounded mb-2 tw:mb-2" style="border:1px solid var(--border-color);">
     <slot />
   </div>
 </div>

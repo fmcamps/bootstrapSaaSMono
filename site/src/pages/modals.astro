@@ -4,13 +4,13 @@ import Section from '../components/Section.astro';
 ---
 
 <Base title="Modals">
-  <h1 class="mb-4">Modals</h1>
-  <p class="text-muted mb-4">Los modales se muestran como bloques estáticos (sin JavaScript). En producción se activan con jQuery/Bootstrap JS.</p>
+  <h1 class="mb-4 tw:mb-6">Modals</h1>
+  <p class="text-muted mb-4 tw:mb-6">Los modales se muestran como bloques estáticos (sin JavaScript). En producción se activan con jQuery/Bootstrap JS.</p>
 
   <Section title="Modal completo" description=".modal-content con borde cyan/orange, header, body gradient, footer">
     <div class="row">
       <div class="col-md-8 col-lg-6">
-        <div class="modal-content mb-3" style="position:relative;">
+        <div class="modal-content mb-3 tw:mb-4" style="position:relative;">
           <div class="modal-header">
             <h3>Título del modal</h3>
             <button type="button" class="close"><span>&times;</span></button>
@@ -31,7 +31,7 @@ import Section from '../components/Section.astro';
   <Section title="Modal con subtítulo" description=".modal-header > h3 + h4 (gris #666)">
     <div class="row">
       <div class="col-md-8 col-lg-6">
-        <div class="modal-content mb-3" style="position:relative;">
+        <div class="modal-content mb-3 tw:mb-4" style="position:relative;">
           <div class="modal-header">
             <div>
               <h3>Crear nuevo registro</h3>
@@ -60,14 +60,14 @@ import Section from '../components/Section.astro';
   <Section title="Modal con tabla" description=".modal-body-with-table — tabla dentro de modal sin padding">
     <div class="row">
       <div class="col-md-8 col-lg-6">
-        <div class="modal-content mb-3" style="position:relative;">
+        <div class="modal-content mb-3 tw:mb-4" style="position:relative;">
           <div class="modal-header">
             <h3>Listado de items</h3>
             <button type="button" class="close"><span>&times;</span></button>
           </div>
           <div class="modal-body-with-table">
             <div class="table-responsive">
-              <table class="table mb-0">
+              <table class="table mb-0 tw:mb-0">
                 <thead>
                   <tr>
                     <th>#</th>
@@ -94,7 +94,7 @@ import Section from '../components/Section.astro';
   <Section title="Botón Close" description="button.close con hover light-dark">
     <div class="row">
       <div class="col-md-4">
-        <div class="p-4 rounded" style="border:1px solid var(--border-color);position:relative;">
+        <div class="p-4 tw:p-6 rounded tw:rounded" style="border:1px solid var(--border-color);position:relative;">
           <p>El botón close cambia de fondo en hover:</p>
           <ul>
             <li>Light: <code>lightgray</code></li>

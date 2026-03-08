@@ -2,6 +2,45 @@
 
 Historial de cambios relevantes al design system.
 
+## 2026-03-08 — Fase 0 Tailwind CSS v4 (Paso 0a: coexistencia)
+
+### Instalacion y configuracion
+
+- Instalado Tailwind CSS v4.2.1 + `@tailwindcss/vite` v4.2.1 en `site/`
+- Configuracion: `@import "tailwindcss" prefix(tw)` con `@theme { --spacing: 0.25rem; }`
+- Plugin Vite integrado en `site/astro.config.mjs`
+- Importado en `site/src/layouts/Base.astro` (coexiste con `fmcamps.css`)
+
+### Migracion additive-first (tw:* junto a BS4)
+
+- 12 paginas + 4 componentes Astro con clases `tw:*` agregadas junto a BS4
+- Utilities migradas: spacing (mb-3→tw:mb-4, p-3→tw:p-4), display (d-flex→tw:flex), text (text-center→tw:text-center), sizing (h-100→tw:h-full), position, border, margin-auto
+- Clases de componente BS4 preservadas: btn-*, card-*, table-*, alert-*, modal-*, nav-*, badge-*, form-control, row/col-*
+- Mapping completo documentado en `docs/refactoring/tailwind-class-mapping.md`
+
+### Archivos de referencia creados
+
+- `site/src/styles/tailwind.css` — entry point Tailwind con prefix
+- `site/src/styles/fmcamps-custom.css` — design tokens + clases custom extraidas (referencia para Fase B, no importado aun)
+
+### Bug fix durante quality review
+
+- `tokens.astro:64-65`: referencia a `var(--dark-color)` (eliminado en M-5) corregida a `var(--text-dark-mode)`
+
+### Correccion del PRD (v1.1 → v1.2)
+
+- §4.13 Spacing: corregida tabla — BS4 niveles 3/4/5 NO son 1:1 con Tailwind (escala no-lineal vs lineal). `mb-3→tw:mb-4`, `mb-4→tw:mb-6`, `mb-5→tw:mb-12`
+- §11.3 Matriz: spacing reclasificado de "Trivial (1:1)" a "Baja (no-lineal)"
+- §14.1 Gate: dividido en 14.1a (coexistencia ✅) y 14.1b (Tailwind-only, pendiente)
+- Agregada §15 "Lecciones Aprendidas — Fase 0" con 6 hallazgos
+
+### Verificacion
+
+- 48/48 visual regression tests pasan (0 diferencias visuales)
+- Baselines actualizadas con `npm run test-visual-update`
+
+---
+
 ## 2026-03-08 — Code review findings (7 bugs SCSS)
 
 ### Correccion de hallazgos

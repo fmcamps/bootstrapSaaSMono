@@ -1,0 +1,152 @@
+/*
+ * FMCamps Custom CSS — Design Tokens + Custom Classes
+ * Reference file for Tailwind migration (Fase B+)
+ *
+ * This file extracts the FMCamps-specific styles that will SURVIVE
+ * the BS4 → Tailwind transition. It is NOT loaded in Fase 0 —
+ * the kitchen sink still uses fmcamps.css for all styles.
+ *
+ * Source: scss/fmcamps/_variables.scss, _gradients.scss, _toasts.scss,
+ *         _dialogs.scss, _gestor-archivos.scss, _buttons.scss
+ */
+
+/* ============================================
+   1. CSS Custom Properties (Design Tokens)
+   ============================================ */
+
+:root {
+    color-scheme: light dark;
+
+    /* Surfaces */
+    --light-bg: #f1f1f1;
+    --light-color: #21211f;
+    --dark-bg: #001d2b;
+    --dark-bg2: #22272E;
+    --text-dark-mode: #eee;
+    --surface-light: #eee;
+    --gris-oscuro: #343a40;
+
+    /* Borders */
+    --border-color: rgba(142, 142, 142, 0.25);
+    --border-color-table: rgba(222, 226, 230, 0.20);
+
+    /* Labels */
+    --label-color: #979797;
+
+    /* Brand colors (with light-dark()) */
+    --danger-fmc: #c90000; /* fallback */
+    --danger-fmc: light-dark(#c90000, #850000);
+    --success-fmc: #008000; /* fallback */
+    --success-fmc: light-dark(#008000, #006400);
+    --orange-fmc: #ff5b00; /* fallback */
+    --orange-fmc: light-dark(#ff5b00, #c44400);
+    --warning-fmc: #f8ba02; /* fallback */
+    --warning-fmc: light-dark(#f8ba02, #ffa200);
+    --cyan-fmc: #2084ff; /* fallback */
+    --cyan-fmc: light-dark(#2084ff, #53cfff);
+    --blue-fmc: #02115d; /* fallback */
+    --blue-fmc: light-dark(#02115d, #001fba);
+}
+
+/* ============================================
+   2. Gradients (Branding)
+   ============================================ */
+
+.bg-fmc1 {
+    background: linear-gradient(30deg, #001d2b, #001d2b, #00283a, #693400, #ff8200);
+}
+
+.bg-fmc2 {
+    background: linear-gradient(102deg, #000000, #693400, #004463);
+}
+
+.bg-fmc3 {
+    background: linear-gradient(88deg, #993100, #ff8b12 25.17%, #88d4ff 50%, #1bafec 73.09%, #005499);
+}
+
+.titulo {
+    font-size: 4rem;
+    background: linear-gradient(45deg, var(--cyan-fmc), #009eff, #ff5e00, var(--orange-fmc));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    text-shadow: -2px 2px 2px rgba(98, 113, 255, 0.25);
+    margin-bottom: 0;
+    color: #2a295c;
+}
+
+.tituloright {
+    background: linear-gradient(90deg, #009eff, var(--cyan-fmc));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    float: right;
+    text-shadow: -2px 2px 2px rgba(98, 113, 255, 0.25);
+    margin-bottom: 0;
+    color: #2a295c;
+}
+
+/* ============================================
+   3. Blur Classes
+   ============================================ */
+
+.bg-black-blur {
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(45, 201, 253, 0.20);
+    backdrop-filter: blur(5px);
+}
+
+.bg-white-blur {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 4px 4px rgba(45, 201, 253, 0.20);
+    backdrop-filter: blur(5px);
+}
+
+.bg-blur {
+    backdrop-filter: blur(5px);
+}
+
+/* ============================================
+   4. Accept Button (CTA)
+   ============================================ */
+
+.accept-button {
+    display: block;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0.75rem 2.5rem;
+    border-radius: 25px;
+    background-color: #009eff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.accept-button:hover {
+    background-color: #e87200;
+    color: white;
+}
+
+/* ============================================
+   5. Label Banner
+   ============================================ */
+
+.labelConcentBanner {
+    color: var(--light-color);
+    color: light-dark(var(--light-color), var(--text-dark-mode));
+    font-weight: 300;
+    padding-left: 0.4rem;
+}
+
+/*
+ * NOTE: Toast, Dialog, and Gestor de Archivos classes are also
+ * FMCamps-custom but are more complex. They will be extracted
+ * from fmcamps.css when needed in Fase B.
+ *
+ * Classes to extract later:
+ * - .toast-fmc-info, .toast-fmc-icon, .toast-fmc-wait
+ * - .dialog-fmc-success, .dialog-fmc-error, .dialog-fmc-warning
+ * - .dialog-fmc-icon, .dialog-fmc-wait
+ * - .gestor-archivos, .upload-zone, .file-item, .attached-file-item
+ * - .efevidencia, .img-ef
+ * - .showTools
+ */

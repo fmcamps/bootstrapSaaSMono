@@ -1,4 +1,6 @@
 ---
+import '../styles/tailwind.css';
+
 interface Props {
   title: string;
 }
@@ -68,7 +70,7 @@ const { title } = Astro.props;
       <slot />
     </div>
 
-    <footer class="text-center py-3" style="border-top: 1px solid var(--border-color, #dee2e6);">
+    <footer class="text-center tw:text-center py-3 tw:py-4" style="border-top: 1px solid var(--border-color, #dee2e6);">
       <small class="text-muted">FMCamps Design System — Bootstrap 4.6.2 fork — Kitchen Sink</small>
     </footer>
   </body>

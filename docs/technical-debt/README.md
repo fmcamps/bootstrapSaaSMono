@@ -78,6 +78,10 @@ Encontrados durante la sincronizacion CSS a SaaSMono. Verificados contra SCSS fu
 
 ### Largo plazo
 
-- [ ] Alinear con estrategia CSS de SaaSMono (PRD Frontend Stack Modernization §O3): SaaSMono migra BS4 → **Tailwind CSS** (no BS5). bootstrapSaaSMono evoluciona hacia design tokens puros + custom properties CSS nativos. BS5 descartado como destino — invertir en `light-dark()`, variables y partials FMC que sobrevivan la transicion a Tailwind
+- [ ] Migrar BS4 → Tailwind CSS en produccion (Fases A-F del PRD): SaaSMono migra BS4 → **Tailwind CSS** (no BS5). bootstrapSaaSMono evoluciona hacia design tokens puros + custom properties CSS nativos. Ver [PRD_TAILWIND_MIGRATION.md](../refactoring/PRD_TAILWIND_MIGRATION.md)
+  - [x] **Fase 0 Paso 0a** (2026-03-08): Tailwind v4 instalado en kitchen sink con `prefix(tw)`, 12 paginas con `tw:*` additive, 48/48 tests pasan, mapping documentado en [tailwind-class-mapping.md](../refactoring/tailwind-class-mapping.md)
+  - [ ] **Fase 0 Paso 0b**: Remover `fmcamps.css` del kitchen sink, reemplazar clases BS4 componentes con Tailwind-only
+  - [ ] **Fase A**: Limpieza BS3 legacy (14 clases, ~174 usos en SaaSMono)
+  - [ ] **Fases B-F**: Migracion incremental en produccion (586 clases, 81 Views)
 - [ ] Design tokens en formato estandar (Style Dictionary / W3C design tokens) — puente hacia `tailwind.config.js` theme. Ver [design-tokens.md](design-tokens.md)
 - [x] ~~Storybook o catalogo visual de componentes~~ — reemplazado por kitchen sink Astro en `site/`

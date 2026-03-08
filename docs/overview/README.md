@@ -50,6 +50,10 @@ SaaSMono migra BS4 → **Tailwind CSS** (BS5 descartado). Este repo evoluciona h
 
 No invertir en features que dependan de la API SCSS de Bootstrap (mixins, extends). Invertir en CSS custom properties y `light-dark()`.
 
+### Estado actual de la migracion
+
+**Fase 0 Paso 0a completado (2026-03-08):** Tailwind CSS v4 instalado en el kitchen sink (`site/`) con `@import "tailwindcss" prefix(tw)`. Las 12 paginas + 4 componentes tienen clases `tw:*` junto a BS4 (coexistencia validada, 48/48 visual tests pasan). Ver [PRD_TAILWIND_MIGRATION.md](../refactoring/PRD_TAILWIND_MIGRATION.md) y [tailwind-class-mapping.md](../refactoring/tailwind-class-mapping.md).
+
 ## Relacion con app1.css
 
 La app SaaSMono carga **ambos**: `fmcamps.css` (compilado aqui) y un `app1.css` residual (vive en el proyecto SaaSMono). El residual contiene solo reglas que referencian assets app-specific (cursores custom, logos, view-transitions, selectores de ID).

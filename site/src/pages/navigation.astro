@@ -4,10 +4,10 @@ import Section from '../components/Section.astro';
 ---
 
 <Base title="Navigation">
-  <h1 class="mb-4">Navigation</h1>
+  <h1 class="mb-4 tw:mb-6">Navigation</h1>
 
   <Section title="Navbar dark" description=".navbar-dark con nav-links, active state con fondo negro">
-    <nav class="navbar navbar-expand navbar-dark bg-fmc1 rounded mb-3">
+    <nav class="navbar navbar-expand navbar-dark bg-fmc1 rounded tw:rounded mb-3 tw:mb-4">
       <a class="navbar-brand" href="#">Brand</a>
       <ul class="navbar-nav">
         <li class="nav-item">
@@ -28,9 +28,9 @@ import Section from '../components/Section.astro';
   </Section>
 
   <Section title="Navbar con bg-fmc2" description="Otra variante de gradiente">
-    <nav class="navbar navbar-expand navbar-dark bg-fmc2 rounded mb-3">
+    <nav class="navbar navbar-expand navbar-dark bg-fmc2 rounded tw:rounded mb-3 tw:mb-4">
       <a class="navbar-brand" href="#">FMCamps</a>
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto tw:ml-auto">
         <li class="nav-item">
           <a class="nav-link active" href="#">Dashboard</a>
         </li>
@@ -45,7 +45,7 @@ import Section from '../components/Section.astro';
   </Section>
 
   <Section title="Navbar toggler" description=".navbar-toggler (1.8rem, sin borde)">
-    <nav class="navbar navbar-dark bg-fmc3 rounded mb-3">
+    <nav class="navbar navbar-dark bg-fmc3 rounded tw:rounded mb-3 tw:mb-4">
       <a class="navbar-brand" href="#">Mobile Nav</a>
       <button class="navbar-toggler" type="button">
         <span class="navbar-toggler-icon"></span>
@@ -55,7 +55,7 @@ import Section from '../components/Section.astro';
   </Section>
 
   <Section title="Nav Tabs" description=".nav-tabs con border-bottom naranja en active">
-    <ul class="nav nav-tabs mb-3">
+    <ul class="nav nav-tabs mb-3 tw:mb-4">
       <li class="nav-item">
         <a class="nav-link active" href="#">General</a>
       </li>
@@ -70,7 +70,7 @@ import Section from '../components/Section.astro';
       </li>
     </ul>
     <div class="tab-content">
-      <div class="p-3 rounded" style="border:1px solid var(--border-color);">
+      <div class="p-3 tw:p-4 rounded tw:rounded" style="border:1px solid var(--border-color);">
         <p>Contenido del tab activo. El <code>.tab-content</code> tiene <code>margin-top: 10px</code>.</p>
         <p>Los tabs activos tienen <code>border-bottom: var(--orange-fmc)</code>. El hover muestra <code>#ffd2a1</code>.</p>
       </div>
@@ -79,9 +79,9 @@ import Section from '../components/Section.astro';
 
   <Section title="Dropdown" description=".dropdown-menu con backdrop-blur y sombra naranja">
     <div class="row">
-      <div class="col-md-6 mb-3">
+      <div class="col-md-6 mb-3 tw:mb-4">
         <h6>Dropdown menu (estático)</h6>
-        <div class="dropdown-menu d-block position-relative" style="max-width:250px;">
+        <div class="dropdown-menu d-block tw:block position-relative tw:relative" style="max-width:250px;">
           <a class="dropdown-item" href="#">Acción 1</a>
           <a class="dropdown-item" href="#">Acción 2</a>
           <a class="dropdown-item active" href="#">Activo (naranja)</a>
@@ -89,7 +89,7 @@ import Section from '../components/Section.astro';
           <span class="dropdown-item-text">Texto informativo</span>
         </div>
       </div>
-      <div class="col-md-6 mb-3">
+      <div class="col-md-6 mb-3 tw:mb-4">
         <h6>Propiedades del dropdown</h6>
         <ul>
           <li><code>background: rgba(0,0,0,0.75)</code></li>

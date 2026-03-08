@@ -32,6 +32,8 @@ npm run site-dev
 
 El sitio Astro en `site/` es un playground visual que muestra todos los componentes del design system con `fmcamps.css` cargado. Incluye 12 paginas: tokens, buttons, forms, tables, cards, modals, alerts, navigation, feedback, media, dark-theme, y un toggle para forzar light/dark mode.
 
+**Tailwind v4 (Fase 0):** Desde 2026-03-08, el kitchen sink tambien carga Tailwind CSS v4 con `prefix(tw)` para validar la coexistencia BS4 + Tailwind. Las 12 paginas tienen clases `tw:*` junto a BS4. Ver [tailwind-class-mapping.md](refactoring/tailwind-class-mapping.md).
+
 ```bash
 npm run site-dev      # Dev server en puerto 4321
 npm run site-build    # Build estatico en site/dist/

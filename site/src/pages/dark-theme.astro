@@ -5,14 +5,14 @@ import ThemeToggle from '../components/ThemeToggle.astro';
 ---
 
 <Base title="Dark Theme">
-  <h1 class="mb-4">Dark Theme</h1>
+  <h1 class="mb-4 tw:mb-6">Dark Theme</h1>
 
   <ThemeToggle />
 
   <Section title="Estrategia" description="El design system usa 3 mecanismos para dark mode">
     <div class="row">
-      <div class="col-md-4 mb-3">
-        <div class="card h-100">
+      <div class="col-md-4 mb-3 tw:mb-4">
+        <div class="card h-100 tw:h-full">
           <div class="card-body">
             <h6>1. CSS light-dark()</h6>
             <p class="card-text"><small>Función nativa inline. dart-sass la pasa tal cual.</small></p>
@@ -20,8 +20,8 @@ import ThemeToggle from '../components/ThemeToggle.astro';
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-3">
-        <div class="card h-100">
+      <div class="col-md-4 mb-3 tw:mb-4">
+        <div class="card h-100 tw:h-full">
           <div class="card-body">
             <h6>2. @media prefers-color-scheme</h6>
             <p class="card-text"><small>Bloque en <code>_dark-theme.scss</code> para overrides complejos.</small></p>
@@ -29,8 +29,8 @@ import ThemeToggle from '../components/ThemeToggle.astro';
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-3">
-        <div class="card h-100">
+      <div class="col-md-4 mb-3 tw:mb-4">
+        <div class="card h-100 tw:h-full">
           <div class="card-body">
             <h6>3. CSS custom properties</h6>
             <p class="card-text"><small>Variables en :root que cambian con media queries.</small></p>
@@ -42,7 +42,7 @@ import ThemeToggle from '../components/ThemeToggle.astro';
   </Section>
 
   <Section title="Gradiente .tituloright" description="Light: cyan gradient — Dark: amarillo → naranja">
-    <div class="mb-3">
+    <div class="mb-3 tw:mb-4">
       <div class="tituloright">Texto tituloright</div>
       <div style="clear:both;"></div>
     </div>
@@ -50,9 +50,9 @@ import ThemeToggle from '../components/ThemeToggle.astro';
   </Section>
 
   <Section title="Botón Primary" description="Light: azul — Dark: naranja, hover cyan">
-    <div class="mb-3">
-      <button class="btn btn-primary mr-2">btn-primary</button>
-      <button class="btn btn-primary mr-2" disabled>btn-primary disabled</button>
+    <div class="mb-3 tw:mb-4">
+      <button class="btn btn-primary mr-2 tw:mr-2">btn-primary</button>
+      <button class="btn btn-primary mr-2 tw:mr-2" disabled>btn-primary disabled</button>
     </div>
     <p class="text-muted"><small>Dark: <code>background-color: var(--orange-fmc)</code>, hover: <code>var(--cyan-fmc)</code>.</small></p>
   </Section>
@@ -76,17 +76,17 @@ import ThemeToggle from '../components/ThemeToggle.astro';
   </Section>
 
   <Section title="Textos de estado" description=".text-success y .text-danger en dark mode">
-    <div class="mb-3">
-      <span class="text-success mr-3"><strong>.text-success</strong> — Dark: <code>#00ff3d</code></span>
+    <div class="mb-3 tw:mb-4">
+      <span class="text-success mr-3 tw:mr-4"><strong>.text-success</strong> — Dark: <code>#00ff3d</code></span>
       <span class="text-danger"><strong>.text-danger</strong> — Dark: <code>#ff0019</code></span>
     </div>
   </Section>
 
   <Section title="Botón Circle dark" description=".btn-circle hover en dark: amarillo #f8ba02">
-    <div class="mb-3">
-      <button class="btn btn-circle mr-2"><i class="fa fa-pencil"></i></button>
-      <button class="btn btn-circle mr-2"><i class="fa fa-trash"></i></button>
-      <button class="btn btn-circle mr-2"><i class="fa fa-plus"></i></button>
+    <div class="mb-3 tw:mb-4">
+      <button class="btn btn-circle mr-2 tw:mr-2"><i class="fa fa-pencil"></i></button>
+      <button class="btn btn-circle mr-2 tw:mr-2"><i class="fa fa-trash"></i></button>
+      <button class="btn btn-circle mr-2 tw:mr-2"><i class="fa fa-plus"></i></button>
     </div>
     <p class="text-muted"><small>En dark mode, hover cambia a fondo amarillo <code>#f8ba02</code> con texto oscuro.</small></p>
   </Section>
@@ -112,7 +112,7 @@ import ThemeToggle from '../components/ThemeToggle.astro';
 
   <Section title="Componentes con light-dark()" description="Ejemplos de componentes que usan light-dark() inline">
     <div class="row">
-      <div class="col-md-6 mb-3">
+      <div class="col-md-6 mb-3 tw:mb-4">
         <div class="card">
           <div class="card-header">Card</div>
           <div class="card-body">
@@ -120,8 +120,8 @@ import ThemeToggle from '../components/ThemeToggle.astro';
           </div>
         </div>
       </div>
-      <div class="col-md-6 mb-3">
-        <input type="text" class="form-control mb-2" placeholder="Form control con light-dark" />
+      <div class="col-md-6 mb-3 tw:mb-4">
+        <input type="text" class="form-control mb-2 tw:mb-2" placeholder="Form control con light-dark" />
         <div class="list-group">
           <a href="#" class="list-group-item list-group-item-action">List group item</a>
           <a href="#" class="list-group-item list-group-item-action">Hover: light-dark(#f8f9fa, #351905)</a>

@@ -4,11 +4,11 @@ import Section from '../components/Section.astro';
 ---
 
 <Base title="Cards">
-  <h1 class="mb-4">Cards</h1>
+  <h1 class="mb-4 tw:mb-6">Cards</h1>
 
   <Section title="Card básica" description=".card con light-dark background y border">
     <div class="row">
-      <div class="col-md-4 mb-3">
+      <div class="col-md-4 mb-3 tw:mb-4">
         <div class="card">
           <div class="card-header">Card Header</div>
           <div class="card-body">
@@ -21,7 +21,7 @@ import Section from '../components/Section.astro';
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-3">
+      <div class="col-md-4 mb-3 tw:mb-4">
         <div class="card">
           <div class="card-body">
             <h5 class="card-title">Card sin header</h5>
@@ -33,7 +33,7 @@ import Section from '../components/Section.astro';
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-3">
+      <div class="col-md-4 mb-3 tw:mb-4">
         <div class="card">
           <div class="card-header">
             <strong>Header con background</strong>
@@ -51,7 +51,7 @@ import Section from '../components/Section.astro';
       <div class="card-header">Registros recientes</div>
       <div class="card-body-with-table">
         <div class="table-responsive">
-          <table class="table mb-0">
+          <table class="table mb-0 tw:mb-0">
             <thead>
               <tr>
                 <th>ID</th>
@@ -74,8 +74,8 @@ import Section from '../components/Section.astro';
     <div class="accordion" id="accordionExample">
       <div class="card">
         <div class="card-header" id="headingOne">
-          <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left" type="button">
+          <h2 class="mb-0 tw:mb-0">
+            <button class="btn btn-link btn-block text-left tw:text-left" type="button">
               Sección 1 — Información general
             </button>
           </h2>
@@ -86,8 +86,8 @@ import Section from '../components/Section.astro';
       </div>
       <div class="card">
         <div class="card-header" id="headingTwo">
-          <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left" type="button">
+          <h2 class="mb-0 tw:mb-0">
+            <button class="btn btn-link btn-block text-left tw:text-left" type="button">
               Sección 2 — Detalles técnicos
             </button>
           </h2>
@@ -98,8 +98,8 @@ import Section from '../components/Section.astro';
       </div>
       <div class="card">
         <div class="card-header" id="headingThree">
-          <h2 class="mb-0">
-            <button class="btn btn-link btn-block text-left" type="button">
+          <h2 class="mb-0 tw:mb-0">
+            <button class="btn btn-link btn-block text-left tw:text-left" type="button">
               Sección 3 — Configuración
             </button>
           </h2>
@@ -115,7 +115,7 @@ import Section from '../components/Section.astro';
     <div class="jumbotron">
       <h1 class="display-4">Bienvenido</h1>
       <p class="lead">Este es un jumbotron con fondo transparente y min-height de 150px.</p>
-      <hr class="my-4" />
+      <hr class="my-4 tw:my-6" />
       <p>Contenido adicional del jumbotron.</p>
       <a class="btn btn-primary btn-lg" href="#" role="button">Acción principal</a>
     </div>
