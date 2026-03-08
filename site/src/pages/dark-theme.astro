@@ -1,0 +1,132 @@
+---
+import Base from '../layouts/Base.astro';
+import Section from '../components/Section.astro';
+import ThemeToggle from '../components/ThemeToggle.astro';
+---
+
+<Base title="Dark Theme">
+  <h1 class="mb-4">Dark Theme</h1>
+
+  <ThemeToggle />
+
+  <Section title="Estrategia" description="El design system usa 3 mecanismos para dark mode">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h6>1. CSS light-dark()</h6>
+            <p class="card-text"><small>Función nativa inline. dart-sass la pasa tal cual.</small></p>
+            <code>color: light-dark(black, white);</code>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h6>2. @media prefers-color-scheme</h6>
+            <p class="card-text"><small>Bloque en <code>_dark-theme.scss</code> para overrides complejos.</small></p>
+            <code>@media (prefers-color-scheme: dark) &#123; ... &#125;</code>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h6>3. CSS custom properties</h6>
+            <p class="card-text"><small>Variables en :root que cambian con media queries.</small></p>
+            <code>var(--cyan-fmc), var(--orange-fmc)</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Gradiente .tituloright" description="Light: cyan gradient — Dark: amarillo → naranja">
+    <div class="mb-3">
+      <div class="tituloright">Texto tituloright</div>
+      <div style="clear:both;"></div>
+    </div>
+    <p class="text-muted"><small>En dark mode cambia a <code>linear-gradient(90deg, #f8ba02, var(--orange-fmc))</code> con text-shadow blanco.</small></p>
+  </Section>
+
+  <Section title="Botón Primary" description="Light: azul — Dark: naranja, hover cyan">
+    <div class="mb-3">
+      <button class="btn btn-primary mr-2">btn-primary</button>
+      <button class="btn btn-primary mr-2" disabled>btn-primary disabled</button>
+    </div>
+    <p class="text-muted"><small>Dark: <code>background-color: var(--orange-fmc)</code>, hover: <code>var(--cyan-fmc)</code>.</small></p>
+  </Section>
+
+  <Section title="Alertas dark" description="Colores adaptados con fondos semi-transparentes en dark mode">
+    <div class="alert alert-primary">
+      <strong>Primary:</strong> En dark: texto <code>#b8daff</code>, fondo <code>rgba(0,64,133,0.5)</code>.
+    </div>
+    <div class="alert alert-info">
+      <strong>Info:</strong> En dark: texto <code>#d1ecf1</code>, fondo <code>rgba(12,84,96,0.5)</code>.
+    </div>
+    <div class="alert alert-success">
+      <strong>Success:</strong> En dark: texto <code>#d4edda</code>, fondo <code>rgba(21,87,36,0.5)</code>.
+    </div>
+    <div class="alert alert-warning">
+      <strong>Warning:</strong> En dark: texto <code>#ffeeba</code>, fondo <code>rgba(117,88,0,0.5)</code>.
+    </div>
+    <div class="alert alert-danger">
+      <strong>Danger:</strong> En dark: texto <code>#f5c6cb</code>, fondo <code>rgba(114,28,36,0.5)</code>.
+    </div>
+  </Section>
+
+  <Section title="Textos de estado" description=".text-success y .text-danger en dark mode">
+    <div class="mb-3">
+      <span class="text-success mr-3"><strong>.text-success</strong> — Dark: <code>#00ff3d</code></span>
+      <span class="text-danger"><strong>.text-danger</strong> — Dark: <code>#ff0019</code></span>
+    </div>
+  </Section>
+
+  <Section title="Botón Circle dark" description=".btn-circle hover en dark: amarillo #f8ba02">
+    <div class="mb-3">
+      <button class="btn btn-circle mr-2"><i class="fa fa-pencil"></i></button>
+      <button class="btn btn-circle mr-2"><i class="fa fa-trash"></i></button>
+      <button class="btn btn-circle mr-2"><i class="fa fa-plus"></i></button>
+    </div>
+    <p class="text-muted"><small>En dark mode, hover cambia a fondo amarillo <code>#f8ba02</code> con texto oscuro.</small></p>
+  </Section>
+
+  <Section title="Modal body dark" description="En dark mode: background inherit (sin gradient)">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="modal-content" style="position:relative;">
+          <div class="modal-header">
+            <h5>Modal en dark mode</h5>
+            <button type="button" class="close"><span>&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <p>En dark mode el <code>.modal-body</code> usa <code>background: inherit</code> en vez del gradient blanco → gris.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-primary btn-sm">Aceptar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Componentes con light-dark()" description="Ejemplos de componentes que usan light-dark() inline">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <div class="card">
+          <div class="card-header">Card</div>
+          <div class="card-body">
+            <p>Fondo <code>light-dark(var(--light-bg), var(--dark-bg))</code></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <input type="text" class="form-control mb-2" placeholder="Form control con light-dark" />
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action">List group item</a>
+          <a href="#" class="list-group-item list-group-item-action">Hover: light-dark(#f8f9fa, #351905)</a>
+        </div>
+      </div>
+    </div>
+  </Section>
+</Base>

@@ -1,0 +1,123 @@
+---
+import Base from '../layouts/Base.astro';
+import Section from '../components/Section.astro';
+---
+
+<Base title="Navigation">
+  <h1 class="mb-4">Navigation</h1>
+
+  <Section title="Navbar dark" description=".navbar-dark con nav-links, active state con fondo negro">
+    <nav class="navbar navbar-expand navbar-dark bg-fmc1 rounded mb-3">
+      <a class="navbar-brand" href="#">Brand</a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Proyectos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Reportes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Config</a>
+        </li>
+      </ul>
+    </nav>
+    <p class="text-muted"><small>Active: fondo <code>rgba(0,0,0,0.75)</code> + borde <code>--border-color</code>. Hover: opacity 1.</small></p>
+  </Section>
+
+  <Section title="Navbar con bg-fmc2" description="Otra variante de gradiente">
+    <nav class="navbar navbar-expand navbar-dark bg-fmc2 rounded mb-3">
+      <a class="navbar-brand" href="#">FMCamps</a>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Usuarios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ayuda</a>
+        </li>
+      </ul>
+    </nav>
+  </Section>
+
+  <Section title="Navbar toggler" description=".navbar-toggler (1.8rem, sin borde)">
+    <nav class="navbar navbar-dark bg-fmc3 rounded mb-3">
+      <a class="navbar-brand" href="#">Mobile Nav</a>
+      <button class="navbar-toggler" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+    <p class="text-muted"><small>El toggler tiene <code>font-size: 1.8rem</code>, sin borde, padding 0.</small></p>
+  </Section>
+
+  <Section title="Nav Tabs" description=".nav-tabs con border-bottom naranja en active">
+    <ul class="nav nav-tabs mb-3">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">General</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Detalles</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Historial</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Deshabilitado</a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div class="p-3 rounded" style="border:1px solid var(--border-color);">
+        <p>Contenido del tab activo. El <code>.tab-content</code> tiene <code>margin-top: 10px</code>.</p>
+        <p>Los tabs activos tienen <code>border-bottom: var(--orange-fmc)</code>. El hover muestra <code>#ffd2a1</code>.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Dropdown" description=".dropdown-menu con backdrop-blur y sombra naranja">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <h6>Dropdown menu (estático)</h6>
+        <div class="dropdown-menu d-block position-relative" style="max-width:250px;">
+          <a class="dropdown-item" href="#">Acción 1</a>
+          <a class="dropdown-item" href="#">Acción 2</a>
+          <a class="dropdown-item active" href="#">Activo (naranja)</a>
+          <div class="dropdown-divider"></div>
+          <span class="dropdown-item-text">Texto informativo</span>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <h6>Propiedades del dropdown</h6>
+        <ul>
+          <li><code>background: rgba(0,0,0,0.75)</code></li>
+          <li><code>backdrop-filter: blur(3px)</code></li>
+          <li><code>box-shadow</code> con naranja 50%</li>
+          <li>Active: <code>#ed6324</code></li>
+          <li>Hover: <code>#138dc2</code> (cyan)</li>
+        </ul>
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Pagination" description=".page-link con fondo naranja y borde dorado">
+    <nav>
+      <ul class="pagination">
+        <li class="page-item">
+          <a class="page-link" href="#">&laquo;</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item active"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link" href="#">5</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">&raquo;</a>
+        </li>
+      </ul>
+    </nav>
+    <p class="text-muted"><small>Background: <code>#ac5802</code>, borde: <code>#d18e47</code>. Hover: <code>#dd7102</code>.</small></p>
+  </Section>
+</Base>

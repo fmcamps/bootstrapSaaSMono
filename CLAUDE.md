@@ -21,10 +21,11 @@ This is a **customized fork of Bootstrap 4.6.2** for the FMCamps SaaS Mono proje
 | Lint JS                                      | `npm run js-lint`       |
 | Run JS tests                                 | `npm run js-test`       |
 | Run single test suite (Karma)                | `npm run js-test-karma` |
-| Full test suite (lint + dist + tests + docs) | `npm test`              |
-| Watch mode (CSS + JS + docs server)          | `npm start`             |
-| Build docs (Hugo)                            | `npm run docs-build`    |
-| Serve docs locally (port 9001)               | `npm run docs-serve`    |
+| Full test suite (lint + dist + tests)        | `npm test`              |
+| Watch mode (CSS + JS)                        | `npm start`             |
+| Kitchen sink dev server (Astro, port 4321)   | `npm run site-dev`      |
+| Kitchen sink build                           | `npm run site-build`    |
+| Kitchen sink preview                         | `npm run site-preview`  |
 
 ## Architecture
 

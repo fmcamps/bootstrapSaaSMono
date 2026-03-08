@@ -1,0 +1,183 @@
+---
+import Base from '../layouts/Base.astro';
+import Section from '../components/Section.astro';
+---
+
+<Base title="Tables">
+  <h1 class="mb-4">Tables</h1>
+
+  <Section title="Tabla básica" description=".table con light-dark bg, radius y shadow sutil">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Juan Pérez</td>
+          <td><a href="#">juan@example.com</a></td>
+          <td><span class="badge badge-success">Activo</span></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>María García</td>
+          <td><a href="#">maria@example.com</a></td>
+          <td><span class="badge badge-warning">Pendiente</span></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Carlos López</td>
+          <td><a href="#">carlos@example.com</a></td>
+          <td><span class="badge badge-danger">Inactivo</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </Section>
+
+  <Section title="Tabla striped" description=".table-striped con light-dark en filas alternas">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Stock</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Widget A</td><td>$25.00</td><td>150</td></tr>
+        <tr><td>2</td><td>Widget B</td><td>$42.50</td><td>89</td></tr>
+        <tr><td>3</td><td>Widget C</td><td>$18.75</td><td>230</td></tr>
+        <tr><td>4</td><td>Widget D</td><td>$67.00</td><td>45</td></tr>
+        <tr><td>5</td><td>Widget E</td><td>$33.25</td><td>112</td></tr>
+      </tbody>
+    </table>
+  </Section>
+
+  <Section title="Tabla bordered" description=".table-bordered con bordes en todas las celdas">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Campo</th>
+          <th>Valor anterior</th>
+          <th>Valor nuevo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Nombre</td><td>Juan</td><td>Juan Carlos</td></tr>
+        <tr><td>Email</td><td>juan@old.com</td><td>juan@new.com</td></tr>
+        <tr><td>Teléfono</td><td>555-0100</td><td>555-0200</td></tr>
+      </tbody>
+    </table>
+  </Section>
+
+  <Section title="Tabla con hover + showTools" description="Hover sobre filas muestra herramientas (.showTools → inline-flex)">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Registro A</td>
+          <td>Descripción del registro</td>
+          <td>
+            <span class="showTools">
+              <button class="btn btn-circle btn-sm"><i class="fa fa-pencil"></i></button>
+              <button class="btn btn-circle btn-sm"><i class="fa fa-trash"></i></button>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>Registro B</td>
+          <td>Otra descripción</td>
+          <td>
+            <span class="showTools">
+              <button class="btn btn-circle btn-sm"><i class="fa fa-pencil"></i></button>
+              <button class="btn btn-circle btn-sm"><i class="fa fa-trash"></i></button>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>Registro C</td>
+          <td>Tercera descripción</td>
+          <td>
+            <span class="showTools">
+              <button class="btn btn-circle btn-sm"><i class="fa fa-pencil"></i></button>
+              <button class="btn btn-circle btn-sm"><i class="fa fa-trash"></i></button>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="text-muted"><small>Pasa el mouse sobre las filas para ver los botones de acción.</small></p>
+  </Section>
+
+  <Section title="Tabla transparente" description=".table.transparente — fondo transparente">
+    <div class="bg-fmc2 p-3 rounded">
+      <table class="table transparente text-white">
+        <thead>
+          <tr>
+            <th>Columna 1</th>
+            <th>Columna 2</th>
+            <th>Columna 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Dato A</td><td>Dato B</td><td>Dato C</td></tr>
+          <tr><td>Dato D</td><td>Dato E</td><td>Dato F</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </Section>
+
+  <Section title="Tabla con bg-fmc2 header" description=".table.bg-fmc2 > thead hover → texto blanco">
+    <table class="table bg-fmc2">
+      <thead>
+        <tr>
+          <th>Mes</th>
+          <th>Ingresos</th>
+          <th>Gastos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Enero</td><td>$10,000</td><td>$7,500</td></tr>
+        <tr><td>Febrero</td><td>$12,000</td><td>$8,200</td></tr>
+        <tr><td>Marzo</td><td>$11,500</td><td>$7,800</td></tr>
+      </tbody>
+    </table>
+  </Section>
+
+  <Section title="Tabla en card" description=".card-body-with-table — tabla dentro de card sin padding">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="mb-0">Tabla dentro de card</h5>
+      </div>
+      <div class="card-body-with-table">
+        <div class="table-responsive">
+          <table class="table mb-0">
+            <thead>
+              <tr>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>2</td><td>3</td></tr>
+              <tr><td>4</td><td>5</td><td>6</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </Section>
+</Base>

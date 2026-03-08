@@ -1,0 +1,36 @@
+---
+// ThemeToggle — Adds a button to force dark/light mode for testing
+---
+
+<div class="mb-4 p-3 rounded" style="border:1px solid var(--border-color);">
+  <strong>Theme Toggle:</strong>
+  <button id="theme-toggle" class="btn btn-sm btn-outline-secondary ml-2">
+    <i class="fa fa-moon-o"></i> Toggle Dark Mode
+  </button>
+  <small class="text-muted ml-2" id="theme-status">Auto (sigue preferencia del sistema)</small>
+</div>
+
+<script>
+  const btn = document.getElementById('theme-toggle');
+  const status = document.getElementById('theme-status');
+  let mode = 'auto';
+
+  if (btn && status) {
+    btn.addEventListener('click', () => {
+      const html = document.documentElement;
+      if (mode === 'auto') {
+        html.style.colorScheme = 'dark';
+        mode = 'dark';
+        status.textContent = 'Forzado: Dark';
+      } else if (mode === 'dark') {
+        html.style.colorScheme = 'light';
+        mode = 'light';
+        status.textContent = 'Forzado: Light';
+      } else {
+        html.style.colorScheme = 'light dark';
+        mode = 'auto';
+        status.textContent = 'Auto (sigue preferencia del sistema)';
+      }
+    });
+  }
+</script>

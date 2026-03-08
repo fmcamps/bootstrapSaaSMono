@@ -1,0 +1,119 @@
+---
+import Base from '../layouts/Base.astro';
+import Section from '../components/Section.astro';
+---
+
+<Base title="Feedback">
+  <h1 class="mb-4">Feedback</h1>
+
+  <Section title="Toast FMC Info" description=".toast-fmc-info — toast informativo con light-dark">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <div class="toast-fmc-info">
+          <div class="toast-header">
+            <span class="toast-fmc-icon mr-2"><i class="fa fa-info-circle"></i></span>
+            <strong class="mr-auto">Información</strong>
+            <span class="toast-fmc-wait badge">5s</span>
+            <button type="button" class="ml-2 close"><span>&times;</span></button>
+          </div>
+          <div class="toast-body">
+            Registro guardado exitosamente. Los cambios están disponibles.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <div class="toast-fmc-info">
+          <div class="toast-header">
+            <span class="toast-fmc-icon mr-2"><i class="fa fa-exclamation-triangle"></i></span>
+            <strong class="mr-auto">Advertencia</strong>
+            <span class="toast-fmc-wait badge">3s</span>
+            <button type="button" class="ml-2 close"><span>&times;</span></button>
+          </div>
+          <div class="toast-body">
+            La sesión expirará en 5 minutos. Guarda tu trabajo.
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="text-muted mt-2"><small>Borde cyan, header con fondo sutil, sombra light-dark. El badge <code>.toast-fmc-wait</code> muestra el countdown.</small></p>
+  </Section>
+
+  <Section title="Diálogos FMC" description=".dialog-fmc-success/error/warning con iconos y colores light-dark">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="dialog-fmc-success">
+              <span class="dialog-fmc-icon"><i class="fa fa-check-circle"></i></span>
+              <strong>Operación exitosa</strong>
+              <span class="dialog-fmc-wait">Cerrando en <strong>3</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="dialog-fmc-error">
+              <span class="dialog-fmc-icon"><i class="fa fa-times-circle"></i></span>
+              <strong>Error al procesar</strong>
+              <span class="dialog-fmc-wait">Cerrando en <strong>5</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="dialog-fmc-warning">
+              <span class="dialog-fmc-icon"><i class="fa fa-exclamation-triangle"></i></span>
+              <strong>Acción irreversible</strong>
+              <span class="dialog-fmc-wait">Cerrando en <strong>4</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Spinners" description=".fa-spin — púrpura por defecto, blanco en .btn y .modal-footer">
+    <div class="row align-items-center">
+      <div class="col-md-3 mb-3 text-center">
+        <i class="fa fa-spinner fa-spin fa-2x"></i>
+        <p class="mt-2"><small>Default (púrpura <code>#5a5ae4</code>)</small></p>
+      </div>
+      <div class="col-md-3 mb-3 text-center">
+        <button class="btn btn-primary">
+          <i class="fa fa-spinner fa-spin"></i> Cargando...
+        </button>
+        <p class="mt-2"><small>En .btn (blanco)</small></p>
+      </div>
+      <div class="col-md-3 mb-3 text-center">
+        <i class="fa fa-circle-o-notch fa-spin fa-2x" style="color:#5a5ae4;"></i>
+        <p class="mt-2"><small>circle-o-notch</small></p>
+      </div>
+      <div class="col-md-3 mb-3 text-center">
+        <i class="fa fa-refresh fa-spin fa-2x" style="color:#5a5ae4;"></i>
+        <p class="mt-2"><small>refresh</small></p>
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Badges" description=".badge-orange y .badge.badge-pill">
+    <div class="mb-3">
+      <span class="badge badge-orange mr-2">Orange</span>
+      <span class="badge badge-primary mr-2">Primary</span>
+      <span class="badge badge-success mr-2">Success</span>
+      <span class="badge badge-danger mr-2">Danger</span>
+      <span class="badge badge-warning mr-2">Warning</span>
+      <span class="badge badge-info mr-2">Info</span>
+    </div>
+    <div class="mb-3">
+      <span class="badge badge-pill badge-orange mr-2">Pill Orange</span>
+      <span class="badge badge-pill badge-primary mr-2">Pill Primary</span>
+      <span class="badge badge-pill badge-success mr-2">Pill Success</span>
+      <span class="badge badge-pill badge-danger mr-2">Pill Danger</span>
+    </div>
+    <p class="text-muted"><small><code>.badge-orange</code> usa <code>--orange-fmc</code> como background con texto blanco.</small></p>
+  </Section>
+</Base>

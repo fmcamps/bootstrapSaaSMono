@@ -14,6 +14,8 @@ Documentacion del sistema de diseno visual basado en Bootstrap 4.6.2 + FMCAMPS c
 | [dark-theme/](dark-theme/) | Estrategia light/dark, variables CSS, overrides |
 | [technical-debt/](technical-debt/) | Deuda tecnica, mejoras pendientes, aspiraciones |
 | [changelog/](changelog/) | Historial de cambios relevantes al design system |
+| [refactoring/](refactoring/) | PRDs de refactoring (migracion Astro, etc.) |
+| [reference-css/](reference-css/) | CSS de referencia del proyecto SaaSMono |
 
 ## Quick Start
 
@@ -21,8 +23,19 @@ Documentacion del sistema de diseno visual basado en Bootstrap 4.6.2 + FMCAMPS c
 # Compilar CSS
 npm run css
 
-# Compilar + watch
-npm start
+# Kitchen sink (visualizar componentes)
+npm run site-dev
+# Abre http://localhost:4321
 ```
 
-Pipeline: `scss/fmcamps/` --> dart-sass --> autoprefixer --> clean-css --> `dist/css/fmcamps.css`
+## Kitchen Sink (Astro)
+
+El sitio Astro en `site/` es un playground visual que muestra todos los componentes del design system con `fmcamps.css` cargado. Incluye 12 paginas: tokens, buttons, forms, tables, cards, modals, alerts, navigation, feedback, media, dark-theme, y un toggle para forzar light/dark mode.
+
+```bash
+npm run site-dev      # Dev server en puerto 4321
+npm run site-build    # Build estatico en site/dist/
+npm run site-preview  # Preview del build
+```
+
+Pipeline CSS: `scss/fmcamps/` --> dart-sass --> autoprefixer --> clean-css --> `dist/css/fmcamps.css`

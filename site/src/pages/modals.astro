@@ -1,0 +1,110 @@
+---
+import Base from '../layouts/Base.astro';
+import Section from '../components/Section.astro';
+---
+
+<Base title="Modals">
+  <h1 class="mb-4">Modals</h1>
+  <p class="text-muted mb-4">Los modales se muestran como bloques estáticos (sin JavaScript). En producción se activan con jQuery/Bootstrap JS.</p>
+
+  <Section title="Modal completo" description=".modal-content con borde cyan/orange, header, body gradient, footer">
+    <div class="row">
+      <div class="col-md-8 col-lg-6">
+        <div class="modal-content mb-3" style="position:relative;">
+          <div class="modal-header">
+            <h3>Título del modal</h3>
+            <button type="button" class="close"><span>&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <p>Contenido del modal con fondo gradient (blanco → gris claro).</p>
+            <p>El <code>.modal-content</code> tiene borde 2px <code>light-dark(cyan, orange)</code> y border-radius 0.75rem.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-sm">Guardar</button>
+            <button type="button" class="btn btn-secondary btn-sm">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Modal con subtítulo" description=".modal-header > h3 + h4 (gris #666)">
+    <div class="row">
+      <div class="col-md-8 col-lg-6">
+        <div class="modal-content mb-3" style="position:relative;">
+          <div class="modal-header">
+            <div>
+              <h3>Crear nuevo registro</h3>
+              <h4>Complete los campos requeridos</h4>
+            </div>
+            <button type="button" class="close"><span>&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>Nombre</label>
+              <input type="text" class="form-control" placeholder="Ingrese nombre" />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" class="form-control" placeholder="email@ejemplo.com" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="accept-button btn btn-primary">Crear</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Modal con tabla" description=".modal-body-with-table — tabla dentro de modal sin padding">
+    <div class="row">
+      <div class="col-md-8 col-lg-6">
+        <div class="modal-content mb-3" style="position:relative;">
+          <div class="modal-header">
+            <h3>Listado de items</h3>
+            <button type="button" class="close"><span>&times;</span></button>
+          </div>
+          <div class="modal-body-with-table">
+            <div class="table-responsive">
+              <table class="table mb-0">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Item</th>
+                    <th>Cantidad</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>1</td><td>Widget A</td><td>10</td></tr>
+                  <tr><td>2</td><td>Widget B</td><td>25</td></tr>
+                  <tr><td>3</td><td>Widget C</td><td>5</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-sm">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Botón Close" description="button.close con hover light-dark">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="p-4 rounded" style="border:1px solid var(--border-color);position:relative;">
+          <p>El botón close cambia de fondo en hover:</p>
+          <ul>
+            <li>Light: <code>lightgray</code></li>
+            <li>Dark: <code>#23272b</code></li>
+          </ul>
+          <button type="button" class="close" style="position:absolute;top:10px;right:15px;">
+            <span>&times;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </Section>
+</Base>

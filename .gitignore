@@ -1,8 +1,6 @@
-# Ignore docs files
-/_site/
-# Hugo files
-/resources/
-/.hugo_build.lock
+# Astro site
+/site/node_modules/
+/site/dist/
 
 # Numerous always-ignore extensions
 *.diff

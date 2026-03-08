@@ -1,0 +1,68 @@
+---
+import Base from '../layouts/Base.astro';
+import Section from '../components/Section.astro';
+---
+
+<Base title="Alerts">
+  <h1 class="mb-4">Alerts</h1>
+
+  <Section title="Alertas con border-left" description="Cada tipo tiene border: 0 + border-left 3px colored">
+    <div class="alert alert-primary" role="alert">
+      <strong>Primary:</strong> Alerta informativa principal con borde izquierdo <code>#007bff</code>.
+    </div>
+    <div class="alert alert-info" role="alert">
+      <strong>Info:</strong> Alerta informativa con borde izquierdo <code>#007bff</code>.
+    </div>
+    <div class="alert alert-success" role="alert">
+      <strong>Success:</strong> Operación exitosa con borde izquierdo <code>#28a745</code>.
+    </div>
+    <div class="alert alert-warning" role="alert">
+      <strong>Warning:</strong> Advertencia con borde izquierdo <code>#daa300</code>.
+    </div>
+    <div class="alert alert-danger" role="alert">
+      <strong>Danger:</strong> Error o acción destructiva con borde izquierdo <code>#ca0014</code>.
+    </div>
+  </Section>
+
+  <Section title="Alertas con contenido rico" description="Alertas con párrafos, links, y listas">
+    <div class="alert alert-info" role="alert">
+      <h4 class="alert-heading">Información importante</h4>
+      <p>Este es un mensaje más largo con formato enriquecido. Las alertas FMCamps eliminan el borde completo (<code>border: 0</code>) y lo reemplazan con un <code>border-left</code> de 3px.</p>
+      <hr />
+      <p class="mb-0">Puedes incluir <a href="#" class="alert-link">links de alerta</a> dentro del contenido.</p>
+    </div>
+
+    <div class="alert alert-danger" role="alert">
+      <h4 class="alert-heading">Error de validación</h4>
+      <p>Los siguientes campos tienen errores:</p>
+      <ul>
+        <li>Nombre: campo obligatorio</li>
+        <li>Email: formato inválido</li>
+        <li>Teléfono: debe contener solo números</li>
+      </ul>
+    </div>
+  </Section>
+
+  <Section title="Alertas dismissible" description="Con botón close (sin JS, estático)">
+    <div class="alert alert-warning alert-dismissible" role="alert">
+      <button type="button" class="close"><span>&times;</span></button>
+      <strong>Atención:</strong> Esta alerta tiene un botón de cierre (requiere JS para funcionar).
+    </div>
+    <div class="alert alert-success alert-dismissible" role="alert">
+      <button type="button" class="close"><span>&times;</span></button>
+      <strong>Éxito:</strong> Los cambios se guardaron correctamente.
+    </div>
+  </Section>
+
+  <Section title="Bootstrap standard" description="Alertas secondary, light, dark">
+    <div class="alert alert-secondary" role="alert">
+      <strong>Secondary:</strong> Alerta con estilo secundario (sin border-left custom de FMCamps).
+    </div>
+    <div class="alert alert-light" role="alert">
+      <strong>Light:</strong> Alerta con fondo claro.
+    </div>
+    <div class="alert alert-dark" role="alert">
+      <strong>Dark:</strong> Alerta con fondo oscuro.
+    </div>
+  </Section>
+</Base>

@@ -1,0 +1,150 @@
+---
+import Base from '../layouts/Base.astro';
+import Section from '../components/Section.astro';
+---
+
+<Base title="Forms">
+  <h1 class="mb-4">Forms</h1>
+
+  <Section title="Form Control" description=".form-control con light-dark, cyan border-left, pulse animation en focus">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label>Input normal</label>
+        <input type="text" class="form-control" placeholder="Escribe algo..." />
+      </div>
+      <div class="col-md-6 mb-3">
+        <label>Input con valor</label>
+        <input type="text" class="form-control" value="Texto de ejemplo" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label>Input disabled</label>
+        <input type="text" class="form-control" disabled value="No editable" />
+      </div>
+      <div class="col-md-6 mb-3">
+        <label>Input readonly nativo</label>
+        <input type="text" class="form-control" readonly value="Solo lectura" />
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Readonly State" description=".form-control.readonly-state — borde gris, cursor not-allowed">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label>Campo readonly-state</label>
+        <input type="text" class="form-control readonly-state" value="No se puede editar" readonly />
+      </div>
+      <div class="col-md-6 mb-3">
+        <label>Campo normal para comparar</label>
+        <input type="text" class="form-control" value="Se puede editar" />
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Variantes" description=".form-control-left, .form-control-color">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label>form-control-left (forzar borde cyan izquierdo)</label>
+        <input type="text" class="form-control form-control-left" placeholder="Con borde izquierdo" />
+      </div>
+      <div class="col-md-6 mb-3">
+        <label>form-control-color</label>
+        <input type="text" class="form-control form-control-color" placeholder="Color light-dark" />
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Custom Switch" description=".custom-switch con toggle cyan">
+    <div class="custom-control custom-switch mb-3">
+      <input type="checkbox" class="custom-control-input" id="switch1" />
+      <label class="custom-control-label" for="switch1">Switch apagado</label>
+    </div>
+    <div class="custom-control custom-switch mb-3">
+      <input type="checkbox" class="custom-control-input" id="switch2" checked />
+      <label class="custom-control-label" for="switch2">Switch encendido</label>
+    </div>
+  </Section>
+
+  <Section title="Checkboxes y Radios" description="Custom controls con checked state naranja">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="custom-control custom-checkbox mb-2">
+          <input type="checkbox" class="custom-control-input" id="check1" checked />
+          <label class="custom-control-label" for="check1">Checkbox marcado</label>
+        </div>
+        <div class="custom-control custom-checkbox mb-2">
+          <input type="checkbox" class="custom-control-input" id="check2" />
+          <label class="custom-control-label" for="check2">Checkbox desmarcado</label>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="custom-control custom-radio mb-2">
+          <input type="radio" class="custom-control-input" id="radio1" name="radioGroup" checked />
+          <label class="custom-control-label" for="radio1">Opción A</label>
+        </div>
+        <div class="custom-control custom-radio mb-2">
+          <input type="radio" class="custom-control-input" id="radio2" name="radioGroup" />
+          <label class="custom-control-label" for="radio2">Opción B</label>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Validación" description=".invalid, .input-error, .error-message">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <label>Campo con .invalid</label>
+        <input type="text" class="form-control invalid" value="Dato inválido" />
+      </div>
+      <div class="col-md-4 mb-3">
+        <label>Campo con .input-error</label>
+        <input type="text" class="form-control input-error" value="Error" />
+      </div>
+      <div class="col-md-4 mb-3">
+        <label>Error message</label>
+        <input type="text" class="form-control input-error" value="Algo salió mal" />
+        <span class="error-message" style="display:block;">Este campo es obligatorio</span>
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Filtro único" description=".filtrounico — fondo antiquewhite/dark brown (light-dark)">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label>Input con .filtrounico</label>
+        <input type="text" class="form-control filtrounico" placeholder="Filtro especial" />
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Style ID" description=".styleId (20px, sans-serif) y .styleIdBottoms">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <span class="styleId">ID: 12345</span>
+        <div class="styleIdBottoms">
+          <small class="text-muted">Subtexto debajo del ID</small>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Textarea" description="textarea con overflow-y hidden y resize none">
+    <div class="row">
+      <div class="col-md-8 mb-3">
+        <label>Textarea auto-resize</label>
+        <textarea class="form-control" rows="3" placeholder="Este textarea no permite resize manual..."></textarea>
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Pulse Animation" description="@keyframes pulse-border en focus del form-control">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label>Haz click para ver la animación pulse-border</label>
+        <input type="text" class="form-control" placeholder="Click aquí y observa el borde izquierdo..." />
+      </div>
+    </div>
+    <p class="text-muted"><small>El borde izquierdo pulsa de 4px a 6px cuando el input tiene focus.</small></p>
+  </Section>
+</Base>

@@ -1,0 +1,123 @@
+---
+import Base from '../layouts/Base.astro';
+import Section from '../components/Section.astro';
+---
+
+<Base title="Cards">
+  <h1 class="mb-4">Cards</h1>
+
+  <Section title="Card básica" description=".card con light-dark background y border">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-header">Card Header</div>
+          <div class="card-body">
+            <h5 class="card-title">Título de la card</h5>
+            <p class="card-text">Contenido de ejemplo. La card usa <code>light-dark()</code> para fondo y borde.</p>
+            <a href="#" class="btn btn-primary btn-sm">Acción</a>
+          </div>
+          <div class="card-footer text-muted">
+            Card footer con border-radius 12px
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card sin header</h5>
+            <p class="card-text">Solo body y footer.</p>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-success btn-sm">Guardar</button>
+            <button class="btn btn-link btn-sm">Cancelar</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-header">
+            <strong>Header con background</strong>
+          </div>
+          <div class="card-body">
+            <p class="card-text">El <code>.card-header</code> usa <code>light-dark(rgba(0,0,0,0.03), black)</code>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Card con tabla" description=".card-body-with-table — sin padding, con scroll">
+    <div class="card">
+      <div class="card-header">Registros recientes</div>
+      <div class="card-body-with-table">
+        <div class="table-responsive">
+          <table class="table mb-0">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>001</td><td>Proyecto Alpha</td><td><span class="badge badge-success">Activo</span></td></tr>
+              <tr><td>002</td><td>Proyecto Beta</td><td><span class="badge badge-warning">Pendiente</span></td></tr>
+              <tr><td>003</td><td>Proyecto Gamma</td><td><span class="badge badge-danger">Cancelado</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Accordion" description=".accordion > .card con overflow inherit">
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left" type="button">
+              Sección 1 — Información general
+            </button>
+          </h2>
+        </div>
+        <div class="card-body">
+          <p>Contenido de la primera sección del accordion. El <code>.accordion > .card</code> tiene <code>overflow: inherit</code>.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left" type="button">
+              Sección 2 — Detalles técnicos
+            </button>
+          </h2>
+        </div>
+        <div class="card-body">
+          <p>Contenido de la segunda sección. Sin JavaScript, ambas secciones se muestran abiertas.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h2 class="mb-0">
+            <button class="btn btn-link btn-block text-left" type="button">
+              Sección 3 — Configuración
+            </button>
+          </h2>
+        </div>
+        <div class="card-body">
+          <p>Tercera sección del accordion.</p>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section title="Jumbotron" description=".jumbotron — min-height 150px, fondo transparente">
+    <div class="jumbotron">
+      <h1 class="display-4">Bienvenido</h1>
+      <p class="lead">Este es un jumbotron con fondo transparente y min-height de 150px.</p>
+      <hr class="my-4" />
+      <p>Contenido adicional del jumbotron.</p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Acción principal</a>
+    </div>
+  </Section>
+</Base>

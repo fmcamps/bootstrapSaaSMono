@@ -1,0 +1,15 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+const id = title.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '');
+---
+
+<section id={id} class="mb-5">
+  <h2 class="mb-1">{title}</h2>
+  {description && <p class="text-muted mb-3">{description}</p>}
+  <slot />
+</section>
