@@ -41,7 +41,7 @@ Hallazgos identificados durante la sincronizacion CSS a SaaSMono. Verificados co
 - **Fix:** `linear-gradient(light-dark(#FFF, #1a1a1a), light-dark(#e9e5e5, #2d2d2d))` con fallback estatico
 - **Impacto:** Modal body ahora tiene gradiente oscuro en dark mode
 
-### MEDIUM — 4 corregidos, 1 diferido
+### MEDIUM — ~~5/5 corregidos~~
 
 #### M-1: `.btn-orange` dead code eliminado
 
@@ -64,11 +64,12 @@ Hallazgos identificados durante la sincronizacion CSS a SaaSMono. Verificados co
 - **Fix:** Simplificado a `color: white`
 - **Impacto:** Ninguno visual — el dropdown siempre tiene fondo oscuro (`rgba(0,0,0,0.75)`), texto blanco es correcto en ambos modos
 
-#### M-2: `textarea` global — DIFERIDO
+#### M-2: `textarea` global — RESUELTO
 
 - **Archivo:** `_forms.scss:131`
 - **Hallazgo:** `textarea { overflow-y: hidden; resize: none }` aplica globalmente a todos los textareas
-- **Accion:** Requiere coordinacion con SaaSMono para agregar clase `.auto-resize` a textareas existentes antes de cambiar el selector
+- **Fix:** Cambiado selector a `textarea.auto-resize`. SaaSMono ya agrego `.auto-resize` a los 4 textareas (commit `43ad05ad`)
+- **Impacto:** Textareas sin `.auto-resize` ahora mantienen comportamiento nativo del browser (scrollbar + resize handle). Verificado con 48 visual regression tests (0 diferencias)
 
 #### M-5: `--dark-color` nombre confuso — RESUELTO
 
@@ -121,7 +122,7 @@ Hallazgos identificados durante la sincronizacion CSS a SaaSMono. Verificados co
 
 ## Resumen de archivos modificados
 
-### SCSS (10 archivos — 6 originales + 4 del split M-5)
+### SCSS (11 archivos — 7 originales + 4 del split M-5)
 
 | Archivo | Cambio | Lineas |
 | --- | --- | --- |
@@ -131,6 +132,7 @@ Hallazgos identificados durante la sincronizacion CSS a SaaSMono. Verificados co
 | `scss/fmcamps/_buttons.scss` | `.btn-orange` dead code eliminado | -4 |
 | `scss/fmcamps/_scrollbars.scss` | `*:hover` scrollbar eliminado | -5 |
 | `scss/fmcamps/_dropdowns.scss` | `light-dark(white,white)` → `white` | -1 |
+| `scss/fmcamps/_forms.scss` | `textarea` → `textarea.auto-resize` | 1 linea |
 | `scss/fmcamps/_responsive.scss` | 5 `@viewport` eliminados | -20 |
 
 ### CSS compilado (2 archivos)
@@ -156,3 +158,4 @@ Ver tabla de alineacion Tailwind arriba.
 2. Verificar modal body — gradiente oscuro en dark mode (antes era blanco)
 3. Verificar filas `text-warning` en tablas — celdas con fondo amarillo
 4. Verificar scrollbars — hover naranja en webkit (comportamiento sin cambio)
+5. Verificar textareas con `.auto-resize` — sin scrollbar, sin resize handle (comportamiento sin cambio)
