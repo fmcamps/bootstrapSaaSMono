@@ -41,8 +41,11 @@ Thumbs.db
 /js/coverage/
 /node_modules/
 
-# Playwright screenshots
+# Playwright
 *.png
+!tests/visual/__screenshots__/**/*.png
+/test-results/
+/playwright-report/
 playwright-mcp/
 
 desktop.ini

@@ -35,14 +35,14 @@ Registro de deuda tecnica conocida y mejoras aspiracionales para el design syste
 ### Corto plazo
 
 - [x] ~~Completar remocion de `!important` con testing visual~~ — 24 quick wins removidos, 80 restantes justificados
-- [ ] Actualizar browserslist (`npx update-browserslist-db@latest`)
+- [x] ~~Actualizar browserslist~~ — `caniuse-lite` ya en version mas reciente (1.0.30001777)
 - [x] ~~Documentar cada componente~~ — cubierto por el kitchen sink Astro en `site/`
 
 ### Mediano plazo
 
 - [ ] Migrar Font Awesome 4.7.0 a Font Awesome 6 (o a iconos SVG)
 - [ ] Consolidar fallbacks light-dark: eliminar fallbacks estaticos cuando browsers legacy dejen de ser necesarios
-- [ ] Crear visual regression tests (screenshots antes/despues de cambios)
+- [x] ~~Crear visual regression tests~~ — 48 baselines (12 paginas x desktop/mobile x light/dark) con Playwright + slash command `/test-visual` para inspeccion MCP
 
 ### Largo plazo
 

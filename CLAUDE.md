@@ -10,22 +10,24 @@ This is a **customized fork of Bootstrap 4.6.2** for the FMCamps SaaS Mono proje
 
 ## Key Commands
 
-| Task                                         | Command                 |
-| -------------------------------------------- | ----------------------- |
-| Build everything (CSS + JS)                  | `npm run dist`          |
-| Build CSS only                               | `npm run css`           |
-| Compile SCSS to CSS                          | `npm run css-compile`   |
-| Build JS only                                | `npm run js`            |
-| Lint all                                     | `npm run lint`          |
-| Lint CSS/SCSS                                | `npm run css-lint`      |
-| Lint JS                                      | `npm run js-lint`       |
-| Run JS tests                                 | `npm run js-test`       |
-| Run single test suite (Karma)                | `npm run js-test-karma` |
-| Full test suite (lint + dist + tests)        | `npm test`              |
-| Watch mode (CSS + JS)                        | `npm start`             |
-| Kitchen sink dev server (Astro, port 4321)   | `npm run site-dev`      |
-| Kitchen sink build                           | `npm run site-build`    |
-| Kitchen sink preview                         | `npm run site-preview`  |
+| Task                                         | Command                      |
+| -------------------------------------------- | ---------------------------- |
+| Build everything (CSS + JS)                  | `npm run dist`               |
+| Build CSS only                               | `npm run css`                |
+| Compile SCSS to CSS                          | `npm run css-compile`        |
+| Build JS only                                | `npm run js`                 |
+| Lint all                                     | `npm run lint`               |
+| Lint CSS/SCSS                                | `npm run css-lint`           |
+| Lint JS                                      | `npm run js-lint`            |
+| Run JS tests                                 | `npm run js-test`            |
+| Run single test suite (Karma)                | `npm run js-test-karma`      |
+| Full test suite (lint + dist + tests)        | `npm test`                   |
+| Watch mode (CSS + JS)                        | `npm start`                  |
+| Kitchen sink dev server (Astro, port 4321)   | `npm run site-dev`           |
+| Kitchen sink build                           | `npm run site-build`         |
+| Kitchen sink preview                         | `npm run site-preview`       |
+| Visual regression tests (Playwright)         | `npm run test-visual`        |
+| Update visual baselines                      | `npm run test-visual-update` |
 
 ## Architecture
 
