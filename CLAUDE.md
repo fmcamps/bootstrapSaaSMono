@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a **customized fork of Bootstrap 4.6.2** for the FMCamps SaaS Mono project. The main customization layer lives in `scss/fmcamps/fmcamps.scss`, which overrides Bootstrap's default variables (colors, body styles) and selectively imports Bootstrap components. It also bundles Font Awesome 4.7.0 and RFS (Responsive Font Sizes).
 
-**Required Node version: 18 LTS**
+**SCSS compiler: dart-sass (`sass` package)** — compatible with any Node version.
 
 ## Key Commands
 
@@ -54,10 +54,10 @@ The app's custom styles are organized into partial files imported by `fmcamps.sc
 | **App components** | `_dialogs` (FMC dialogs), `_toasts` (bInfo toasts), `_gestor-archivos` (S3 upload) |
 | **Theme** | `_dark-theme` (`@media (prefers-color-scheme: dark)` overrides) |
 
-**Important node-sass constraints:**
-- Use comma-separated `rgb(r, g, b)` / `rgba(r, g, b, a)` syntax, NOT space-separated CSS Level 4 (`rgb(r g b / a)`) — node-sass will error.
-- Use `#{"rgb(var(--custom-prop))"}` interpolation when passing CSS custom properties to `rgb()`/`rgba()` — prevents node-sass from trying to evaluate them.
-- `light-dark()` passes through node-sass as-is (unknown function), which is the intended behavior.
+**SCSS notes (dart-sass):**
+- `light-dark()` passes through dart-sass as-is (unknown function), which is the intended behavior.
+- CSS custom properties inside `rgb()`/`rgba()` work natively — no interpolation workaround needed.
+- Bootstrap 4.6.2 uses `@import` which dart-sass marks as deprecated (warning only, not an error).
 
 ### Relationship with app1.css (SaaSMono project)
 
@@ -80,6 +80,6 @@ The SaaSMono app loads **both** `fmcamps.css` (compiled here) and a residual `ap
 ### Build System
 
 - `build/` — Rollup config, PostCSS config, build scripts
-- CSS pipeline: node-sass → postcss (autoprefixer) → clean-css
+- CSS pipeline: dart-sass → postcss (autoprefixer) → clean-css
 - JS pipeline: rollup (with babel) → terser
 - Tests: Karma + QUnit

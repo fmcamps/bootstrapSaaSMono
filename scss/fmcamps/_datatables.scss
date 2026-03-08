@@ -386,12 +386,12 @@ table.dataTable.table.table-striped > tbody > tr:nth-of-type(2n+1) {
 table.dataTable.table > tbody > tr.selected > * {
     box-shadow: inset 0 0 0 9999px var(--dt-row-selected);
     color: rgb(255, 255, 255);
-    color: #{"rgb(var(--dt-row-selected-text))"};
+    color: rgb(var(--dt-row-selected-text));
 }
 
 table.dataTable.table > tbody > tr.selected a {
     color: rgb(9, 10, 11);
-    color: #{"rgb(var(--dt-row-selected-link))"};
+    color: rgb(var(--dt-row-selected-link));
 }
 
 table.dataTable.table.table-striped > tbody > tr:nth-of-type(2n+1).selected > * {
@@ -399,7 +399,7 @@ table.dataTable.table.table-striped > tbody > tr:nth-of-type(2n+1).selected > * 
 }
 
 table.dataTable.table.table-hover > tbody > tr:hover > * {
-    box-shadow: inset 0 0 0 9999px #{"rgba(var(--dt-row-hover), 0.075)"};
+    box-shadow: inset 0 0 0 9999px rgba(var(--dt-row-hover), 0.075);
 }
 
 table.dataTable.table.table-hover > tbody > tr.selected:hover > * {
