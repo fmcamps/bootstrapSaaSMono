@@ -117,8 +117,9 @@ header#overview.navbar.navbar-fixed-top.page-header, header#overview.navbar.navb
     padding-bottom: 7px;
     padding-top: 9px;
     margin: 41px 0 17px;
-    border-bottom: 1px solid var(--dark-color);
-    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+    background-color: #fff; /* fallback */
+    background-color: light-dark(#fff, #212529);
     z-index: 1020 !important;
 }
 
@@ -220,16 +221,19 @@ table.dataTable thead > tr > td.dt-orderable-desc {
 
 /* Dialogos FMCamps con cursor custom */
 .modal-dialog-fmc-success >div > div.modal-content {
+    border-color: #008000; /* fallback */
     border-color: light-dark(#008000, #00ff00);
     cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
 }
 
 .modal-dialog-fmc-error >div > div.modal-content {
+    border-color: #c20000; /* fallback */
     border-color: light-dark(#c20000, #ff4141);
     cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
 }
 
 .modal-dialog-fmc-warning >div > div.modal-content {
+    border-color: #ca9800; /* fallback */
     border-color: light-dark(#ca9800, #ffda5f);
     cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
 }
