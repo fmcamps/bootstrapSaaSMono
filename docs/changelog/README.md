@@ -2,6 +2,19 @@
 
 Historial de cambios relevantes al design system.
 
+## 2026-03-08 — Code review findings (7 bugs SCSS)
+
+### Correccion de hallazgos
+
+- Corregidos 7 bugs encontrados durante sincronizacion CSS a SaaSMono
+- 3 HIGH: selector imposible tr>tr, var(--dark-color) mal usado en Select2 disabled, gradiente modal sin dark
+- 3 MEDIUM: btn-orange dead code, *:hover scrollbar, light-dark(white,white) redundante
+- 1 LOW: 5 reglas @viewport deprecated eliminadas
+- Verificado con 48 visual regression tests (0 regresiones)
+- Documentacion alineada con estrategia Tailwind CSS (7 docs actualizados)
+
+---
+
 ## 2026-03-08 — Consolidacion fallbacks light-dark()
 
 ### Auditoria y correccion

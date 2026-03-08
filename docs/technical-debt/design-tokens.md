@@ -50,7 +50,7 @@ Implementar design tokens tiene sentido cuando se cumpla **al menos una** de est
 | --- | --- |
 | Esfuerzo | Medio — extraer ~20 tokens a JSON, configurar Style Dictionary, integrar en pipeline |
 | Riesgo | Bajo — es una capa adicional, no reemplaza nada existente |
-| Dependencia | Ninguna — se puede hacer independiente de Bootstrap 5 |
+| Dependencia | Ninguna — independiente de framework (BS5 descartado, destino es Tailwind) |
 | Beneficio actual | Bajo — no hay consumidores adicionales |
 
 ## Si se decide implementar

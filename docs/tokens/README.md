@@ -44,3 +44,12 @@ Tokens de diseno definidos en `scss/fmcamps/_variables.scss` y en los overrides 
 
 - `scss/fmcamps/_variables.scss` — CSS custom properties (:root)
 - `scss/fmcamps/fmcamps.scss` — Sass variable overrides (antes de Bootstrap)
+
+## Puente hacia Tailwind
+
+Los CSS custom properties definidos aqui son el puente natural hacia `tailwind.config.js theme`. Al migrar a Tailwind:
+
+- Las variables `--cyan-fmc`, `--orange-fmc`, etc. se mapean a `theme.colors`
+- Los tokens de superficie (`--light-bg`, `--dark-bg`) se mapean a `theme.backgroundColor`
+- Los `light-dark()` se reemplazan por el variant `dark:` de Tailwind
+- Las variables SCSS (`$primary`, etc.) desaparecen — solo sobreviven los CSS custom properties

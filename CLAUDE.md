@@ -8,6 +8,8 @@ This is a **customized fork of Bootstrap 4.6.2** for the FMCamps SaaS Mono proje
 
 **SCSS compiler: dart-sass (`sass` package)** — compatible with any Node version.
 
+**Strategic direction:** SaaSMono migrates BS4 → **Tailwind CSS** (not BS5). This repo evolves toward pure design tokens + native CSS custom properties. Invest in `light-dark()`, CSS variables, and FMCamps partials that will survive the Tailwind transition. See `docs/technical-debt/README.md` for details.
+
 ## Key Commands
 
 | Task                                         | Command                      |

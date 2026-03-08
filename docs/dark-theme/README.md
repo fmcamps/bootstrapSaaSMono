@@ -44,3 +44,15 @@ Variables en `:root` que responden a media queries:
 | `_variables.scss` | Define CSS custom properties (`:root`) |
 | `_dark-theme.scss` | Bloque `@media (prefers-color-scheme: dark)` |
 | Multiples parciales | Usan `light-dark()` inline |
+
+## Compatibilidad con Tailwind
+
+La estrategia dark mode actual es compatible con la migracion a Tailwind CSS:
+
+| Mecanismo actual | Equivalente Tailwind | Migracion |
+|------------------|---------------------|-----------|
+| `light-dark(a, b)` | `class="bg-[a] dark:bg-[b]"` | Directa — los valores se mapean 1:1 |
+| `@media (prefers-color-scheme: dark)` | `dark:` variant (con `darkMode: 'media'`) | Directa — Tailwind usa la misma media query |
+| CSS custom properties en `:root` | `theme.colors` en `tailwind.config.js` | Los custom properties sobreviven como puente |
+
+**Inversion segura:** `light-dark()` y CSS custom properties son CSS nativo — funcionan con o sin Tailwind. No dependen de Bootstrap.
