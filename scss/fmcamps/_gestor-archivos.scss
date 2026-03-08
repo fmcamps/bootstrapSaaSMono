@@ -5,6 +5,7 @@
     border-radius: 8px;
     padding: 2rem;
     text-align: center;
+    background-color: #f8f9fa; /* fallback */
     background-color: light-dark(#f8f9fa, rgba(255, 255, 255, 0.05));
     transition: all 0.3s ease;
     cursor: pointer;
@@ -12,12 +13,14 @@
 
 .gestor-archivos .upload-zone:hover {
     border-color: var(--blue-fmc);
+    background-color: #e9ecef; /* fallback */
     background-color: light-dark(#e9ecef, rgba(255, 255, 255, 0.08));
     transform: translateY(-2px);
 }
 
 .gestor-archivos .upload-zone.drag-over {
     border-color: var(--success-fmc);
+    background-color: rgba(0, 128, 0, 0.05); /* fallback */
     background-color: light-dark(rgba(0, 128, 0, 0.05), rgba(0, 255, 0, 0.1));
     transform: scale(1.02);
 }
@@ -36,6 +39,7 @@
 }
 
 .gestor-archivos .selected-files-list {
+    background-color: #fff; /* fallback */
     background-color: light-dark(#fff, rgba(255, 255, 255, 0.03));
     border: 1px solid var(--border-color);
     border-radius: 8px;
@@ -47,6 +51,7 @@
 }
 
 .gestor-archivos .file-item:hover {
+    background-color: #f8f9fa; /* fallback */
     background-color: light-dark(#f8f9fa, rgba(255, 255, 255, 0.05));
 }
 
@@ -60,6 +65,7 @@
 }
 
 .gestor-archivos .global-progress {
+    background-color: #fff; /* fallback */
     background-color: light-dark(#fff, rgba(255, 255, 255, 0.03));
     border: 1px solid var(--border-color);
     border-radius: 8px;
@@ -88,11 +94,13 @@
 }
 
 .gestor-archivos .attached-file-item {
+    background-color: #fff; /* fallback */
     background-color: light-dark(#fff, rgba(255, 255, 255, 0.03));
     transition: all 0.2s ease;
 }
 
 .gestor-archivos .attached-file-item:hover {
+    background-color: #f8f9fa; /* fallback */
     background-color: light-dark(#f8f9fa, rgba(255, 255, 255, 0.06));
     transform: translateX(4px);
 }

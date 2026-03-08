@@ -10,11 +10,14 @@
     background-color: light-dark(white, black);
     border-radius: 0.75rem;
     overflow: hidden;
+    border: 2px solid rgba(0, 155, 255, 0.75); /* fallback */
     border: 2px solid light-dark(rgba(0, 155, 255, 0.75), rgba(253, 102, 0, 0.75));
 }
 
 .modal-header {
+    background-color: white; /* fallback */
     background-color: light-dark(white, black);
+    color: #212529; /* fallback */
     color: light-dark(var(--light-color), var(--dark-color));
     border-bottom: none;
 }
@@ -56,6 +59,8 @@
 }
 
 .close:hover {
+    color: black; /* fallback */
     color: light-dark(black, white);
+    background-color: lightgray; /* fallback */
     background-color: light-dark(lightgray, #23272b);
 }

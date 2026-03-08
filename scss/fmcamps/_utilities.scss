@@ -59,17 +59,22 @@ address {
 
 // Popover overrides
 .popover {
+    background-color: #f8f9fa; /* fallback */
     background-color: light-dark(var(--light-bg), var(--gris-oscuro));
+    color: #212529; /* fallback */
     color: light-dark( var(--light-color), var(--dark-color));
     border: 1px solid #dbdbdb;
 }
 
 .popover-header {
+    background-color: #f8f9fa; /* fallback */
     background-color: light-dark(var(--light-bg), var(--gris-oscuro));
+    color: #212529; /* fallback */
     color: light-dark(var(--light-color), var(--dark-color));
 }
 
 .popover-body {
+    color: #212529; /* fallback */
     color: light-dark( var(--light-color), var(--dark-color));
 }
 

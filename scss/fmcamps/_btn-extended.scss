@@ -1,6 +1,7 @@
 // Extended button overrides
 
 .btn-outline-secondary {
+    color: #495057; /* fallback */
     color: light-dark(#495057, #f8f9fa);
     border-color: var(--border-color);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -17,6 +18,7 @@
 }
 
 .btn-group > .btn-outline-dark:hover {
+    color: #ff0d0d; /* fallback */
     color: light-dark(#ff0d0d, #ffc60d);
     background-color: inherit;
     border-color: #343a40;
@@ -61,6 +63,7 @@ div.modal-footer > button.btn.btn-outline-secondary:hover {
 }
 
 .btn-outline-dark {
+    color: #343a40; /* fallback */
     color: light-dark(#343a40, #adadad);
     border-color: var(--border-color);
 }

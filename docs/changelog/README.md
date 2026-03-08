@@ -2,6 +2,24 @@
 
 Historial de cambios relevantes al design system.
 
+## 2026-03-08 — Consolidacion fallbacks light-dark()
+
+### Auditoria y correccion
+
+- Auditadas 89 instancias de `light-dark()` en 20 archivos SCSS
+- Agregados 64 fallbacks estaticos faltantes (valor light antes de cada `light-dark()`)
+- Corregidos 2 bugs de sintaxis: `_typography.scss` (coma faltante), `_dropdowns.scss` (argumento vacio)
+- Archivos modificados: 15 parciales SCSS
+- Verificado con 48 visual regression tests: 0 regresiones
+
+### Actualizacion .browserslistrc
+
+- Removido IE 10/11 del browserslist (CSS custom properties no soportadas en IE)
+- Nuevo minimo: Chrome 60+, Firefox 60+, Edge 79+, Safari 12+
+- Decision documentada en `docs/technical-debt/light-dark-fallbacks.md`
+
+---
+
 ## 2026-03-08 — Limpieza !important (ronda 3)
 
 ### Remocion con testing visual (Playwright)

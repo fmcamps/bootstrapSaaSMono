@@ -42,7 +42,7 @@ Registro de deuda tecnica conocida y mejoras aspiracionales para el design syste
 ### Mediano plazo
 
 - [ ] Migrar Font Awesome 4.7.0 a Font Awesome 6 (o a iconos SVG)
-- [ ] Consolidar fallbacks light-dark: eliminar fallbacks estaticos cuando browsers legacy dejen de ser necesarios
+- [x] ~~Consolidar fallbacks light-dark~~ — 64 fallbacks agregados, 2 bugs de sintaxis corregidos, IE removido de browserslist. Ver [light-dark-fallbacks.md](light-dark-fallbacks.md)
 - [x] ~~Crear visual regression tests~~ — 48 baselines (12 paginas x desktop/mobile x light/dark) con Playwright + slash command `/test-visual` para inspeccion MCP
 
 ### Largo plazo

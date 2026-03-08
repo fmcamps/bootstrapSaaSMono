@@ -23,10 +23,12 @@
 }
 
 .table > thead > tr > th:hover {
+    color: black; /* fallback */
     color: light-dark(black, white);
 }
 
 .table.bg-fmc2 > thead > tr > th:hover {
+    color: white; /* fallback */
     color: light-dark(white, black);
 }
 

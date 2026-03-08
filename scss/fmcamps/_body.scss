@@ -8,7 +8,9 @@ body {
 }
 
 .page-header {
+    background-color: white; /* fallback */
     background-color: light-dark(white, #000);
+    color: #212529; /* fallback */
     color: light-dark( var(--light-color), var(--dark-color)) !important;
     padding-top: 0.75rem;
 }

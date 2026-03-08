@@ -1,16 +1,19 @@
 // FMCamps custom dialog styles
 
 .dialog-fmc-success {
+    color: #008000; /* fallback */
     color: light-dark(#008000, #00ff00);
     text-align: center;
 }
 
 .dialog-fmc-error {
+    color: #c20000; /* fallback */
     color: light-dark(#c20000, #ff4141);
     text-align: center;
 }
 
 .dialog-fmc-warning {
+    color: #ca9800; /* fallback */
     color: light-dark(#ca9800, #ffda5f);
     text-align: center;
 }

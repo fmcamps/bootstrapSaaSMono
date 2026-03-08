@@ -71,6 +71,7 @@
 }
 
 .form-control-color {
+    color: #495057; /* fallback */
     color: light-dark(#495057, white) !important;
 }
 
@@ -112,6 +113,7 @@
 }
 
 .filtrounico {
+    background-color: antiquewhite; /* fallback */
     background-color: light-dark(antiquewhite, #703400) !important;
 }
 

@@ -18,8 +18,8 @@ label {
 .label-option {
     line-height: 1.525;
     font-size: 1.15rem;
-    color: var(--label-color);
-    color: light-dark(var(--light-color) #21211f, var(--dark-color));
+    color: #21211f; /* fallback */
+    color: light-dark(#21211f, var(--dark-color));
 }
 
 hr {
