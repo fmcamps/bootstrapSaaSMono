@@ -1,7 +1,7 @@
 // Extended button overrides
 
 .btn-outline-secondary {
-    color: light-dark(#495057, #f8f9fa) !important;
+    color: light-dark(#495057, #f8f9fa);
     border-color: var(--border-color);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -23,11 +23,11 @@
 }
 
 div.modal-footer > button.btn.btn-outline-secondary {
-    color: #fff !important;
+    color: #fff;
 }
 
 div.modal-footer > button.btn.btn-outline-secondary:hover {
-    color: #000 !important;
+    color: #000;
 }
 
 .btn {
@@ -50,7 +50,7 @@ div.modal-footer > button.btn.btn-outline-secondary:hover {
 }
 
 .btn-primary {
-    color: #fff !important;
+    color: #fff;
     background-color: var(--cyan-fmc);
     border-right: 1.75px solid black;
     border-bottom: 1.5px solid black;

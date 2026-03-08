@@ -2,6 +2,18 @@
 
 Historial de cambios relevantes al design system.
 
+## 2026-03-08 — Limpieza !important (ronda 2)
+
+### Remocion con testing visual (Playwright)
+
+- Removidos 24 `!important` innecesarios en 8 archivos
+- Archivos: `_buttons`, `_btn-extended`, `_alerts`, `_navtabs`, `_typography`, `_links`, `_dropdowns`, `_body`
+- Testing visual antes/despues via Playwright MCP en kitchen sink Astro
+- Resultado: 0 regresiones visuales detectadas (pixel-perfect)
+- Total restante: 80 instancias (37 third-party, 10 dark-theme, 9 layout, 6 utilities, 18 otros justificados)
+
+---
+
 ## 2026-03-07 — Kitchen Sink Astro
 
 ### Migracion Hugo → Astro

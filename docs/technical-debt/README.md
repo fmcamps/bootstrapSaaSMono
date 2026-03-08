@@ -6,12 +6,13 @@ Registro de deuda tecnica conocida y mejoras aspiracionales para el design syste
 
 ### `!important` excesivos
 
-- **Estado:** Parcialmente mitigado (3 removidos en marzo 2026)
-- **Pendiente:** ~108 instancias restantes en 19 archivos
-- **Quick wins:** ~15-16 removibles sin riesgo en buttons, navbar, forms, cards, modals, typography
-- **Requiere testing:** ~20-25 en tables, alerts, pagination
-- **Justificados:** ~40-50 en DataTables, Select2, DateRangePicker (overrides de plugins)
-- Ver [important-audit.md](important-audit.md) para detalle por archivo
+- **Estado:** 27 removidos (3 en ronda 1 + 24 en ronda 2 con testing visual via Playwright)
+- **Pendiente:** 80 instancias restantes en 13 archivos
+- **Justificados (third-party):** 37 en DataTables (15), Select2 (18), DateRangePicker (4)
+- **Justificados (dark theme):** 10 en `_dark-theme.scss` (overrides de light mode)
+- **Justificados (layout):** 9 en `_body.scss` (3), `_responsive.scss` (6)
+- **Utilities (patron Bootstrap):** 6 en `_utilities.scss`
+- **Otros:** 18 en tables (6), toasts (4), forms (3), buttons (3), cards (1), list-group (1)
 
 ### Bootstrap 4.6.2 `@import` deprecation
 
@@ -33,7 +34,7 @@ Registro de deuda tecnica conocida y mejoras aspiracionales para el design syste
 
 ### Corto plazo
 
-- [ ] Completar remocion de `!important` con testing visual (quick wins restantes)
+- [x] ~~Completar remocion de `!important` con testing visual~~ — 24 quick wins removidos, 80 restantes justificados
 - [ ] Actualizar browserslist (`npx update-browserslist-db@latest`)
 - [x] ~~Documentar cada componente~~ — cubierto por el kitchen sink Astro en `site/`
 

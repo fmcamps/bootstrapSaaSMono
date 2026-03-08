@@ -15,6 +15,6 @@ body {
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
     .sticky-top {
-        top: 3.2rem !important;
+        top: 3.2rem;
     }
 }
