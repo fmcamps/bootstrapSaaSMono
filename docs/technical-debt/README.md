@@ -48,5 +48,5 @@ Registro de deuda tecnica conocida y mejoras aspiracionales para el design syste
 ### Largo plazo
 
 - [ ] Evaluar migracion a Bootstrap 5 (elimina jQuery, usa `@use`, CSS custom properties nativo)
-- [ ] Design tokens en formato estandar (Style Dictionary / W3C design tokens)
+- [ ] Design tokens en formato estandar (Style Dictionary / W3C design tokens). Ver [design-tokens.md](design-tokens.md)
 - [x] ~~Storybook o catalogo visual de componentes~~ — reemplazado por kitchen sink Astro en `site/`
