@@ -1,0 +1,26 @@
+// Cards and Jumbotron
+
+.card {
+    background-color: transparent;
+    background-color: light-dark(var(--light-bg), var(--dark-bg));
+    border-color: light-dark(rgba(0, 0, 0, 0.125), var(--border-color));
+}
+
+.card .card-header {
+    background-color: var(--border-color);
+    background-color: light-dark(rgba(0, 0, 0, 0.03), black);
+    border-color: light-dark(rgba(0, 0, 0, 0.125), var(--border-color));
+}
+
+.card-footer {
+    border-radius: 0 0 12px 12px !important;
+}
+
+.accordion > .card {
+    overflow: inherit;
+}
+
+.jumbotron {
+    min-height: 150px;
+    background-color: transparent;
+}

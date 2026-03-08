@@ -1,0 +1,92 @@
+// Button styles
+
+.accept-button {
+    display: block;
+    margin: 0 auto;
+    font-size: 1.5rem !important;
+    font-weight: 700;
+    padding: 0.75rem 2.5rem;
+    border-radius: 25px !important;
+    background-color: #009eff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.accept-button:hover {
+    background-color: #e87200;
+    color: white;
+}
+
+.btn-group, .btn-group-vertical {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0.5rem !important;
+}
+
+.btn-danger {
+    color: #fff !important;
+    background-color: var(--danger-fmc) !important;
+}
+
+.btn-success {
+    color: #fff !important;
+    background-color: var(--success-fmc) !important;
+}
+
+.btn-warning {
+    color: #000 !important;
+    background-color: var(--warning-fmc) !important;
+}
+
+.btn-orange {
+    color: #fff !important;
+}
+
+.btn-link, .btn-link:hover {
+    color: light-dark(#212529, white);
+}
+
+.btn.btn-circle {
+    border-radius: 50%;
+    background-color: inherit;
+    color: lightslategray;
+    padding: .5em .5em !important;
+    line-height: 1;
+}
+
+.btn.btn-circle:hover {
+    background-color: var(--cyan-fmc);
+    color: white !important;
+    padding: .5em .5em !important;
+    line-height: 1;
+}
+
+.btn.btn-circle > i {
+    line-height: 1;
+}
+
+.btn.btn-circle2 {
+    border-radius: 50%;
+    background-color: aliceblue;
+    color: #2c7ac8;
+    padding: .5em .5em !important;
+    line-height: 1;
+}
+
+.btn.btn-circle2:hover {
+    background-color: var(--cyan-fmc);
+    color: white !important;
+    padding: .5em .5em !important;
+    line-height: 1;
+}
+
+.btn.btn-circle2 > i {
+    line-height: 1;
+}
+
+button.close {
+    padding: 10px 18px !important;
+    margin-top: 4px !important;
+    border-radius: 15%;
+    border: 1px solid #ccc;
+}

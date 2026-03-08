@@ -1,0 +1,43 @@
+// FMCamps CSS Custom Properties
+// These are runtime variables used for light-dark theming
+
+:root {
+    color-scheme: light dark;
+    --light-bg: #f1f1f1;
+    --light-color: #21211f;
+    --dark-bg: #001d2b;
+    --dark-bg2: #22272E;
+    --dark-color: #eee;
+    --border-color: rgba(142, 142, 142, 0.25);
+    --border-color-table: rgba(222, 226, 230, 0.20);
+    --label-color: #979797;
+    --danger-fmc: #c90000; /* fallback */
+    --danger-fmc: light-dark(#c90000, #850000);
+    --success-fmc: #008000; /* fallback */
+    --success-fmc: light-dark(#008000, #006400);
+    --orange-fmc: #ff5b00; /* fallback */
+    --orange-fmc: light-dark(#ff5b00, #c44400);
+    --warning-fmc: #f8ba02; /* fallback */
+    --warning-fmc: light-dark(#f8ba02, #ffa200);
+    --cyan-fmc: #2084ff; /* fallback */
+    --cyan-fmc: light-dark(#2084ff, #53cfff);
+    --blue-fmc: #02115d; /* fallback */
+    --blue-fmc: light-dark(#02115d, #001fba);
+    --gris-oscuro: #343a40;
+}
+
+// DataTables CSS custom properties
+:root {
+    --dt-row-selected: var(--cyan-fmc); /* fallback */
+    --dt-row-selected: light-dark(var(--cyan-fmc), var(--orange-fmc));
+    --dt-row-selected-text: 255, 255, 255;
+    --dt-row-selected-link: 9, 10, 11;
+    --dt-row-stripe: 0, 0, 0;
+    --dt-row-hover: 0, 0, 0;
+    --dt-column-ordering: 0, 0, 0;
+    --dt-html-background: white;
+}
+
+:root.dark {
+    --dt-html-background: rgb(33, 37, 41);
+}

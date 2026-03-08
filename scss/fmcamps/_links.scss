@@ -1,0 +1,15 @@
+// Link styles
+
+a {
+    color: var(--cyan-fmc);
+}
+
+a:hover {
+    color: var(--orange-fmc);
+    text-decoration: underline;
+    text-underline-offset: .3rem;
+}
+
+a.nav-link:hover {
+    color: #ff5800 !important;
+}

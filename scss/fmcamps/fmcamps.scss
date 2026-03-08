@@ -1,0 +1,143 @@
+/*!
+* Personalizacion de bootstrap para SaasMono
+ */
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "scss/functions";
+
+// 2. Include any default variable overrides here
+$body-bg: #fafafa;
+$body-color: #111;
+
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-600: #6c757d;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+$blue: #0048ff;
+$indigo: #5800e6;
+$purple: #784bcb;
+$pink: #e83588;
+$red: #cc0000;
+$orange: #ee730e;
+$yellow: #f8ae02;
+$green: #21a340;
+$teal: #3dd7a9;
+$cyan: #1aa3b9;
+
+$primary: $gray-900;
+$secondary: $gray-100;
+$success: $green;
+$info: $cyan;
+$warning: $yellow;
+$danger: $red;
+$light: $gray-100;
+$dark: $gray-800;
+
+// $theme-colors: (
+//   "primary": #282828,
+//   "danger": #ff4136
+// );
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "scss/variables";
+@import "scss/mixins";
+
+// 4. Include any optional Bootstrap components as you like
+@import "scss/root";
+@import "scss/reboot";
+@import "scss/type";
+@import "scss/images";
+@import "scss/code";
+@import "scss/grid";
+@import "scss/tables";
+@import "scss/forms";
+@import "scss/buttons";
+@import "scss/transitions";
+@import "scss/dropdown";
+@import "scss/button-group";
+@import "scss/input-group";
+@import "scss/custom-forms";
+@import "scss/nav";
+@import "scss/navbar";
+@import "scss/card";
+// @import "scss/breadcrumb";
+@import "scss/pagination";
+@import "scss/badge";
+@import "scss/jumbotron";
+@import "scss/alert";
+@import "scss/progress";
+@import "scss/media";
+@import "scss/list-group";
+@import "scss/close";
+@import "scss/toasts";
+@import "scss/modal";
+@import "scss/tooltip";
+@import "scss/popover";
+@import "scss/carousel";
+@import "scss/spinners";
+@import "scss/utilities";
+@import "scss/print";
+
+
+// 5. Custom styles
+
+// Include RFS (Responsive Font Sizes) to make font sizes responsive
+@import "../../node_modules/rfs/scss";
+
+// Include Font Awesome icons
+@import "scss/font-awesome-4.7.0/scss/font-awesome.scss";
+
+// Style Bootstrap icons
+.bi {
+  fill: currentcolor;
+}
+
+// 6. FMCAMPS CSS custom properties
+@import "variables";
+
+// 7. FMCAMPS base overrides
+@import "body";
+@import "typography";
+@import "links";
+@import "scrollbars";
+
+// 8. FMCAMPS component overrides
+@import "forms";
+@import "buttons";
+@import "btn-extended";
+@import "badges";
+@import "navbar";
+@import "navtabs";
+@import "dropdowns";
+@import "pagination";
+@import "tables";
+@import "cards";
+@import "modals";
+@import "alerts";
+@import "list-group";
+@import "spinners";
+@import "images";
+
+// 9. FMCAMPS branding
+@import "gradients";
+
+// 10. FMCAMPS third-party overrides
+@import "datatables";
+@import "daterangepicker";
+@import "select2";
+
+// 11. FMCAMPS layout and utilities
+@import "footer";
+@import "utilities";
+@import "responsive";
+
+// 12. FMCAMPS app-specific components
+@import "dialogs";
+@import "toasts";
+@import "gestor-archivos";
+
+// 13. FMCAMPS dark theme overrides
+@import "dark-theme";

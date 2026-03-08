@@ -1,0 +1,45 @@
+// Typography and text styles
+
+html {
+    font-size: 14px;
+}
+
+.h6 {
+    font-weight: 400 !important;
+}
+
+label {
+    margin-bottom: 0.25rem;
+    font-weight: 300;
+    color: var(--label-color);
+    font-size: 1.15rem;
+}
+
+.label-option {
+    line-height: 1.525;
+    font-size: 1.15rem;
+    color: var(--label-color);
+    color: light-dark(var(--light-color) #21211f, var(--dark-color)) !important;
+}
+
+hr {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.help-block {
+    font-size: 12px;
+}
+
+.centered-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+}

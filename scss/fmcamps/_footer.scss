@@ -1,0 +1,11 @@
+// Footer styles
+
+.bs-footer {
+    color: whitesmoke;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+footer .row > [class*="col-md-"] > p.textalignright {
+    text-align: right
+}

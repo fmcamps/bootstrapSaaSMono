@@ -1,0 +1,100 @@
+// Utility classes
+
+.rounded-lg {
+    border-radius: 1em !important;
+}
+
+.rounded-lg-top {
+    border-top-left-radius: 0.75rem !important;
+    border-top-right-radius: 0.75rem !important;
+}
+
+.rounded-xl {
+    border-radius: 0.75rem !important;
+}
+
+.popover-header {
+    padding: 0.25rem 0.75rem;
+}
+
+.bg-danger-dark {
+    background-color: var(--danger-fmc) !important;
+}
+
+.bs-popover-top > .arrow.arrow-danger::before, .bs-popover-auto[x-placement^="top"] > .arrow.arrow-danger::before {
+    border-top-color: var(--danger-fmc);
+}
+
+.bs-popover-top > .arrow.arrow-danger::after, .bs-popover-auto[x-placement^="top"] > .arrow.arrow-danger::after {
+    bottom: 1px;
+    border-width: 0.5rem 0.5rem 0;
+    border-top-color: var(--danger-fmc);
+}
+
+.shadow-top {
+    box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+address {
+    text-align: center;
+}
+
+// Tooltip overrides
+.tooltip-inner {
+    background-color: var(--gris-oscuro);
+}
+
+.bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^="top"] .arrow::before,
+.bs-tooltip-right .arrow::before, .bs-tooltip-auto[x-placement^="right"] .arrow::before {
+    border-top-color: var(--gris-oscuro);
+}
+
+.bs-tooltip-left .arrow::before, .bs-tooltip-auto[x-placement^="left"] .arrow::before {
+    border-left-color: var(--gris-oscuro);
+}
+
+.bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
+    border-bottom-color: var(--gris-oscuro);
+}
+
+// Popover overrides
+.popover {
+    background-color: light-dark(var(--light-bg), var(--gris-oscuro));
+    color: light-dark( var(--light-color), var(--dark-color));
+    border: 1px solid #dbdbdb;
+}
+
+.popover-header {
+    background-color: light-dark(var(--light-bg), var(--gris-oscuro));
+    color: light-dark(var(--light-color), var(--dark-color));
+}
+
+.popover-body {
+    color: light-dark( var(--light-color), var(--dark-color));
+}
+
+// List inline
+.list-inline.bulleted li {
+    display: inline-block;
+    margin-right: 0.5rem;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+// List group form control
+ul.list-group.rounded-lg.form-control-left {
+    margin-top: 8px;
+}
+
+// Icon select interaction
+td > button.select:hover .fa-circle-o::before {
+    content: "\f00c";
+    color: #000;
+}
+
+// Top right button positioning
+.top-right-btn {
+    top: 2.2em;
+    right: 0.25em;
+    z-index: 10;
+}

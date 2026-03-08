@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+/* ====================================================================
+   app1.css - Residual (reglas que DEBEN quedarse aqui)
+   Todo lo demas fue migrado a scss/fmcamps/ -> fmcamps.css
+   ==================================================================== */
+
+/* 1. Cursor global por defecto */
+html {
+    cursor: image-set(url(/static/images/_cursors/default.png) 1x, url(/static/images/_cursors/default@2x.png) 2x) 8 8, default;
+}
+
+/* 2. Cursor de texto para campos de entrada */
+input:not([type="checkbox"]):not([type="radio"]),
+textarea,
+select {
+    cursor: image-set(url(/static/images/_cursors/text.png) 1x, url(/static/images/_cursors/text@2x.png) 2x) 8 8, text;
+}
+
+/* 3. Cursor pointer para elementos interactivos */
+input[type="checkbox"],
+input[type="radio"],
+button,
+button:hover,
+a,
+.btn,
+.nav-link,
+.dropdown-item,
+.list-group-item-action,
+.list-group-item,
+option {
+    cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
+}
+
+/* 4. Cursor not-allowed para botones deshabilitados */
+button:disabled,
+option:disabled,
+select:disabled {
+    cursor: image-set(url(/static/images/_cursors/not-allowed@2x.png) 2x) 8 8, not-allowed !important;
+}
+
+/* 5. Cursor de progreso */
+.cursor-progress {
+    cursor: image-set(url(/static/images/_cursors/progress@2x.png) 2x) 8 8, progress !important;
+}
+
+/* Body: padding-top y user-select (app-specific) */
+body {
+    padding-top: 3.2rem;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+/* Bootbox modal override */
+body > div.bootbox.modal.fade.bootbox-alert.show > div > div > div.modal-body {
+    background: inherit;
+    padding: 20px 20px;
+}
+
+/* #overview sticky position */
+@media (min-width: 768px) {
+    @supports ((position: -webkit-sticky) or (position: sticky)) {
+        #overview {
+            top: 3.2rem !important;
+        }
+    }
+}
+
+/* View transitions */
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 0.5s;
+}
+
+/* Logo (referencian assets de la app) */
+.logo {
+    content: url('/static/images/favicon.png');
+    width: 38px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .logo {
+        content: url('/static/images/favicon_dark.png');
+    }
+}
+
+@media screen and (max-width: 768px) and (prefers-color-scheme: light) {
+    .logo {
+        content: url('/static/images/favicon_mobile.webp');
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 768px) and (prefers-color-scheme: dark) {
+    .logo {
+        content: url('/static/images/favicon_mobile_dark.webp');
+        width: 160px;
+    }
+}
+
+#logopk {
+    border-radius: 0.5rem !important;
+}
+
+/* #grilla_stock (selector de ID app-specific) */
+#grilla_stock.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+/* header#overview (selector de ID app-specific) */
+header#overview.navbar.navbar-fixed-top.page-header, header#overview.navbar.navbar-fixed-bottom.page-header {
+    padding-bottom: 7px;
+    padding-top: 9px;
+    margin: 41px 0 17px;
+    border-bottom: 1px solid var(--dark-color);
+    background-color: #fff;
+    z-index: 1020 !important;
+}
+
+/* Nav-tabs: cursor custom */
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    cursor: image-set(url(/static/images/_cursors/default.png) 1x, url(/static/images/_cursors/default@2x.png) 2x) 8 8, default;
+}
+
+/* Custom file input: cursor */
+.custom-file-input, .custom-file-label {
+    cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
+}
+
+/* DataTables: cursors */
+table.dataTable td.dt-control {
+    cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
+}
+
+table.dataTable thead > tr > th.dt-orderable-asc,
+table.dataTable thead > tr > th.dt-orderable-desc,
+table.dataTable thead > tr > td.dt-orderable-asc,
+table.dataTable thead > tr > td.dt-orderable-desc {
+    cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
+}
+
+/* DateRangePicker: cursors */
+.daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
+    cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
+}
+
+.daterangepicker select.monthselect, .daterangepicker select.yearselect {
+    cursor: image-set(url(/static/images/_cursors/default.png) 1x, url(/static/images/_cursors/default@2x.png) 2x) 8 8, default;
+}
+
+.daterangepicker .ranges li {
+    cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
+}
+
+/* Select2: cursors */
+.select2-container .select2-selection--single {
+    cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
+}
+
+.select2-container .select2-selection--multiple {
+    cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
+}
+
+.select2-results__option--selectable {
+    cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__clear {
+    cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__clear {
+    cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+    cursor: image-set(url(/static/images/_cursors/default.png) 1x, url(/static/images/_cursors/default@2x.png) 2x) 8 8, default;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
+}
+
+.select2-container--default .select2-results__group {
+    cursor: image-set(url(/static/images/_cursors/default.png) 1x, url(/static/images/_cursors/default@2x.png) 2x) 8 8, default;
+}
+
+.select2-container--classic .select2-selection--single .select2-selection__clear {
+    cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
+}
+
+.select2-container--classic .select2-selection--multiple .select2-selection__choice__display {
+    cursor: image-set(url(/static/images/_cursors/default.png) 1x, url(/static/images/_cursors/default@2x.png) 2x) 8 8, default;
+}
+
+.select2-container--classic .select2-selection--multiple .select2-selection__choice__remove {
+    cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
+}
+
+.select2-container--classic .select2-results__group {
+    cursor: image-set(url(/static/images/_cursors/default.png) 1x, url(/static/images/_cursors/default@2x.png) 2x) 8 8, default;
+}
+
+.select2-container--bootstrap .select2-selection__clear {
+    cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
+}
+
+.select2-container--bootstrap .select2-selection--multiple .select2-selection__choice {
+    cursor: image-set(url(/static/images/_cursors/default.png) 1x, url(/static/images/_cursors/default@2x.png) 2x) 8 8, default;
+}
+
+.select2-container--bootstrap .select2-selection--multiple .select2-selection__choice__remove {
+    cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
+}
+
+/* Dialogos FMCamps con cursor custom */
+.modal-dialog-fmc-success >div > div.modal-content {
+    border-color: light-dark(#008000, #00ff00);
+    cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
+}
+
+.modal-dialog-fmc-error >div > div.modal-content {
+    border-color: light-dark(#c20000, #ff4141);
+    cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
+}
+
+.modal-dialog-fmc-warning >div > div.modal-content {
+    border-color: light-dark(#ca9800, #ffda5f);
+    cursor: image-set(url(/static/images/_cursors/pointer.png) 1x, url(/static/images/_cursors/pointer@2x.png) 2x) 8 8, pointer !important;
+}
+
+/* Tema oscuro: reglas app-specific con ID */
+@media (prefers-color-scheme: dark) {
+    img#logopk {
+        filter: grayscale(100%) invert(100%);
+    }
+}

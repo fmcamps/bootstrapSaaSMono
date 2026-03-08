@@ -1,0 +1,89 @@
+// Toast informativo - bInfo()
+
+#fmc-toast-container {
+    z-index: 9999;
+    max-width: 350px;
+}
+
+.toast-fmc-info {
+    background-color: light-dark(#ffffff, rgba(33, 37, 41, 0.95));
+    border: 1px solid light-dark(rgba(32, 132, 255, 0.3), rgba(83, 207, 255, 0.3));
+    box-shadow: 0 0.5rem 1rem light-dark(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.5));
+    border-radius: 0.375rem;
+    margin-bottom: 0.75rem;
+    min-width: 300px;
+}
+
+.toast-fmc-info .toast-header {
+    background-color: light-dark(rgba(32, 132, 255, 0.1), rgba(83, 207, 255, 0.15));
+    border-bottom: 1px solid light-dark(rgba(32, 132, 255, 0.3), rgba(83, 207, 255, 0.3));
+    color: var(--cyan-fmc);
+    font-weight: 600;
+}
+
+.toast-fmc-info .toast-body {
+    padding: 0.75rem 1rem;
+    color: light-dark(#212529, #f8f9fa);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+}
+
+.toast-fmc-icon {
+    color: var(--cyan-fmc);
+    font-size: 1.25em;
+    filter: drop-shadow(0 0 2px light-dark(rgba(32, 132, 255, 0.3), rgba(83, 207, 255, 0.5)));
+}
+
+.toast-fmc-wait {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25em 0.5em;
+    background-color: var(--cyan-fmc) !important;
+    color: #ffffff !important;
+    border: none;
+    min-width: 2.5em;
+    text-align: center;
+}
+
+.toast.showing {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.toast.hide {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.toast-fmc-info .close {
+    color: light-dark(#6c757d, #adb5bd);
+    opacity: 0.7;
+    font-size: 1.25rem;
+    line-height: 1;
+    text-shadow: none;
+}
+
+.toast-fmc-info .close:hover {
+    opacity: 1;
+    color: light-dark(#495057, #dee2e6);
+}
+
+@media (max-width: 576px) {
+    #fmc-toast-container {
+        left: 0.5rem !important;
+        right: 0.5rem !important;
+        max-width: calc(100vw - 1rem);
+    }
+
+    .toast-fmc-info {
+        min-width: auto;
+        width: 100%;
+    }
+}

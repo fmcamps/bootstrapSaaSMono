@@ -1,0 +1,85 @@
+// Responsive and viewport styles
+
+@-webkit-viewport {
+    width: device-width;
+}
+
+@-moz-viewport {
+    width: device-width;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
+
+@-o-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        border-radius: 0.75rem 0.75rem 1.75rem 1.75rem;
+    }
+
+    .showTools {
+        display: inline-flex;
+    }
+
+    .dropdown-item {
+        line-height: 1.85rem;
+    }
+
+    footer .row > [class*="col-md-"] {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    footer .row > [class*="col-md-"] > p.textalignright {
+        text-align: center
+    }
+
+    section > div.container-fluid {
+        padding-left: 0 !important;
+        padding-right: 0 !important
+    }
+
+    .dropdown-menu > li > a {
+        line-height: 2.2 !important;
+    }
+
+    .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
+        max-height: inherit !important;
+    }
+
+    .navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header {
+        padding: 5px 15px 5px 40px !important;
+    }
+
+    .modal-dialog {
+        margin: 0 !important
+    }
+}
+
+@media (min-width: 769px) {
+    .modal-body {
+        padding: 10px 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .sh {
+        width: 1170px;
+        padding-left: inherit;
+        padding-right: inherit;
+    }
+}
+
+@media (max-width: 991px) {
+    .well {
+        margin-top: 10px
+    }
+}

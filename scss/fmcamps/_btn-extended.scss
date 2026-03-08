@@ -1,0 +1,70 @@
+// Extended button overrides
+
+.btn-outline-secondary {
+    color: light-dark(#495057, #f8f9fa) !important;
+    border-color: var(--border-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-orange {
+    color: white;
+    background-color: var(--orange-fmc);
+    border-color: var(--border-color);
+}
+
+.btn-group > .btn, .btn-group-vertical > .btn {
+    border: 0;
+}
+
+.btn-group > .btn-outline-dark:hover {
+    color: light-dark(#ff0d0d, #ffc60d);
+    background-color: inherit;
+    border-color: #343a40;
+}
+
+div.modal-footer > button.btn.btn-outline-secondary {
+    color: #fff !important;
+}
+
+div.modal-footer > button.btn.btn-outline-secondary:hover {
+    color: #000 !important;
+}
+
+.btn {
+    border-radius: 0.5rem;
+    font-weight: 500;
+}
+
+.btn.btn-default {
+    background-color: inherit;
+}
+
+.btn.btn-mobile {
+    background-color: inherit;
+    border: 0;
+}
+
+.btn.btn-mobile:hover {
+    background-color: inherit;
+    border: 0;
+}
+
+.btn-primary {
+    color: #fff !important;
+    background-color: var(--cyan-fmc);
+    border-right: 1.75px solid black;
+    border-bottom: 1.5px solid black;
+}
+
+.btn-primary:hover {
+    background-color: var(--orange-fmc);
+}
+
+.btn-outline-dark {
+    color: light-dark(#343a40, #adadad);
+    border-color: var(--border-color);
+}
+
+.copy-btn {
+    border: none;
+}

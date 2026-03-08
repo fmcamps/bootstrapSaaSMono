@@ -1,0 +1,154 @@
+// GestorArchivos - Upload de Archivos a S3
+
+.gestor-archivos .upload-zone {
+    border: 2px dashed var(--cyan-fmc);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    background-color: light-dark(#f8f9fa, rgba(255, 255, 255, 0.05));
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gestor-archivos .upload-zone:hover {
+    border-color: var(--blue-fmc);
+    background-color: light-dark(#e9ecef, rgba(255, 255, 255, 0.08));
+    transform: translateY(-2px);
+}
+
+.gestor-archivos .upload-zone.drag-over {
+    border-color: var(--success-fmc);
+    background-color: light-dark(rgba(0, 128, 0, 0.05), rgba(0, 255, 0, 0.1));
+    transform: scale(1.02);
+}
+
+.gestor-archivos .upload-zone-content i {
+    color: var(--cyan-fmc);
+    transition: transform 0.3s ease;
+}
+
+.gestor-archivos .upload-zone:hover .upload-zone-content i {
+    transform: scale(1.1);
+}
+
+.gestor-archivos .upload-zone-info {
+    font-size: 0.875rem;
+}
+
+.gestor-archivos .selected-files-list {
+    background-color: light-dark(#fff, rgba(255, 255, 255, 0.03));
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.gestor-archivos .file-item {
+    transition: background-color 0.2s ease;
+}
+
+.gestor-archivos .file-item:hover {
+    background-color: light-dark(#f8f9fa, rgba(255, 255, 255, 0.05));
+}
+
+.gestor-archivos .file-item .btn-danger {
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+
+.gestor-archivos .file-item .btn-danger:hover {
+    opacity: 1;
+}
+
+.gestor-archivos .global-progress {
+    background-color: light-dark(#fff, rgba(255, 255, 255, 0.03));
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.gestor-archivos .global-progress h6 {
+    color: var(--cyan-fmc);
+    font-weight: 600;
+}
+
+.gestor-archivos .global-progress .progress {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gestor-archivos .global-progress .progress-bar {
+    background-color: var(--cyan-fmc);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: width 0.4s ease;
+}
+
+.gestor-archivos .attached-files-list h6 {
+    font-weight: 600;
+    color: var(--blue-fmc);
+}
+
+.gestor-archivos .attached-file-item {
+    background-color: light-dark(#fff, rgba(255, 255, 255, 0.03));
+    transition: all 0.2s ease;
+}
+
+.gestor-archivos .attached-file-item:hover {
+    background-color: light-dark(#f8f9fa, rgba(255, 255, 255, 0.06));
+    transform: translateX(4px);
+}
+
+.gestor-archivos .attached-file-item a {
+    color: var(--cyan-fmc);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.gestor-archivos .attached-file-item a:hover {
+    color: var(--blue-fmc);
+    text-decoration: underline;
+}
+
+.gestor-archivos .attached-file-item .btn-danger {
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.gestor-archivos .attached-file-item:hover .btn-danger {
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gestor-archivos .selected-files-list,
+.gestor-archivos .global-progress {
+    animation: fadeIn 0.3s ease;
+}
+
+@media (max-width: 576px) {
+    .gestor-archivos .upload-zone {
+        padding: 1.5rem 1rem;
+    }
+
+    .gestor-archivos .upload-zone-content h5 {
+        font-size: 1rem;
+    }
+
+    .gestor-archivos .upload-zone-content i {
+        font-size: 2rem;
+    }
+
+    .gestor-archivos .file-item .btn-danger {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
+    }
+}

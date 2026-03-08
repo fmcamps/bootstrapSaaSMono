@@ -1,0 +1,88 @@
+// Table styles
+
+.table {
+    background-color: white; /* fallback */
+    background-color: light-dark(white, black);
+    color: inherit;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.table.tableMV > thead > tr > th {
+    border-top: 1px solid #dee2e6;
+}
+
+.table > thead > tr > th {
+    font-weight: 400;
+    color: gray;
+    font-size: 0.85rem;
+    border-top: 0 solid #E2F2FF;
+    border-bottom: 1px solid #dee2e666;
+    vertical-align: top;
+    text-align: center;
+}
+
+.table > thead > tr > th:hover {
+    color: light-dark(black, white);
+}
+
+.table.bg-fmc2 > thead > tr > th:hover {
+    color: light-dark(white, black);
+}
+
+.table > tbody > tr > td > a {
+    color: var(--cyan-fmc);
+}
+
+.table > tbody > tr > td > a:hover {
+    color: var(--orange-fmc);
+    text-decoration: underline;
+}
+
+.table > tbody > tr:hover .showTools {
+    display: inline-flex;
+    margin-top: 1px;
+}
+
+.table > tbody > tr:last-child > td {
+    border-bottom: 0;
+}
+
+.table.transparente {
+    background-color: transparent !important;
+}
+
+tr.text-warning > tr {
+    background-color: var(--warning-fmc) !important;
+}
+
+.table td {
+    border-top: 1px solid var(--border-color-table);
+}
+
+.table-bordered td {
+    border: 1px solid var(--border-color-table);
+}
+
+table.table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--light-bg); /* fallback */
+    background-color: light-dark(var(--light-bg), var(--dark-bg));
+}
+
+.modal-body-with-table, .card-body-with-table {
+    padding: 0 !important;
+    overflow-x: auto;
+    border-right: 0 !important;
+    border-bottom: 0 !important;
+}
+
+.modal-body-with-table .table-responsive,
+.modal-body-with-table .table-responsive table.table,
+.card-body-with-table .table-responsive,
+.card-body-with-table .table-responsive table.table {
+    margin: 0 !important
+}
+
+.modal-body-with-table > .table-responsive > table {
+    margin-bottom: 0
+}

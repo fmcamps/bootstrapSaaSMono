@@ -1,0 +1,144 @@
+// Form controls
+
+.form-control {
+    background-color: white; /* fallback */
+    background-color: light-dark(white, black);
+    color: #495057; /* fallback */
+    color: light-dark(#495057, white);
+    font-weight: 500;
+    font-size: 1.15rem;
+    line-height: 1.4;
+    border-radius: 0.375rem;
+    border-color: var(--border-color);
+    border-left: 4px solid var(--cyan-fmc);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: white; /* fallback */
+    background-color: light-dark(white, black);
+    color: #495057; /* fallback */
+    color: light-dark(#495057, white);
+    border: 1px solid #ffa200;
+    border-left: 4px solid #ffa200;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: #e9ecef; /* fallback */
+    background-color: light-dark(#e9ecef, transparent);
+    color: grey;
+}
+
+.form-control.readonly-state {
+    background-color: #f8f9fa; /* fallback */
+    background-color: light-dark(#f8f9fa, #2a2a2a);
+    color: #6c757d; /* fallback */
+    color: light-dark(#6c757d, #adb5bd);
+    border-left: 4px solid #6c757d;
+    cursor: not-allowed;
+    transition: all 0.3s ease;
+}
+
+.form-control.readonly-state:focus {
+    background-color: #f8f9fa; /* fallback */
+    background-color: light-dark(#f8f9fa, #2a2a2a);
+    border-color: #6c757d;
+    border-left: 4px solid #6c757d;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-control:not(.readonly-state):focus {
+    border-left: 4px solid var(--cyan-fmc);
+    animation: pulse-border 0.3s ease-in-out;
+}
+
+@keyframes pulse-border {
+    0% { border-left-width: 4px; }
+    50% { border-left-width: 6px; }
+    100% { border-left-width: 4px; }
+}
+
+.form-control-left {
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--cyan-fmc) !important;
+    background-color: white; /* fallback */
+    background-color: light-dark(white, black);
+    color: #495057; /* fallback */
+    color: light-dark(#495057, white);
+}
+
+.form-control-color {
+    color: light-dark(#495057, white) !important;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    border-color: #ffb926;
+    background-color: #c75b00;
+    width: 2.25rem;
+    height: 1.3rem;
+}
+
+.custom-control-label::before {
+    width: 2.25rem;
+    height: 1.3rem;
+    background-color: transparent;
+}
+
+.custom-switch .custom-control-label::before {
+    left: -2.25rem;
+    width: 2.25rem;
+    pointer-events: all;
+    border-radius: 0.75rem;
+}
+
+.custom-switch .custom-control-label::after {
+    top: calc(0.25rem + 2px);
+    left: calc(-2.25rem + 2px);
+    width: calc(1.3rem - 2px);
+    height: calc(1.3rem - 4px);
+    background-color: var(--cyan-fmc);
+}
+
+.headerForm {
+    margin-top: auto;
+}
+
+.invalid {
+    border: 1px solid red;
+    color: red;
+}
+
+.filtrounico {
+    background-color: light-dark(antiquewhite, #703400) !important;
+}
+
+.showTools {
+    display: none;
+}
+
+.styleId {
+    font-size: 20px;
+    padding: 5px;
+    font-family: sans-serif, fantasy;
+}
+
+.styleIdBottoms {
+    margin-top: 4px;
+}
+
+textarea {
+    overflow-y: hidden;
+    resize: none;
+}
+
+.input-error {
+    border: 1px solid red;
+}
+
+.error-message {
+    color: red;
+    display: none;
+}

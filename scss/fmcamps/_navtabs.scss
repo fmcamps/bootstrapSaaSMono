@@ -1,0 +1,30 @@
+// Nav tabs
+
+.nav-tabs {
+    border-bottom: none !important;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: light-dark(#000000, white);
+    background-color: transparent;
+    border-color: #dbdbdb #d9d9d9 var(--orange-fmc) !important;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.nav-tabs .nav-link {
+    margin-bottom: -1px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 4px solid #b2b2b254;
+    border-top-left-radius: 0.35rem;
+    border-top-right-radius: 0.35rem;
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: #e9ecef #e9ecef #ffd2a1;
+}
+
+.tab-content {
+    margin-top: 10px
+}

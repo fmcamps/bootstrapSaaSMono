@@ -1,0 +1,39 @@
+// Dropdown styles
+
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: solid 1px var(--border-color);
+    margin-top: 0;
+    box-shadow: 0 5px 20px -7px rgba(253, 134, 0, 0.50);
+}
+
+.dropdown-menu > li > a.tech {
+    padding: 6px 20px;
+    font-size: 18px;
+}
+
+.dropdown-item {
+    color: light-dark( var(--light-color),);
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #ed6324;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: #138dc2;
+    color: white;
+}
+
+.dropdown-item-text {
+    color: var(--label-color);
+    text-align: center;
+    cursor: default !important;
+}
+
+.dropdown-item-text:hover {
+    color: var(--label-color);
+}
