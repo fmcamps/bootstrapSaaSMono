@@ -2,7 +2,7 @@
 
 .list-group-item {
     background-color: light-dark(white, #000);
-    color: light-dark( var(--light-color), var(--dark-color)) !important;
+    color: light-dark( var(--light-color), var(--dark-color));
     padding: 0.25rem 1.25rem;
 }
 

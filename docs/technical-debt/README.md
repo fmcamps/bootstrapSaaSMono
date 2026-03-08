@@ -6,13 +6,14 @@ Registro de deuda tecnica conocida y mejoras aspiracionales para el design syste
 
 ### `!important` excesivos
 
-- **Estado:** 27 removidos (3 en ronda 1 + 24 en ronda 2 con testing visual via Playwright)
-- **Pendiente:** 80 instancias restantes en 13 archivos
+- **Estado:** 36 removidos (3 en ronda 1 + 24 en ronda 2 + 9 en ronda 3 con testing visual via Playwright)
+- **Pendiente:** 71 instancias restantes en 13 archivos
 - **Justificados (third-party):** 37 en DataTables (15), Select2 (18), DateRangePicker (4)
 - **Justificados (dark theme):** 10 en `_dark-theme.scss` (overrides de light mode)
 - **Justificados (layout):** 9 en `_body.scss` (3), `_responsive.scss` (6)
 - **Utilities (patron Bootstrap):** 6 en `_utilities.scss`
-- **Otros:** 18 en tables (6), toasts (4), forms (3), buttons (3), cards (1), list-group (1)
+- **Justificados (specificity):** 7 en forms (3, override :focus), cards (1, override :last-child), toasts (2, override badge variants), toast container (1, override inline JS)
+- **Ronda 3 removidos:** 9 en buttons (3), tables (5), list-group (1) — verificado con 48 visual tests
 
 ### Bootstrap 4.6.2 `@import` deprecation
 
@@ -34,7 +35,7 @@ Registro de deuda tecnica conocida y mejoras aspiracionales para el design syste
 
 ### Corto plazo
 
-- [x] ~~Completar remocion de `!important` con testing visual~~ — 24 quick wins removidos, 80 restantes justificados
+- [x] ~~Completar remocion de `!important` con testing visual~~ — 36 removidos en 3 rondas, 71 restantes (todos justificados)
 - [x] ~~Actualizar browserslist~~ — `caniuse-lite` ya en version mas reciente (1.0.30001777)
 - [x] ~~Documentar cada componente~~ — cubierto por el kitchen sink Astro en `site/`
 
