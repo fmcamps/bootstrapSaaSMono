@@ -1,0 +1,337 @@
+/**
+ * Notification Center Styles - "FMCAMPS SaaSMono"
+ * Descripción: Estilos para el centro de notificaciones in-app
+ * Autor: Sistema "FMCAMPS SaaSMono"
+ * Fecha: 2025-01-08
+ */
+
+/* ========================================
+   CAMPANA DE NOTIFICACIONES
+   ======================================== */
+
+.notification-bell {
+    position: relative;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: color 0.2s ease;
+}
+
+.notification-bell:hover {
+    color: #ffc107;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 0;
+    right: -6px;
+    min-width: 18px;
+    height: 18px;
+    padding: 2px 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    line-height: 14px;
+    text-align: center;
+    border-radius: 9px;
+    background-color: #dc3545;
+    color: #fff;
+    animation: fadeInBounce 0.3s ease-in;
+}
+
+@keyframes fadeInBounce {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ========================================
+   DROPDOWN DE NOTIFICACIONES
+   ======================================== */
+
+.notification-dropdown {
+    width: 350px;
+    max-height: 500px;
+    overflow: hidden;
+    padding: 0;
+    border-radius: 0.5rem;
+    background-color: light-dark(rgb(255 255 255 / 95%), rgb(0 0 0 / 85%));
+    backdrop-filter: blur(3px);
+    border: solid 1px light-dark(#dee2e6, #444);
+    box-shadow: 0 4px 12px light-dark(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.4));
+}
+
+.notification-dropdown .dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background-color: light-dark(#f8f9fa, #1f1f1f);
+    border-bottom: 1px solid light-dark(#dee2e6, #444);
+    font-weight: bold;
+}
+
+.notification-dropdown .dropdown-header span {
+    font-size: 1rem;
+    color: light-dark(#495057, #e0e0e0);
+}
+
+.notification-dropdown .mark-all-read {
+    padding: 2px 8px;
+    font-size: 0.75rem;
+    color: light-dark(#007bff, #5dade2);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.notification-dropdown .mark-all-read:hover {
+    color: light-dark(#0056b3, #3498db);
+    text-decoration: underline;
+}
+
+/* ========================================
+   LISTA DE NOTIFICACIONES
+   ======================================== */
+
+.notification-list {
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Scrollbar personalizado */
+.notification-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.notification-list::-webkit-scrollbar-track {
+    background: light-dark(#f1f1f1, #2d2d2d);
+}
+
+.notification-list::-webkit-scrollbar-thumb {
+    background: light-dark(#888, #555);
+    border-radius: 3px;
+}
+
+.notification-list::-webkit-scrollbar-thumb:hover {
+    background: light-dark(#555, #777);
+}
+
+/* ========================================
+   ITEMS DE NOTIFICACIÓN
+   ======================================== */
+
+.notification-item {
+    padding: 12px 16px;
+    border-bottom: 1px solid light-dark(#e9ecef, #444);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    background-color: light-dark(transparent, transparent);
+}
+
+.notification-item:last-child {
+    border-bottom: none;
+}
+
+.notification-item:hover {
+    background-color: light-dark(#f8f9fa, #3a3a3a);
+}
+
+.notification-item.unread {
+    background-color: light-dark(#e3f2fd, #2c3e50);
+    border-left: 3px solid light-dark(#007bff, #5dade2);
+}
+
+.notification-item.unread:hover {
+    background-color: light-dark(#d1ecf1, #34495e);
+}
+
+.notification-title {
+    font-weight: bold;
+    color: light-dark(#212529, #e0e0e0);
+}
+
+.notification-message {
+    font-size: 0.875rem;
+    color: light-dark(#495057, #b0b0b0);
+    margin-bottom: 4px;
+    line-height: 1.4;
+}
+
+.notification-item small {
+    font-size: 0.75rem;
+    color: light-dark(#6c757d, #adb5bd);
+}
+
+/* ========================================
+   ESTADO VACÍO
+   ======================================== */
+
+.notification-empty {
+    padding: 40px 20px !important;
+}
+
+.notification-empty i {
+    color: light-dark(#adb5bd, #6c757d);
+}
+
+.notification-empty p {
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-size: 0.875rem;
+    color: light-dark(#6c757d, #adb5bd);
+}
+
+/* ========================================
+   FOOTER DEL DROPDOWN
+   ======================================== */
+
+.notification-dropdown .dropdown-item.text-center {
+    padding: 10px;
+    font-size: 0.8rem;
+    color: light-dark(#6c757d, #adb5bd);
+    background-color: light-dark(#f8f9fa, #1f1f1f);
+    border-top: 1px solid light-dark(#dee2e6, #444);
+    transition: background-color 0.2s;
+}
+
+.notification-dropdown .dropdown-item.text-center:hover {
+    background-color: light-dark(#e9ecef, #2a2a2a);
+    color: light-dark(#495057, #e0e0e0);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 576px) {
+    .notification-dropdown {
+        width: 300px;
+    }
+
+    .notification-list {
+        max-height: 350px;
+    }
+
+    .notification-item {
+        padding: 10px 12px;
+    }
+
+    .notification-message {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .notification-dropdown {
+        width: 280px;
+    }
+}
+
+/* ========================================
+   TOAST STYLES (para bInfo)
+   ======================================== */
+
+.toast-fmc-info {
+    min-width: 300px;
+    max-width: 400px;
+    margin-bottom: 0.5rem;
+    background-color: #fff;
+    border-left: 4px solid #17a2b8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.toast-fmc-info .toast-header {
+    background-color: #e9f7fb;
+    border-bottom: 1px solid #bee5eb;
+}
+
+.toast-fmc-icon {
+    color: #17a2b8;
+    font-size: 1.1rem;
+}
+
+.toast-fmc-wait {
+    font-size: 0.75rem;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.toast-fmc-info {
+    animation: slideInRight 0.3s ease-out;
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+.notification-item:focus {
+    outline: 2px solid #007bff;
+    outline-offset: -2px;
+}
+
+.notification-bell:focus {
+    outline: 2px solid #ffc107;
+    outline-offset: 2px;
+}
+
+/* ========================================
+   DARK MODE SUPPORT
+   ======================================== */
+
+/* Ya no es necesario usar @media queries - todos los estilos
+   usan light-dark() para soporte automático de temas */
+
+/* ========================================
+   BADGES "NUEVO" EN DATATABLES
+   PRD Notificaciones - Indicadores de notificaciones no vistas
+   ======================================== */
+
+.badge-notification-new {
+    background-color: #e65100; /* Naranja oscuro para mejor contraste WCAG */
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    animation: pulseNew 2s infinite;
+    vertical-align: middle;
+}
+
+@keyframes pulseNew {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+/* Hover effect para destacar la fila con notificación */
+tr:has(.badge-notification-new):hover .badge-notification-new {
+    animation: none;
+    background-color: #e68900;
+}

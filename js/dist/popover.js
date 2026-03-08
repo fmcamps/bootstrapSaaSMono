@@ -1,6 +1,6 @@
 /*!
   * Bootstrap popover.js v4.6.2 (https://getbootstrap.com/)
-  * Copyright 2011-2022 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Copyright 2011-2024 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 (function (global, factory) {
@@ -23,7 +23,6 @@
       Object.defineProperty(target, descriptor.key, descriptor);
     }
   }
-
   function _createClass(Constructor, protoProps, staticProps) {
     if (protoProps) _defineProperties(Constructor.prototype, protoProps);
     if (staticProps) _defineProperties(Constructor, staticProps);
@@ -32,31 +31,25 @@
     });
     return Constructor;
   }
-
   function _extends() {
     _extends = Object.assign ? Object.assign.bind() : function (target) {
       for (var i = 1; i < arguments.length; i++) {
         var source = arguments[i];
-
         for (var key in source) {
           if (Object.prototype.hasOwnProperty.call(source, key)) {
             target[key] = source[key];
           }
         }
       }
-
       return target;
     };
     return _extends.apply(this, arguments);
   }
-
   function _inheritsLoose(subClass, superClass) {
     subClass.prototype = Object.create(superClass.prototype);
     subClass.prototype.constructor = subClass;
-
     _setPrototypeOf(subClass, superClass);
   }
-
   function _setPrototypeOf(o, p) {
     _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) {
       o.__proto__ = p;
@@ -80,18 +73,15 @@
   var CLASS_NAME_SHOW = 'show';
   var SELECTOR_TITLE = '.popover-header';
   var SELECTOR_CONTENT = '.popover-body';
-
   var Default = _extends({}, Tooltip__default["default"].Default, {
     placement: 'right',
     trigger: 'click',
     content: '',
     template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
   });
-
   var DefaultType = _extends({}, Tooltip__default["default"].DefaultType, {
     content: '(string|element|function)'
   });
-
   var Event = {
     HIDE: "hide" + EVENT_KEY,
     HIDDEN: "hidden" + EVENT_KEY,
@@ -104,91 +94,78 @@
     MOUSEENTER: "mouseenter" + EVENT_KEY,
     MOUSELEAVE: "mouseleave" + EVENT_KEY
   };
+
   /**
    * Class definition
    */
-
   var Popover = /*#__PURE__*/function (_Tooltip) {
     _inheritsLoose(Popover, _Tooltip);
-
     function Popover() {
       return _Tooltip.apply(this, arguments) || this;
     }
-
     var _proto = Popover.prototype;
-
     // Overrides
     _proto.isWithContent = function isWithContent() {
       return this.getTitle() || this._getContent();
     };
-
     _proto.addAttachmentClass = function addAttachmentClass(attachment) {
       $__default["default"](this.getTipElement()).addClass(CLASS_PREFIX + "-" + attachment);
     };
-
     _proto.getTipElement = function getTipElement() {
       this.tip = this.tip || $__default["default"](this.config.template)[0];
       return this.tip;
     };
-
     _proto.setContent = function setContent() {
-      var $tip = $__default["default"](this.getTipElement()); // We use append for html objects to maintain js events
+      var $tip = $__default["default"](this.getTipElement());
 
+      // We use append for html objects to maintain js events
       this.setElementContent($tip.find(SELECTOR_TITLE), this.getTitle());
-
       var content = this._getContent();
-
       if (typeof content === 'function') {
         content = content.call(this.element);
       }
-
       this.setElementContent($tip.find(SELECTOR_CONTENT), content);
       $tip.removeClass(CLASS_NAME_FADE + " " + CLASS_NAME_SHOW);
-    } // Private
-    ;
+    }
 
+    // Private
+    ;
     _proto._getContent = function _getContent() {
       return this.element.getAttribute('data-content') || this.config.content;
     };
-
     _proto._cleanTipClass = function _cleanTipClass() {
       var $tip = $__default["default"](this.getTipElement());
       var tabClass = $tip.attr('class').match(BSCLS_PREFIX_REGEX);
-
       if (tabClass !== null && tabClass.length > 0) {
         $tip.removeClass(tabClass.join(''));
       }
-    } // Static
-    ;
+    }
 
+    // Static
+    ;
     Popover._jQueryInterface = function _jQueryInterface(config) {
       return this.each(function () {
         var data = $__default["default"](this).data(DATA_KEY);
-
         var _config = typeof config === 'object' ? config : null;
-
         if (!data && /dispose|hide/.test(config)) {
           return;
         }
-
         if (!data) {
           data = new Popover(this, _config);
           $__default["default"](this).data(DATA_KEY, data);
         }
-
         if (typeof config === 'string') {
           if (typeof data[config] === 'undefined') {
             throw new TypeError("No method named \"" + config + "\"");
           }
-
           data[config]();
         }
       });
     };
-
     _createClass(Popover, null, [{
       key: "VERSION",
-      get: // Getters
+      get:
+      // Getters
       function get() {
         return VERSION;
       }
@@ -223,17 +200,13 @@
         return DefaultType;
       }
     }]);
-
     return Popover;
   }(Tooltip__default["default"]);
   /**
    * jQuery
    */
-
-
   $__default["default"].fn[NAME] = Popover._jQueryInterface;
   $__default["default"].fn[NAME].Constructor = Popover;
-
   $__default["default"].fn[NAME].noConflict = function () {
     $__default["default"].fn[NAME] = JQUERY_NO_CONFLICT;
     return Popover._jQueryInterface;
