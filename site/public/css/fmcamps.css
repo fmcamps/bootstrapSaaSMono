@@ -84,11 +84,9 @@ p {
 abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
   cursor: help;
   border-bottom: 0;
-  -webkit-text-decoration-skip-ink: none;
   text-decoration-skip-ink: none;
 }
 
@@ -1833,8 +1831,6 @@ input[type=date].form-control,
 input[type=time].form-control,
 input[type=datetime-local].form-control,
 input[type=month].form-control {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 
@@ -2234,8 +2230,6 @@ textarea.form-control {
   color: #111;
   text-align: center;
   vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
   user-select: none;
   background-color: transparent;
   border: 1px solid transparent;
@@ -3370,8 +3364,6 @@ input[type=button].btn-block {
   display: block;
   min-height: 1.5rem;
   padding-left: 1.5rem;
-  -webkit-print-color-adjust: exact;
-  color-adjust: exact;
   print-color-adjust: exact;
 }
 
@@ -3513,8 +3505,6 @@ input[type=button].btn-block {
   background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") right 0.75rem center/8px 10px no-repeat;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 .custom-select:focus {
@@ -3628,8 +3618,6 @@ input[type=button].btn-block {
   height: 1.4rem;
   padding: 0;
   background-color: transparent;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
 }
 .custom-range:focus {
@@ -3654,17 +3642,14 @@ input[type=button].btn-block {
   background-color: #212529;
   border: 0;
   border-radius: 1rem;
-  -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-webkit-slider-thumb {
-    -webkit-transition: none;
     transition: none;
   }
 }
 .custom-range::-webkit-slider-thumb {
-  -webkit-appearance: none;
   appearance: none;
 }
 .custom-range::-webkit-slider-thumb:active {
@@ -3685,17 +3670,14 @@ input[type=button].btn-block {
   background-color: #212529;
   border: 0;
   border-radius: 1rem;
-  -moz-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-moz-range-thumb {
-    -moz-transition: none;
     transition: none;
   }
 }
 .custom-range::-moz-range-thumb {
-  -moz-appearance: none;
   appearance: none;
 }
 .custom-range::-moz-range-thumb:active {
@@ -3719,12 +3701,10 @@ input[type=button].btn-block {
   background-color: #212529;
   border: 0;
   border-radius: 1rem;
-  -ms-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-ms-thumb {
-    -ms-transition: none;
     transition: none;
   }
 }
@@ -4433,9 +4413,7 @@ input[type=button].btn-block {
 }
 @media (min-width: 576px) {
   .card-columns {
-    -moz-column-count: 3;
     column-count: 3;
-    -moz-column-gap: 1.25rem;
     column-gap: 1.25rem;
     orphans: 1;
     widows: 1;
@@ -5361,8 +5339,6 @@ a.close.disabled {
 .modal-dialog-centered::before {
   display: block;
   height: calc(100vh - 1rem);
-  height: -webkit-min-content;
-  height: -moz-min-content;
   height: min-content;
   content: "";
 }
@@ -5470,8 +5446,6 @@ a.close.disabled {
   }
   .modal-dialog-centered::before {
     height: calc(100vh - 3.5rem);
-    height: -webkit-min-content;
-    height: -moz-min-content;
     height: min-content;
   }
   .modal-sm {
@@ -5759,7 +5733,6 @@ a.close.disabled {
   float: left;
   width: 100%;
   margin-right: -100%;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transition: transform 0.6s ease-in-out;
 }
@@ -7052,20 +7025,14 @@ button.bg-dark:focus {
   }
 }
 .user-select-all {
-  -webkit-user-select: all !important;
-  -moz-user-select: all !important;
   user-select: all !important;
 }
 
 .user-select-auto {
-  -webkit-user-select: auto !important;
-  -moz-user-select: auto !important;
   user-select: auto !important;
 }
 
 .user-select-none {
-  -webkit-user-select: none !important;
-  -moz-user-select: none !important;
   user-select: none !important;
 }
 
@@ -7094,7 +7061,6 @@ button.bg-dark:focus {
 }
 
 .position-sticky {
-  position: -webkit-sticky !important;
   position: sticky !important;
 }
 
@@ -7114,9 +7080,8 @@ button.bg-dark:focus {
   z-index: 1030;
 }
 
-@supports ((position: -webkit-sticky) or (position: sticky)) {
+@supports (position: sticky) {
   .sticky-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -9462,42 +9427,67 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
 }
 
 .fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
   animation: fa-spin 1s infinite steps(8);
 }
-@keyframes fa-spin {
+
+@-webkit-keyframes fa-spin {
   0% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 .fa-rotate-90 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
 .fa-rotate-180 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
 .fa-rotate-270 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 
 .fa-flip-horizontal {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 
 .fa-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
   transform: scale(1, -1);
 }
 
@@ -12429,7 +12419,7 @@ body {
   padding-top: 0.75rem;
 }
 
-@supports ((position: -webkit-sticky) or (position: sticky)) {
+@supports (position: -webkit-sticky) or (position: sticky) {
   .sticky-top {
     top: 3.2rem;
   }
@@ -12609,19 +12599,16 @@ a.nav-link:hover {
 .custom-control-input:checked ~ .custom-control-label::before {
   border-color: #ffb926;
   background-color: #c75b00;
-  width: 2.25rem;
-  height: 1.3rem;
 }
 
 .custom-control-label::before {
-  width: 2.25rem;
-  height: 1.3rem;
   background-color: transparent;
 }
 
 .custom-switch .custom-control-label::before {
   left: -2.25rem;
   width: 2.25rem;
+  height: 1.3rem;
   pointer-events: all;
   border-radius: 0.75rem;
 }
@@ -12905,7 +12892,6 @@ div.modal-footer > button.btn.btn-outline-secondary:hover {
 .dropdown-menu {
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
-  -webkit-backdrop-filter: blur(3px);
   backdrop-filter: blur(3px);
   border: solid 1px var(--border-color);
   margin-top: 0;
@@ -13138,6 +13124,10 @@ table.table-striped tbody tr:nth-of-type(odd) {
 .alert {
   border: 0;
 }
+.alert .close {
+  border: 0;
+  outline: 0;
+}
 
 .alert-primary {
   border-left: 3px solid #007bff;
@@ -13192,7 +13182,6 @@ table.table-striped tbody tr:nth-of-type(odd) {
 .img-ef {
   width: 100%;
   aspect-ratio: 1/1;
-  -o-object-fit: contain;
   object-fit: contain;
 }
 
@@ -13218,7 +13207,6 @@ table.table-striped tbody tr:nth-of-type(odd) {
 .titulo {
   font-size: 4rem;
   background: linear-gradient(45deg, var(--cyan-fmc), #009eff, #ff5e00, var(--orange-fmc));
-  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -13229,7 +13217,6 @@ table.table-striped tbody tr:nth-of-type(odd) {
 
 .tituloright {
   background: linear-gradient(90deg, #009eff, var(--cyan-fmc));
-  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   float: right;
@@ -13241,19 +13228,16 @@ table.table-striped tbody tr:nth-of-type(odd) {
 .bg-black-blur {
   background: rgba(0, 0, 0, 0.25);
   box-shadow: 0px 4px 4px rgba(45, 201, 253, 0.2);
-  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
 
 .bg-white-blur {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0px 4px 4px rgba(45, 201, 253, 0.2);
-  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
 
 .bg-blur {
-  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
 
@@ -13852,7 +13836,6 @@ div.calendar-table table.table th, div.calendar-table table.table td {
 .daterangepicker {
   position: absolute;
   color: inherit;
-  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   background-color: rgba(255, 255, 255, 0.7); /* fallback */
   background-color: light-dark(rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.7));
@@ -14233,8 +14216,6 @@ div.calendar-table table.table th, div.calendar-table table.table td {
 
 .daterangepicker .drp-calendar {
   width: 100% !important;
-  max-width: -webkit-min-content !important;
-  max-width: -moz-min-content !important;
   max-width: min-content !important;
 }
 
@@ -14254,7 +14235,6 @@ div.calendar-table table.table th, div.calendar-table table.table td {
 .select2-container .select2-selection--single {
   box-sizing: border-box;
   display: block;
-  -moz-user-select: none;
   user-select: none;
   -webkit-user-select: none;
 }
@@ -14284,7 +14264,6 @@ div.calendar-table table.table th, div.calendar-table table.table td {
   box-sizing: border-box;
   display: block;
   min-height: 32px;
-  -moz-user-select: none;
   user-select: none;
   -webkit-user-select: none;
 }
@@ -14346,7 +14325,6 @@ div.calendar-table table.table th, div.calendar-table table.table td {
 
 .select2-results__option {
   padding: 6px;
-  -moz-user-select: none;
   user-select: none;
   -webkit-user-select: none;
 }
@@ -14658,6 +14636,8 @@ div.calendar-table table.table th, div.calendar-table table.table td {
   border: 1px solid #aaa;
   border-radius: 4px;
   outline: 0;
+  background-image: -webkit-linear-gradient(top, white 50%, var(--dark-color) 100%);
+  background-image: -o-linear-gradient(top, white 50%, var(--dark-color) 100%);
   background-image: linear-gradient(to bottom, white 50%, var(--dark-color) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0);
@@ -14687,6 +14667,8 @@ div.calendar-table table.table th, div.calendar-table table.table td {
   top: 1px;
   right: 1px;
   width: 20px;
+  background-image: -webkit-linear-gradient(top, var(--dark-color) 50%, #ccc 100%);
+  background-image: -o-linear-gradient(top, var(--dark-color) 50%, #ccc 100%);
   background-image: linear-gradient(to bottom, var(--dark-color) 50%, #ccc 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFCCCCCC', GradientType=0);
@@ -14737,6 +14719,8 @@ div.calendar-table table.table th, div.calendar-table table.table td {
   border-top: 0;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  background-image: -webkit-linear-gradient(top, white 0%, var(--dark-color) 50%);
+  background-image: -o-linear-gradient(top, white 0%, var(--dark-color) 50%);
   background-image: linear-gradient(to bottom, white 0%, var(--dark-color) 50%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFEEEEEE', GradientType=0);
@@ -14746,6 +14730,8 @@ div.calendar-table table.table th, div.calendar-table table.table td {
   border-bottom: 0;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  background-image: -webkit-linear-gradient(top, var(--dark-color) 50%, white 100%);
+  background-image: -o-linear-gradient(top, var(--dark-color) 50%, white 100%);
   background-image: linear-gradient(to bottom, var(--dark-color) 50%, white 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEEEEEE', endColorstr='#FFFFFFFF', GradientType=0);
@@ -14883,6 +14869,7 @@ div.calendar-table table.table th, div.calendar-table table.table td {
 }
 
 .select2-container--bootstrap .select2-search--dropdown .select2-search__field {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   background-color: #fff; /* fallback */
   background-color: light-dark(#fff, #000);
@@ -15013,6 +15000,7 @@ div.calendar-table table.table th, div.calendar-table table.table td {
 
 .select2-container--bootstrap.select2-container--disabled .select2-selection {
   border-color: #ccc;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -15032,6 +15020,7 @@ div.calendar-table table.table th, div.calendar-table table.table td {
 }
 
 .select2-container--bootstrap .select2-dropdown {
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   border-color: #66afe9;
   overflow-x: hidden;
@@ -15039,6 +15028,7 @@ div.calendar-table table.table th, div.calendar-table table.table td {
 }
 
 .select2-container--bootstrap .select2-dropdown--above {
+  -webkit-box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.175);
   margin-top: 1px;
 }
@@ -15089,6 +15079,8 @@ div.calendar-table table.table th, div.calendar-table table.table td {
 }
 
 .select2-container--bootstrap .select2-selection--multiple .select2-selection__rendered {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: block;
   line-height: 1.42857143;
@@ -15298,6 +15290,7 @@ div.calendar-table table.table th, div.calendar-table table.table td {
 }
 
 .has-warning .select2-container--focus .select2-selection, .has-warning .select2-container--open .select2-selection {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
   border-color: #66512c;
 }
@@ -15315,6 +15308,7 @@ div.calendar-table table.table th, div.calendar-table table.table td {
 }
 
 .has-error .select2-container--focus .select2-selection, .has-error .select2-container--open .select2-selection {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
   border-color: #843534;
 }
@@ -15332,6 +15326,7 @@ div.calendar-table table.table th, div.calendar-table table.table td {
 }
 
 .has-success .select2-container--focus .select2-selection, .has-success .select2-container--open .select2-selection {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
   border-color: #2b542c;
 }
@@ -15533,6 +15528,9 @@ td > button.select:hover .fa-circle-o::before {
   width: device-width;
 }
 @-moz-viewport {
+  width: device-width;
+}
+@-ms-viewport {
   width: device-width;
 }
 @-o-viewport {
@@ -15885,7 +15883,6 @@ td > button.select:hover .fa-circle-o::before {
 @media (prefers-color-scheme: dark) {
   .tituloright {
     background: linear-gradient(90deg, #f8ba02, var(--orange-fmc));
-    -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 3px -2px 20px rgba(249, 249, 255, 0.6);

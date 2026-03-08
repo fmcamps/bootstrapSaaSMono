@@ -78,19 +78,16 @@
 .custom-control-input:checked ~ .custom-control-label::before {
     border-color: #ffb926;
     background-color: #c75b00;
-    width: 2.25rem;
-    height: 1.3rem;
 }
 
 .custom-control-label::before {
-    width: 2.25rem;
-    height: 1.3rem;
     background-color: transparent;
 }
 
 .custom-switch .custom-control-label::before {
     left: -2.25rem;
     width: 2.25rem;
+    height: 1.3rem;
     pointer-events: all;
     border-radius: 0.75rem;
 }
