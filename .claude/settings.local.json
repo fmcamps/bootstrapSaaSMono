@@ -5,7 +5,14 @@
       "Bash(npm run:*)",
       "Bash(node:*)",
       "Bash(nvm:*)",
-      "Bash(npx cleancss:*)"
+      "Bash(npx cleancss:*)",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__query-docs",
+      "Bash(npm install sass@latest --save-dev --force)",
+      "Bash(npx update-browserslist-db@latest)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\Robinson\\.claude\\projects\\D--B2B-FMCAMPS-CODE-TORRE-bootstrapSaaSMono\\memory"
     ]
   }
 }
