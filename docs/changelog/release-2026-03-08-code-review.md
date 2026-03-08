@@ -41,7 +41,7 @@ Hallazgos identificados durante la sincronizacion CSS a SaaSMono. Verificados co
 - **Fix:** `linear-gradient(light-dark(#FFF, #1a1a1a), light-dark(#e9e5e5, #2d2d2d))` con fallback estatico
 - **Impacto:** Modal body ahora tiene gradiente oscuro en dark mode
 
-### MEDIUM — 3 corregidos, 2 diferidos
+### MEDIUM — 4 corregidos, 1 diferido
 
 #### M-1: `.btn-orange` dead code eliminado
 
@@ -70,11 +70,14 @@ Hallazgos identificados durante la sincronizacion CSS a SaaSMono. Verificados co
 - **Hallazgo:** `textarea { overflow-y: hidden; resize: none }` aplica globalmente a todos los textareas
 - **Accion:** Requiere coordinacion con SaaSMono para agregar clase `.auto-resize` a textareas existentes antes de cambiar el selector
 
-#### M-5: `--dark-color` nombre confuso — DIFERIDO
+#### M-5: `--dark-color` nombre confuso — RESUELTO
 
 - **Archivo:** `_variables.scss:10`
-- **Hallazgo:** `--dark-color: #eee` — semanticamente confuso (parece "color oscuro" pero es "color para dark mode")
-- **Accion:** Considerar rename futuro a `--text-dark-mode`. Requiere buscar/reemplazar en todo el codebase + app1.css
+- **Hallazgo:** `--dark-color: #eee` — semanticamente confuso (parece "color oscuro" pero es "color para dark mode"). Se usaba para 2 propositos: color de texto en dark mode Y color de fondo/superficie en gradientes
+- **Fix:** Split en 2 tokens semanticos:
+  - `--text-dark-mode: #eee` — color de texto en dark mode (11 usos en 7 partials)
+  - `--surface-light: #eee` — color de fondo/superficie claro para gradientes (7 usos en 2 partials)
+- **Impacto:** Ninguno visual — ambos tokens valen `#eee`, igual que antes. Verificado con 48 visual regression tests (0 diferencias)
 
 ### LOW — 1 corregido, 2 third-party sin accion
 
@@ -118,7 +121,7 @@ Hallazgos identificados durante la sincronizacion CSS a SaaSMono. Verificados co
 
 ## Resumen de archivos modificados
 
-### SCSS (6 archivos)
+### SCSS (10 archivos — 6 originales + 4 del split M-5)
 
 | Archivo | Cambio | Lineas |
 | --- | --- | --- |

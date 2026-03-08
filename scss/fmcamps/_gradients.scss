@@ -2,7 +2,7 @@
 
 .labelConcentBanner {
     color: var(--light-color); /* fallback */
-    color: light-dark( var(--light-color), var(--dark-color));
+    color: light-dark( var(--light-color), var(--text-dark-mode));
     font-weight: 300;
     padding-left: 0.4rem;
 }

@@ -4,14 +4,14 @@ body {
     background-color: var(--light-bg); /* fallback */
     background-color: light-dark(var(--light-bg), var(--dark-bg));
     color: var(--light-color) !important; /* fallback */
-    color: light-dark( var(--light-color), var(--dark-color)) !important;
+    color: light-dark( var(--light-color), var(--text-dark-mode)) !important;
 }
 
 .page-header {
     background-color: white; /* fallback */
     background-color: light-dark(white, #000);
     color: #212529; /* fallback */
-    color: light-dark( var(--light-color), var(--dark-color)) !important;
+    color: light-dark( var(--light-color), var(--text-dark-mode)) !important;
     padding-top: 0.75rem;
 }
 

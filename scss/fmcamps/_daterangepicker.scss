@@ -125,7 +125,7 @@
 .daterangepicker .calendar-table .next span, .daterangepicker .calendar-table .prev span {
     color: #fff;
     border: solid #212529; /* fallback */
-    border: solid light-dark( var(--light-color), var(--dark-color));
+    border: solid light-dark( var(--light-color), var(--text-dark-mode));
     border-width: 0 2px 2px 0;
     border-radius: 0;
     display: inline-block;
@@ -169,7 +169,7 @@
 
 .daterangepicker td.available:hover, .daterangepicker th.available:hover {
     background-color: #f8f9fa; /* fallback */
-    background-color: light-dark(var(--dark-color), lightskyblue);
+    background-color: light-dark(var(--surface-light), lightskyblue);
     color: black; /* fallback */
     color: light-dark(black, white);
     border-color: transparent;
@@ -310,7 +310,7 @@
 
 .daterangepicker .ranges li:hover {
     background-color: #f8f9fa; /* fallback */
-    background-color: light-dark(var(--dark-color), #ed6324);
+    background-color: light-dark(var(--surface-light), #ed6324);
 }
 
 .daterangepicker .ranges li.active {

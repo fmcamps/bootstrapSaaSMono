@@ -81,7 +81,7 @@ Los fallbacks se mantienen porque:
 ### Corregir bugs de sintaxis
 
 Ambos bugs corregidos:
-- `_typography.scss`: cambiado a `light-dark(#21211f, var(--dark-color))`
+- `_typography.scss`: cambiado a `light-dark(#21211f, var(--text-dark-mode))`
 - `_dropdowns.scss`: cambiado a `light-dark(white, white)` (dropdown siempre tiene fondo oscuro)
 
 ## Mapeo de var() a valores estaticos
@@ -93,7 +93,8 @@ Para fallbacks que usan CSS custom properties en el valor light, se resolvieron 
 | `var(--light-bg)` | `#f8f9fa` |
 | `var(--dark-bg)` | `#212529` |
 | `var(--light-color)` | `#212529` |
-| `var(--dark-color)` | `#f8f9fa` |
+| `var(--text-dark-mode)` | `#f8f9fa` |
+| `var(--surface-light)` | `#f8f9fa` |
 | `var(--border-color)` | `#dee2e6` |
 | `var(--gris-oscuro)` | `#343a40` |
 

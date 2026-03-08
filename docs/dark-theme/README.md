@@ -34,7 +34,7 @@ Usado en `_dark-theme.scss` para overrides que requieren reglas completas:
 Variables en `:root` que responden a media queries:
 
 ```css
---light-bg, --dark-bg, --light-color, --dark-color
+--light-bg, --dark-bg, --light-color, --text-dark-mode, --surface-light
 ```
 
 ## Archivos relevantes

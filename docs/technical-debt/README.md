@@ -43,7 +43,7 @@ Encontrados durante la sincronizacion CSS a SaaSMono. Verificados contra SCSS fu
 | H-2 | `_select2.scss:227,325,799` | `background-color: var(--dark-color)` en Select2 disabled. `--dark-color` es `#eee` (texto dark mode), no un color de fondo | ~~`light-dark(#e9ecef, #2d3238)` con fallback (3 ocurrencias)~~ |
 | H-3 | `_modals.scss:36`           | `.modal-body` gradiente hardcodeado blanco `linear-gradient(#FFF, #e9e5e5)` sin variante dark                               | ~~`light-dark()` en gradiente con fallback~~                  |
 
-#### MEDIUM — 3/4 resueltos, 1 diferido
+#### MEDIUM — 4/5 resueltos, 1 diferido
 
 | ID  | Archivo                                      | Hallazgo                                                       | Fix aplicado                                          |
 | --- | -------------------------------------------- | -------------------------------------------------------------- | ----------------------------------------------------- |
@@ -51,7 +51,7 @@ Encontrados durante la sincronizacion CSS a SaaSMono. Verificados contra SCSS fu
 | M-2 | `_forms.scss:131`                            | `textarea { overflow-y: hidden; resize: none }` global         | **Diferido** — requiere coordinar con SaaSMono        |
 | M-3 | `_scrollbars.scss:28`                        | `*:hover` scrollbar — selector universal en hover              | ~~Eliminado; webkit `:hover` pseudo cubre el caso~~   |
 | M-4 | `_dropdowns.scss:18`                         | `light-dark(white, white)` — valores identicos                 | ~~Simplificado a `color: white`~~                     |
-| M-5 | `_variables.scss:10`                         | `--dark-color: #eee` — nombre semanticamente confuso           | Pendiente — considerar rename futuro a `--text-dark-mode` |
+| M-5 | `_variables.scss:10`                         | `--dark-color: #eee` — nombre semanticamente confuso           | ~~Split en `--text-dark-mode` + `--surface-light`~~ |
 
 #### LOW — 1/3 resuelto, 2 third-party sin accion
 

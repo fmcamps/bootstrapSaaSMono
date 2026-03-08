@@ -4,7 +4,7 @@
     background-color: white; /* fallback */
     background-color: light-dark(white, #000);
     color: var(--light-color); /* fallback */
-    color: light-dark( var(--light-color), var(--dark-color));
+    color: light-dark( var(--light-color), var(--text-dark-mode));
     padding: 0.25rem 1.25rem;
 }
 

@@ -19,7 +19,7 @@ label {
     line-height: 1.525;
     font-size: 1.15rem;
     color: #21211f; /* fallback */
-    color: light-dark(#21211f, var(--dark-color));
+    color: light-dark(#21211f, var(--text-dark-mode));
 }
 
 hr {

@@ -21,7 +21,8 @@ Tokens de diseno definidos en `scss/fmcamps/_variables.scss` y en los overrides 
 | `--dark-bg` | Fondo oscuro (dark mode) |
 | `--dark-bg2` | Fondo oscuro alternativo |
 | `--light-color` | Texto en light mode |
-| `--dark-color` | Texto en dark mode |
+| `--text-dark-mode` | Texto en dark mode |
+| `--surface-light` | Fondo/superficie claro para gradientes |
 | `--label-color` | Color de labels de formulario |
 | `--border-color` | Bordes generales |
 | `--border-color-table` | Bordes de tablas |

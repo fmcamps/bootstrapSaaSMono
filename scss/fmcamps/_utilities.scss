@@ -62,7 +62,7 @@ address {
     background-color: #f8f9fa; /* fallback */
     background-color: light-dark(var(--light-bg), var(--gris-oscuro));
     color: #212529; /* fallback */
-    color: light-dark( var(--light-color), var(--dark-color));
+    color: light-dark( var(--light-color), var(--text-dark-mode));
     border: 1px solid #dbdbdb;
 }
 
@@ -70,12 +70,12 @@ address {
     background-color: #f8f9fa; /* fallback */
     background-color: light-dark(var(--light-bg), var(--gris-oscuro));
     color: #212529; /* fallback */
-    color: light-dark(var(--light-color), var(--dark-color));
+    color: light-dark(var(--light-color), var(--text-dark-mode));
 }
 
 .popover-body {
     color: #212529; /* fallback */
-    color: light-dark( var(--light-color), var(--dark-color));
+    color: light-dark( var(--light-color), var(--text-dark-mode));
 }
 
 // List inline
