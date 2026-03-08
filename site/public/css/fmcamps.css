@@ -12507,11 +12507,6 @@ a.nav-link:hover {
   border-radius: 5px;
 }
 
-*:hover {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(253, 133, 0, 0.6784313725) rgba(255, 255, 255, 0.4901960784);
-}
-
 *::-webkit-scrollbar-thumb:active {
   background-color: rgba(253, 133, 0, 0.6784313725);
 }
@@ -12699,10 +12694,6 @@ textarea {
 .btn-warning {
   color: #000;
   background-color: var(--warning-fmc);
-}
-
-.btn-orange {
-  color: #fff;
 }
 
 .btn-link, .btn-link:hover {
@@ -12904,8 +12895,7 @@ div.modal-footer > button.btn.btn-outline-secondary:hover {
 }
 
 .dropdown-item {
-  color: white; /* fallback */
-  color: light-dark(white, white);
+  color: white;
 }
 
 .dropdown-item.active, .dropdown-item:active {
@@ -12994,7 +12984,7 @@ div.modal-footer > button.btn.btn-outline-secondary:hover {
   background-color: transparent;
 }
 
-tr.text-warning > tr {
+tr.text-warning > td {
   background-color: var(--warning-fmc) !important;
 }
 
@@ -13090,7 +13080,8 @@ table.table-striped tbody tr:nth-of-type(odd) {
 }
 
 .modal-body {
-  background: linear-gradient(#FFF, #e9e5e5);
+  background: linear-gradient(#FFF, #e9e5e5); /* fallback */
+  background: linear-gradient(light-dark(#FFF, #1a1a1a), light-dark(#e9e5e5, #2d2d2d));
   padding: 10px;
 }
 
@@ -14441,7 +14432,8 @@ div.calendar-table table.table th, div.calendar-table table.table td {
 }
 
 .select2-container--default.select2-container--disabled .select2-selection--single {
-  background-color: var(--dark-color);
+  background-color: #e9ecef; /* fallback */
+  background-color: light-dark(#e9ecef, #2d3238);
   cursor: default;
 }
 
@@ -14539,7 +14531,8 @@ div.calendar-table table.table th, div.calendar-table table.table td {
 }
 
 .select2-container--default.select2-container--disabled .select2-selection--multiple {
-  background-color: var(--dark-color);
+  background-color: #e9ecef; /* fallback */
+  background-color: light-dark(#e9ecef, #2d3238);
   cursor: default;
 }
 
@@ -15011,7 +15004,8 @@ div.calendar-table table.table th, div.calendar-table table.table td {
 
 .select2-container--bootstrap.select2-container--disabled .select2-selection,
 .select2-container--bootstrap.select2-container--disabled .select2-selection--multiple .select2-selection__choice {
-  background-color: var(--dark-color);
+  background-color: #e9ecef; /* fallback */
+  background-color: light-dark(#e9ecef, #2d3238);
 }
 
 .select2-container--bootstrap.select2-container--disabled .select2-selection--multiple .select2-selection__choice__remove,
@@ -15524,21 +15518,6 @@ td > button.select:hover .fa-circle-o::before {
   z-index: 10;
 }
 
-@-webkit-viewport {
-  width: device-width;
-}
-@-moz-viewport {
-  width: device-width;
-}
-@-ms-viewport {
-  width: device-width;
-}
-@-o-viewport {
-  width: device-width;
-}
-@viewport {
-  width: device-width;
-}
 @media (max-width: 768px) {
   .modal-content {
     border-radius: 0.75rem 0.75rem 1.75rem 1.75rem;

@@ -1,25 +1,5 @@
 // Responsive and viewport styles
 
-@-webkit-viewport {
-    width: device-width;
-}
-
-@-moz-viewport {
-    width: device-width;
-}
-
-@-ms-viewport {
-    width: device-width;
-}
-
-@-o-viewport {
-    width: device-width;
-}
-
-@viewport {
-    width: device-width;
-}
-
 @media (max-width: 768px) {
     .modal-content {
         border-radius: 0.75rem 0.75rem 1.75rem 1.75rem;

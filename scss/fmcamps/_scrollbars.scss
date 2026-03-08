@@ -25,11 +25,6 @@
     border-radius: 5px;
 }
 
-*:hover {
-    scrollbar-width: thin;
-    scrollbar-color: #fd8500ad #ffffff7d;
-}
-
 *::-webkit-scrollbar-thumb:active {
     background-color: #fd8500ad;
 }

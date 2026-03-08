@@ -34,7 +34,8 @@
 }
 
 .modal-body {
-    background: linear-gradient(#FFF, #e9e5e5);
+    background: linear-gradient(#FFF, #e9e5e5); /* fallback */
+    background: linear-gradient(light-dark(#FFF, #1a1a1a), light-dark(#e9e5e5, #2d2d2d));
     padding: 10px;
 }
 

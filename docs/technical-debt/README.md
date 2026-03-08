@@ -35,31 +35,31 @@ Registro de deuda tecnica conocida y mejoras aspiracionales para el design syste
 
 Encontrados durante la sincronizacion CSS a SaaSMono. Verificados contra SCSS fuente.
 
-#### HIGH
+#### HIGH — ~~resueltos (2026-03-08)~~
 
-| ID  | Archivo                     | Hallazgo                                                                                                                    | Fix                                                      |
-| --- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| H-1 | `_tables.scss:57`           | `tr.text-warning > tr` — selector imposible (un `<tr>` no es hijo de otro `<tr>`)                                           | Cambiar a `tr.text-warning > td`                         |
-| H-2 | `_select2.scss:227,325,799` | `background-color: var(--dark-color)` en Select2 disabled. `--dark-color` es `#eee` (texto dark mode), no un color de fondo | Usar `light-dark(#e9ecef, #2d3238)` o variable semantica |
-| H-3 | `_modals.scss:36`           | `.modal-body` gradiente hardcodeado blanco `linear-gradient(#FFF, #e9e5e5)` sin variante dark                               | Usar `light-dark()` para el gradiente o variable         |
+| ID  | Archivo                     | Hallazgo                                                                                                                    | Fix aplicado                                                  |
+| --- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| H-1 | `_tables.scss:57`           | `tr.text-warning > tr` — selector imposible (un `<tr>` no es hijo de otro `<tr>`)                                           | ~~Cambiado a `tr.text-warning > td`~~                         |
+| H-2 | `_select2.scss:227,325,799` | `background-color: var(--dark-color)` en Select2 disabled. `--dark-color` es `#eee` (texto dark mode), no un color de fondo | ~~`light-dark(#e9ecef, #2d3238)` con fallback (3 ocurrencias)~~ |
+| H-3 | `_modals.scss:36`           | `.modal-body` gradiente hardcodeado blanco `linear-gradient(#FFF, #e9e5e5)` sin variante dark                               | ~~`light-dark()` en gradiente con fallback~~                  |
 
-#### MEDIUM
+#### MEDIUM — 3/4 resueltos, 1 diferido
 
-| ID  | Archivo                                      | Hallazgo                                                       | Fix                                            |
-| --- | -------------------------------------------- | -------------------------------------------------------------- | ---------------------------------------------- |
-| M-1 | `_buttons.scss:41` + `_btn-extended.scss:10` | `.btn-orange` definido en 2 archivos — el primero es dead code | Consolidar en `_btn-extended.scss`             |
-| M-2 | `_forms.scss:131`                            | `textarea { overflow-y: hidden; resize: none }` global         | Limitar a `.auto-resize` class                 |
-| M-3 | `_scrollbars.scss:28`                        | `*:hover` scrollbar — selector universal en hover              | Cambiar a `body:hover` o eliminar              |
-| M-4 | `_dropdowns.scss:18`                         | `light-dark(white, white)` — valores identicos                 | Verificar color dark o eliminar `light-dark()` |
-| M-5 | `_variables.scss:10`                         | `--dark-color: #eee` — nombre semanticamente confuso           | Considerar rename futuro a `--text-dark-mode`  |
+| ID  | Archivo                                      | Hallazgo                                                       | Fix aplicado                                          |
+| --- | -------------------------------------------- | -------------------------------------------------------------- | ----------------------------------------------------- |
+| M-1 | `_buttons.scss:41` + `_btn-extended.scss:10` | `.btn-orange` definido en 2 archivos — el primero es dead code | ~~Dead code eliminado de `_buttons.scss`~~            |
+| M-2 | `_forms.scss:131`                            | `textarea { overflow-y: hidden; resize: none }` global         | **Diferido** — requiere coordinar con SaaSMono        |
+| M-3 | `_scrollbars.scss:28`                        | `*:hover` scrollbar — selector universal en hover              | ~~Eliminado; webkit `:hover` pseudo cubre el caso~~   |
+| M-4 | `_dropdowns.scss:18`                         | `light-dark(white, white)` — valores identicos                 | ~~Simplificado a `color: white`~~                     |
+| M-5 | `_variables.scss:10`                         | `--dark-color: #eee` — nombre semanticamente confuso           | Pendiente — considerar rename futuro a `--text-dark-mode` |
 
-#### LOW
+#### LOW — 1/3 resuelto, 2 third-party sin accion
 
-| ID  | Archivo                 | Hallazgo                                                                               |
-| --- | ----------------------- | -------------------------------------------------------------------------------------- |
-| L-1 | `_responsive.scss:3-21` | 5 reglas `@viewport` deprecated (eliminadas de todos los browsers)                     |
-| L-2 | Select2 partials        | ~15 declaraciones IE legacy (`progid:DXImageTransform`, `filter: alpha`, `-ms-filter`) |
-| L-3 | Font Awesome            | `:-moz-focusring` (FF 87+ removed), `-ms-overflow-style`                               |
+| ID  | Archivo                 | Hallazgo                                                                               | Estado                    |
+| --- | ----------------------- | -------------------------------------------------------------------------------------- | ------------------------- |
+| L-1 | `_responsive.scss:3-21` | 5 reglas `@viewport` deprecated (eliminadas de todos los browsers)                     | ~~Eliminadas~~            |
+| L-2 | Select2 partials        | ~15 declaraciones IE legacy (`progid:DXImageTransform`, `filter: alpha`, `-ms-filter`) | Third-party — sin accion  |
+| L-3 | Font Awesome            | `:-moz-focusring` (FF 87+ removed), `-ms-overflow-style`                               | Third-party — sin accion  |
 
 ## Aspiraciones
 

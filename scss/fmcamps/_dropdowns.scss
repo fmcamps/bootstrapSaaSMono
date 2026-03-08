@@ -15,8 +15,7 @@
 }
 
 .dropdown-item {
-    color: white; /* fallback */
-    color: light-dark(white, white);
+    color: white;
 }
 
 .dropdown-item.active, .dropdown-item:active {
