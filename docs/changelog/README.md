@@ -2,15 +2,32 @@
 
 Historial de cambios relevantes al design system.
 
-## 2026-03-08 — Limpieza !important (ronda 2)
+## 2026-03-08 — Limpieza !important (ronda 3)
 
 ### Remocion con testing visual (Playwright)
+
+- Removidos 9 `!important` en 3 archivos: `_buttons` (3), `_tables` (5), `_list-group` (1)
+- Verificado con 48 visual regression tests (12 paginas x desktop/mobile x light/dark)
+- Resultado: 0 regresiones visuales
+- Total removidos en 3 rondas: 36 (3 + 24 + 9)
+- Total restante: 71 instancias, todas justificadas (37 third-party, 10 dark-theme, 9 layout, 6 utilities, 7 specificity, 2 dynamic)
+
+### Font Awesome en kitchen sink
+
+- Agregados archivos de fuente Font Awesome 4.7.0 a `site/public/fonts/`
+- Resuelto: iconos FA ahora renderizan correctamente en todas las paginas
+- Actualizados 10 baselines de visual regression (buttons, dark-theme, feedback)
+
+---
+
+## 2026-03-08 — Limpieza !important (ronda 2)
+
+### Remocion automatizada con Playwright
 
 - Removidos 24 `!important` innecesarios en 8 archivos
 - Archivos: `_buttons`, `_btn-extended`, `_alerts`, `_navtabs`, `_typography`, `_links`, `_dropdowns`, `_body`
 - Testing visual antes/despues via Playwright MCP en kitchen sink Astro
 - Resultado: 0 regresiones visuales detectadas (pixel-perfect)
-- Total restante: 80 instancias (37 third-party, 10 dark-theme, 9 layout, 6 utilities, 18 otros justificados)
 
 ---
 
